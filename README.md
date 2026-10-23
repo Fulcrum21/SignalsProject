@@ -13,7 +13,7 @@ See the [project brief](CCEN%20302%20Project-3.pdf) for the authoritative requir
 | File | Purpose |
 | --- | --- |
 | `Original_Audio.m` | Existing MATLAB script for the original waveform, linear and decibel FFT magnitude plots, and spectrogram. |
-| `untitled.wav` | Baseline recording: mono, 44,100 Hz, 16-bit PCM, approximately 20.004 seconds. |
+| `Audios/` | Different Audio Recordings, All 44.1 kHz sampling rate and 16 bit sampling level. Contains speech music and different waveforms |
 | `CCEN 302 Project-3.pdf` | Supplied project brief. |
 | `README.md` | Setup, current status, and required deliverables. |
 
@@ -22,7 +22,7 @@ See the [project brief](CCEN%20302%20Project-3.pdf) for the authoritative requir
 Requirements:
 
 - MATLAB with Signal Processing Toolbox for `spectrogram` and `hamming`.
-- Keep `Original_Audio.m` and `untitled.wav` in the same folder.
+- Keep `Original_Audio.m` and `Audios/` in the same folder.
 
 Open that folder as MATLAB's Current Folder, then run:
 
@@ -42,8 +42,6 @@ The frequency plots currently display 0-4 kHz. This is a display limit; the reco
 ## Current status
 
 The repository contains an initial baseline-analysis script and a recording. MATLAB execution and the resulting figures have not yet been verified as part of this documentation update.
-
-One existing detail needs review before relying on FFT amplitudes: in `if numSamples%2==0`, MATLAB treats `%` as the start of a comment, so this does not actually test whether the sample count is even. The implementation has been left unchanged for the team to review.
 
 The following project requirements are not yet implemented in the tracked files:
 

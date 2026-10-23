@@ -1,5 +1,6 @@
 % read the audio file
-[originalAudio, Fs] = audioread("untitled.wav");
+% 
+[originalAudio, Fs] = audioread("Audios/SpeechMusic.wav");
 
 % Part 1: Original audio signal in time
 
@@ -38,7 +39,7 @@ fftMag = fftMag(1:floor(numSamples/2) + 1);
 
 % double the positive frequencies' magnitude, since the negative and
 % positive frequencies' are conjugates and have the same magnitude
-if numSamples%2==0
+if mod(numSamples,2)==0
     fftMag(2:end-1) = 2*fftMag(2:end-1);
 else
     fftMag(2:end) = 2*fftMag(2:end);
@@ -53,7 +54,7 @@ xlabel("Frequency (Hz)")
 ylabel("Amplitude")
 title("Frequency Spectrum")
 % limit the frequency range from 0 to 4000Hz
-xlim([0 4000])
+%xlim([0 4000])
 
 % convert the amplitudes to decibels, and plot
 fftMagDb = 20*log10(fftMag);
@@ -62,7 +63,6 @@ plot(frequencies, fftMagDb)
 xlabel("Frequency (Hz)")
 ylabel("Magnitude (dB)")
 title("Frequency Spectrum in Decibels")
-xlim([0 4000])
 
 % Part 4: Spectrogram
 window = round(0.03 * Fs); % Number of window of size 30 ms
@@ -71,8 +71,8 @@ fftBins = 2048; % 2048 Frequency bins
 
 figure(4)
 spectrogram(originalAudio, hamming(window), overlap, fftBins, Fs, 'yaxis')
-ylim([0 4])
-clim([-120 -40])
+%ylim([0 10])
+%clim([-120 -40])
 xlabel("Time (s)")
 ylabel("Frequency (kHz)")
 title("Spectrogram")
