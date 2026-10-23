@@ -1,6 +1,6 @@
 % read the audio file
 % 
-[originalAudio, Fs] = audioread("Audios/SpeechMusic.wav");
+[originalAudio, Fs] = audioread("../Audios/SpeechMusic.wav");
 
 % Part 1: Original audio signal in time
 
