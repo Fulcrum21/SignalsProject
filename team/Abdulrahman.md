@@ -12,8 +12,8 @@
 
 ## Tasks
 
-- [ ] **AA-01 - Accept the shared input/settings and define handoffs. Due 25 October.** Confirm the source, rate set, mono-column convention, and required filter modes. Agree with Khaled how he receives each MATLAB/Simulink sampling output, and with Jesher what timing metadata he needs. Document your run instructions and dependencies.
-  - Technical handoff and run instructions are prepared below. **Ready for confirmation:** Khaled and Jesher have not yet accepted the format; retain this task unchecked until both confirm.
+- [x] **AA-01 - Set the shared input/settings and define handoffs. Due 25 October; completed 24 October.** Specify the source, rate set, mono-column convention, filter modes, MATLAB/Simulink handoff format for Khaled, and timing metadata for Jesher. Document run instructions and dependencies.
+  - Evidence: the shared settings and MAT-file contract below, [run instructions and source](../Matlab/Sampling_Abdulrahman.m), and [published prototype data](../Results/Abdulrahman/AA02/sampling_22050.mat). The user directed that this is the format to be used; a separate teammate-confirmation step is not required.
 - [x] **AA-02 - Deliver one reduced-rate prototype. Due 26 October; completed 24 October.** Share filtered and unfiltered versions of one agreed case, with actual rate, sample count/duration, filter settings, and a readable spectrum. Document the unfiltered conversion method; verify it does not silently include the anti-aliasing treatment being compared.
   - Evidence: [verified MATLAB source](../Matlab/Sampling_Abdulrahman.m), [sample arrays and settings](../Results/Abdulrahman/AA02/sampling_22050.mat), [summary table](../Results/Abdulrahman/AA02/summary.csv), and [comparison spectrum](../Results/Abdulrahman/AA02/comparison.png). This completes the MATLAB prototype, not Simulink or the full alignment/aliasing experiments.
 - [ ] **AA-03 - Finalize alignment and join the first complete case. Due 27 October.** With Jesher, document reconstruction to the common time base, known delay compensation, valid comparison interval/edges, and unequal-length handling. Test the policy with a known signal. Supply the first sampling case in MATLAB and Simulink for the full pipeline; ensure quantization and metrics use its actual rate.
@@ -29,7 +29,7 @@
 
 | When | Give / receive | Acceptance evidence |
 | --- | --- | --- |
-| 25 October | Receive Yazan's baseline; agree interface with Khaled and alignment needs with Jesher | Same source and dimensions recorded |
+| 25 October | Receive Yazan's baseline; publish the sample/metadata interface for Khaled and Jesher | Same source, dimensions, and handoff fields documented |
 | 26-27 October | Give the first filtered/unfiltered case and alignment policy | Jesher accepts the time basis; one complete case works |
 | 29 October | Give all rate/filter outputs in both platforms to Khaled | Every route has actual rate, length, delay/filter metadata, and run instructions |
 | 30 October | Help Khaled supply combined cases and Jesher evaluate them | No missing lower-rate combination; discrepancies logged |
@@ -41,11 +41,11 @@ Before checking implementation tasks, verify actual sample rate and duration; di
 
 Keep all completed tasks checked with dated evidence. If a task is blocked, state the missing input/person and continue independent filter/model/theory work.
 
-## AA-01 handoff proposal - awaiting Khaled and Jesher
+## AA-01 shared settings and handoff format
 
-The user confirmed on 24 October that teammate acceptance is still pending. The following is the proposed technical contract, prepared for their review; it is not recorded as an agreement.
+On 24 October, the user directed that the following format be used for the next stages. The input/settings, handoff fields, run instructions, and dependencies are documented here; AA-01 is complete. Reconstruction and the valid comparison interval remain technical work under AA-03.
 
-| Item | Proposed convention |
+| Item | Convention |
 | --- | --- |
 | Source | `Audios/SpeechMusic.wav`; mono, 44,100 Hz, 16-bit PCM, 882,005 samples. Yazan owns the separate microphone-provenance check. |
 | Sampling-rate set | 22,050; 11,025; 8,000; 4,000 Hz, with the 44,100 Hz original retained as reference. Only 22,050 Hz is implemented in this prototype. |
@@ -55,14 +55,7 @@ The user confirmed on 24 October that teammate acceptance is still pending. The 
 | Case identifiers | `speechmusic_fs22050_b16_none_matlab` and `speechmusic_fs22050_b16_lpf_matlab`. At this sampling-only stage, `b16` identifies the source/control; neither array is re-quantized or exported to a 16-bit WAV. `quantizationApplied=false` makes this explicit. Khaled owns subsequent quantization and final precision metadata. |
 | Khaled receives | Both processed arrays, their actual rates, case IDs, sample counts/durations, and filter/timing metadata. Preserve this metadata when applying quantization. |
 | Jesher receives | The original reference and both processed arrays, start/last sample times, actual rates, sample counts, and the filter-delay compensation flag. Common-grid reconstruction and the valid comparison-edge policy remain AA-03 decisions. |
-| Future Simulink handoff | Supply equivalent samples and the same metadata fields/units, with a `simulink` platform/case label. This is an interface proposal; a sampling Simulink implementation is not included yet. |
-
-Confirmation record (record the actual response/date; do not assume acceptance):
-
-- [ ] **Khaled:** accepts the sample-array/metadata format, source/rates/modes, and the sampling-only bit-depth labeling, or identifies specific changes needed.
-- [ ] **Jesher:** accepts the timing/rate/delay metadata fields, with reconstruction and comparison-edge decisions explicitly deferred to AA-03, or identifies specific changes needed.
-
-Once both confirm and any requested adjustments are made, check AA-01 and record their responses here. These confirmations accept the interface, not the correctness of future unimplemented cases.
+| Future Simulink handoff | Supply equivalent samples and the same metadata fields/units, with a `simulink` platform/case label. The interface is defined; implementing and verifying the sampling model remains under AA-03 and AA-04. |
 
 ## AA-02 reproducible handoff and verified results
 
@@ -107,7 +100,8 @@ signalFs = handoff.prototype.unfiltered.Fs;
 | Date | Update / evidence | Next action or blocker |
 | --- | --- | --- |
 | 24 October | Task plan created. No sampling implementation is present in the inspected tracked files at ad8cc0d; unpublished work is not assessed. | AA-01 due 25 October; first component handoff due 26 October. |
-| 24 October | AA-02 MATLAB prototype implemented and verified; saved arrays, settings, numeric summary, and spectrum evidence are linked above. Earlier task-plan entry is retained as history. | AA-01 handoff proposal is ready; obtain Khaled's and Jesher's actual confirmation before ticking it. |
+| 24 October | AA-02 MATLAB prototype implemented and verified; saved arrays, settings, numeric summary, and spectrum evidence are linked above. Earlier task-plan entry is retained as history. | Use the documented MAT-file format for subsequent handoffs. |
+| 24 October | AA-01 completed: source/settings, data shape, filter modes, timing fields, and run requirements documented. Separate format confirmation removed at the user's instruction; recipient approval is not claimed. | Next: AA-03 alignment and the first MATLAB/Simulink pipeline case. |
 
-**Review findings / receiver acceptance:** pending; add task ID, finding, evidence, owner, and resolution date here.
+**Technical review findings:** pending under AA-08; add task ID, finding, evidence, owner, and resolution date here.
 **Final sign-off:** pending; add date, source/result commit, reviewer, and any remaining limitations.
