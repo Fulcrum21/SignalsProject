@@ -1,2 +1,22 @@
+# MATLAB Editor backups
 *.asv
+
+# Simulink autosaves and local model backups
 *.slx.autosave
+*.mdl.autosave
+*.slx.original
+*.mdl.original
+*.slx.bak
+*.mdl.bak
+
+# Simulink simulation caches and generated build folders
+slprj/
+sccprj/
+*.slxc
+*_grt_rtw/
+*_ert_rtw/
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini

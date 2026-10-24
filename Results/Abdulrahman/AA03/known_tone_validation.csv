@@ -1,0 +1,2 @@
+InputSource,DominantHz,SourceFsHz,ProcessedFsHz,SourceSamples,ProcessedSamples,FirDelayOutputSamples,UnfilteredMaxAbsDifference,FilteredMaxAbsDifference,UnfilteredReconstructionLagSamples,FilteredReconstructionLagSamples
+Audios/300Hz_Sine.wav,300,44100,22050,882000,441000,10,0,6.93889390390723e-17,0,0
