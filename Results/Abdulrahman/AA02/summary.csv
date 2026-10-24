@@ -1,0 +1,3 @@
+CaseId,FilterMode,FsHz,SampleCount,DurationSeconds,FirstSampleTimeSeconds,LastSampleTimeSeconds,FIRTaps,FIRDelayCompensated
+speechmusic_fs22050_b16_none_matlab,none,22050,441003,20.0001360544218,0,20.0000907029478,0,0
+speechmusic_fs22050_b16_lpf_matlab,lpf,22050,441003,20.0001360544218,0,20.0000907029478,41,1
