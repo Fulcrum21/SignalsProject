@@ -15,7 +15,7 @@
 - [x] **AA-01 - Set the shared input/settings and define handoffs. Due 25 October; completed 24 October.** Specify the source, rate set, mono-column convention, filter modes, MATLAB/Simulink handoff format for Khaled, and timing metadata for Jesher. Document run instructions and dependencies.
   - Evidence: the shared settings and MAT-file contract below, [run instructions and source](../Matlab/Sampling_Abdulrahman.m), and [published prototype data](../Results/Abdulrahman/AA02/sampling_22050.mat). The user directed that this is the format to be used; a separate teammate-confirmation step is not required.
 - [x] **AA-02 - Deliver one reduced-rate prototype. Due 26 October; completed 24 October.** Share filtered and unfiltered versions of one agreed case, with actual rate, sample count/duration, filter settings, and a readable spectrum. Document the unfiltered conversion method; verify it does not silently include the anti-aliasing treatment being compared.
-  - Evidence: [verified MATLAB source](../Matlab/Sampling_Abdulrahman.m), [sample arrays and settings](../Results/Abdulrahman/AA02/sampling_22050.mat), [summary table](../Results/Abdulrahman/AA02/summary.csv), and [comparison spectrum](../Results/Abdulrahman/AA02/comparison.png). This completes the MATLAB prototype, not Simulink or the full alignment/aliasing experiments.
+  - Evidence: [verified MATLAB source](../Matlab/Sampling_Abdulrahman.m), [sample arrays and settings](../Results/Abdulrahman/AA02/sampling_22050.mat), [summary table](../Results/Abdulrahman/AA02/summary.csv), [comparison spectrum](../Results/Abdulrahman/AA02/comparison.png), and the WAV copies linked below. This completes the MATLAB prototype, not Simulink or the full alignment/aliasing experiments.
 - [ ] **AA-03 - Finalize alignment and join the first complete case. Due 27 October.** With Jesher, document reconstruction to the common time base, known delay compensation, valid comparison interval/edges, and unequal-length handling. Test the policy with a known signal. Supply the first sampling case in MATLAB and Simulink for the full pipeline; ensure quantization and metrics use its actual rate.
 - [ ] **AA-04 - Complete every sampling route in both platforms. Due 29 October.** Implement 22.05 kHz, 11.025 kHz, 8 kHz, and 4 kHz with and without anti-aliasing filtering. Handle non-integer conversions correctly; keep amplitudes consistent with the reference. Give Khaled the sampling outputs and metadata for all routes, and stay available for combination issues.
 - [ ] **AA-05 - Produce sampling/aliasing evidence. Due 30 October.** For each lower rate at 16 effective bits, produce comparable original/filtered/unfiltered waveform, FFT, and spectrogram views. Demonstrate identifiable frequency folding with at least one existing known-frequency test signal and discuss what is observable in the real recording. Compare equivalent MATLAB/Simulink cases and document filter/method/axis differences.
@@ -51,8 +51,8 @@ On 24 October, the user directed that the following format be used for the next 
 | Sampling-rate set | 22,050; 11,025; 8,000; 4,000 Hz, with the 44,100 Hz original retained as reference. Only 22,050 Hz is implemented in this prototype. |
 | Modes | `none`: direct sample selection, without filtering; `lpf`: anti-aliasing filtering followed by rate reduction. |
 | Data shape/type | One channel as an N-by-1 `double` array; preserve amplitude and do not normalize each case separately. |
-| Current handoff | `Results/Abdulrahman/AA02/sampling_22050.mat`, containing the `prototype` structure described below, plus `summary.csv` and `comparison.png`. |
-| Case identifiers | `speechmusic_fs22050_b16_none_matlab` and `speechmusic_fs22050_b16_lpf_matlab`. At this sampling-only stage, `b16` identifies the source/control; neither array is re-quantized or exported to a 16-bit WAV. `quantizationApplied=false` makes this explicit. Khaled owns subsequent quantization and final precision metadata. |
+| Current handoff | `Results/Abdulrahman/AA02/sampling_22050.mat`, containing the `prototype` structure described below, plus `summary.csv`, `comparison.png`, and filtered/unfiltered 16-bit PCM WAV copies. |
+| Case identifiers | `speechmusic_fs22050_b16_none_matlab` and `speechmusic_fs22050_b16_lpf_matlab`. At this sampling-only stage, `b16` identifies the source/control. MAT arrays retain their double samples with no explicit reduced-bit-depth quantization (`quantizationApplied=false`); separate WAV copies use a 16-bit PCM container and include its rounding error. Khaled owns subsequent quantization and final precision metadata. |
 | Khaled receives | Both processed arrays, their actual rates, case IDs, sample counts/durations, and filter/timing metadata. Preserve this metadata when applying quantization. |
 | Jesher receives | The original reference and both processed arrays, start/last sample times, actual rates, sample counts, and the filter-delay compensation flag. Common-grid reconstruction and the valid comparison-edge policy remain AA-03 decisions. |
 | Future Simulink handoff | Supply equivalent samples and the same metadata fields/units, with a `simulink` platform/case label. The interface is defined; implementing and verifying the sampling model remains under AA-03 and AA-04. |
@@ -67,7 +67,14 @@ From the repository root in MATLAB, run:
 run(fullfile('Matlab', 'Sampling_Abdulrahman.m'));
 ```
 
-The script locates its own input, creates three figures, and regenerates the three handoff files in `Results/Abdulrahman/AA02/`. Its saved comparison uses the same data as the two individual plots.
+The script locates its own input, creates three figures, and regenerates five handoff files in `Results/Abdulrahman/AA02/`: the MAT file, summary CSV, comparison PNG, and two WAV copies. Its saved comparison uses the same data as the two individual plots.
+
+**Playable WAV copies:**
+
+- [Without anti-aliasing filter](../Results/Abdulrahman/AA02/speechmusic_fs22050_b16_none_matlab.wav)
+- [With anti-aliasing filter](../Results/Abdulrahman/AA02/speechmusic_fs22050_b16_lpf_matlab.wav)
+
+Both WAVs are mono, 22,050 Hz, 16-bit PCM copies with the same sample counts/durations as their respective MAT arrays. The script does not normalize them. WAV conversion rounds samples to the PCM representation; use the saved round-trip-error metadata when evaluating exported audio. The MAT arrays preserve the original processing results. The original 44.1 kHz WAV remains in `Audios/SpeechMusic.wav`.
 
 | Signal | Actual rate (Hz) | Sample count | Duration N/Fs (seconds) |
 | --- | --- | --- | --- |
@@ -81,7 +88,7 @@ The small duration difference is sample-count rounding for an odd-length input, 
 
 **Filtered method:** `[yFiltered, filterCoefficients] = resample(x, 1, 2, 10, 5)`. The explicit settings match MATLAB's defaults: design parameter n=10 and Kaiser-window beta=5. The verified filter has 41 coefficients (order 40), saved as `prototype.filter.coefficients`. Its nominal cutoff is 11,025 Hz; it has a finite transition band rather than an ideal brick-wall response. The raw linear-phase group delay is 20 input samples, and `resample` compensates it internally. Do not shift the result by that delay a second time. See the [MathWorks resample documentation](https://www.mathworks.com/help/signal/ref/resample.html).
 
-**Saved structure:** `prototype.original`, `prototype.unfiltered`, and `prototype.filtered` each contain `samples`, `Fs`, `sampleCount`, and `durationSeconds`. Each processed branch also contains `caseId`, `filterMode`, `firstSampleTimeSeconds`, and `lastSampleTimeSeconds`. `prototype.filter` holds the ratio, design settings, actual coefficients, order, nominal cutoff, raw group delay, and compensation flag. The root records source bit depth, MATLAB release, and that no quantization/normalization was applied.
+**Saved structure:** `prototype.original`, `prototype.unfiltered`, and `prototype.filtered` each contain `samples`, `Fs`, `sampleCount`, and `durationSeconds`. Each processed branch also contains `caseId`, `filterMode`, `firstSampleTimeSeconds`, `lastSampleTimeSeconds`, and a `wav` structure recording its WAV filename, container bit depth, file bytes, and maximum absolute round-trip error. `prototype.filter` holds the ratio, design settings, actual coefficients, order, nominal cutoff, raw group delay, and compensation flag. The root records source bit depth, MATLAB release, and that the MAT sampling-stage arrays have no explicit quantization/normalization applied. The CSV includes the WAV metadata too.
 
 Example receiver access, from the repository root:
 
@@ -102,6 +109,7 @@ signalFs = handoff.prototype.unfiltered.Fs;
 | 24 October | Task plan created. No sampling implementation is present in the inspected tracked files at ad8cc0d; unpublished work is not assessed. | AA-01 due 25 October; first component handoff due 26 October. |
 | 24 October | AA-02 MATLAB prototype implemented and verified; saved arrays, settings, numeric summary, and spectrum evidence are linked above. Earlier task-plan entry is retained as history. | Use the documented MAT-file format for subsequent handoffs. |
 | 24 October | AA-01 completed: source/settings, data shape, filter modes, timing fields, and run requirements documented. Separate format confirmation removed at the user's instruction; recipient approval is not claimed. | Next: AA-03 alignment and the first MATLAB/Simulink pipeline case. |
+| 24 October | Added team-requested filtered/unfiltered WAV copies alongside the MAT handoff. The script recreates both exports and records WAV width, file bytes, and round-trip error. | Teammates can play/import the WAVs or load the exact processing arrays from the MAT file. |
 
 **Technical review findings:** pending under AA-08; add task ID, finding, evidence, owner, and resolution date here.
 **Final sign-off:** pending; add date, source/result commit, reviewer, and any remaining limitations.
