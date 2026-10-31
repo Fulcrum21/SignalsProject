@@ -1,0 +1,9 @@
+# Preserve the exact bytes used by the report's SHA-256 evidence on checkout.
+* -text whitespace=cr-at-eol
+*.pdf binary
+*.png binary
+*.wav binary
+*.mat binary
+*.zip binary
+# MATLAB's captured console tables contain intentional trailing spaces.
+results/** whitespace=cr-at-eol,-blank-at-eol

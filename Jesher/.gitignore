@@ -1,0 +1,8 @@
+inputs/*.mat
+*.mat
+*.wav
+*.zip
+results/matlab_run*/
+results/private_originals/
+validation/__pycache__/
+*.asv

@@ -1,0 +1,232 @@
+---------------------------------------------------------------------
+MATLAB Version: 26.2.0.3433840 (R2026b) Update 1
+MATLAB License Number: [redacted before publication]
+Operating System: Microsoft Windows 11 Pro Version 10.0 (Build 26200)
+Java Version: Java is not loaded
+---------------------------------------------------------------------
+MATLAB                                                Version 26.2        (R2026b)
+Simulink                                              Version 26.2        (R2026b)
+DSP System Toolbox                                    Version 26.2        (R2026b)
+MATLAB Copilot                                        Version 26.2        (R2026b)
+Signal Processing Toolbox                             Version 26.2        (R2026b)
+testResults = runtests( ...
+    fullfile(projectRoot, 'Jesher', 'matlab', 'tests'));
+
+disp(table(testResults));
+
+assert(all([testResults.Passed]), ...
+    'Resolve failed or skipped tests before running the evaluation.');
+Running TestJesherCore
+.......... .
+Done TestJesherCore
+__________
+
+Running TestJesherPipeline
+.......Evaluated 3/72 cases. Output: C:\Users\jeshe\AppData\Local\Temp\tpce3906a0_2696_456a_b1f2_8b8ae08ed381\evaluation
+Speaker checks, listening, review and final sign-off remain pending.
+.
+Done TestJesherPipeline
+__________
+
+                                 <strong>Name</strong>                                 <strong>Passed</strong>    <strong>Failed</strong>    <strong>Incomplete</strong>    <strong>Duration</strong>      <strong>Details</strong>   
+    <strong>______________________________________________________________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>________</strong>    <strong>____________</strong>
+
+    {'TestJesherCore/unchangedReference'                         }    true      false       false        0.98211    {1×1 struct}
+    {'TestJesherCore/predictableDegradation'                     }    true      false       false        0.16704    {1×1 struct}
+    {'TestJesherCore/zeroReferenceCases'                         }    true      false       false       0.030056    {1×1 struct}
+    {'TestJesherCore/invalidMetricInputs'                        }    true      false       false        0.64167    {1×1 struct}
+    {'TestJesherCore/nativeGridIsUnchanged'                      }    true      false       false       0.086891    {1×1 struct}
+    {'TestJesherCore/oddLengthReconstruction'                    }    true      false       false        0.90859    {1×1 struct}
+    {'TestJesherCore/mismatchedTimingAndLengthAreRejected'       }    true      false       false       0.018116    {1×1 struct}
+    {'TestJesherCore/rateAndPolicyAreExplicit'                   }    true      false       false       0.010477    {1×1 struct}
+    {'TestJesherCore/rationalGridEndpointRule'                   }    true      false       false        0.14951    {1×1 struct}
+    {'TestJesherCore/wavRateContainerAndRoundTrip'               }    true      false       false        0.55563    {1×1 struct}
+    {'TestJesherCore/wavClippingAndInvalidRatesAreRejected'      }    true      false       false       0.017125    {1×1 struct}
+    {'TestJesherPipeline/expectedMatrixHasTypedUniqueRows'       }    true      false       false        0.85661    {1×1 struct}
+    {'TestJesherPipeline/trackedHandoffHasThreeAvailableControls'}    true      false       false        0.31326    {1×1 struct}
+    {'TestJesherPipeline/baselineOnlyFixtureIsSupported'         }    true      false       false        0.15115    {1×1 struct}
+    {'TestJesherPipeline/duplicatesAndFalsePrecisionAreRejected' }    true      false       false        0.17439    {1×1 struct}
+    {'TestJesherPipeline/duplicateExternalHandoffsNeverOverwrite'}    true      false       false        0.60147    {1×1 struct}
+    {'TestJesherPipeline/crossPlatformPairsUseExtendedNumbers'   }    true      false       false        0.23186    {1×1 struct}
+    {'TestJesherPipeline/completeMatrixGateWritesNoOutput'       }    true      false       false        0.64881    {1×1 struct}
+    {'TestJesherPipeline/noPlotRunCreatesHonestPartialPackage'   }    true      false       false          13.89    {1×1 struct}
+
+x = [-0.5; 0; 0.25; 0.75];
+
+y = x / 2;
+
+m = jesher.computeMetrics(x, y);
+
+disp(m);
+               nmse: 0.2500
+              snrDb: 6.0206
+    referenceEnergy: 0.8750
+        errorEnergy: 0.2188
+        sampleCount: 4
+             status: 'finite'
+
+m = jesher.computeMetrics(x, x);
+
+disp(m);
+               nmse: 0
+              snrDb: Inf
+    referenceEnergy: 0.8750
+        errorEnergy: 0
+        sampleCount: 4
+             status: 'unchanged'
+
+summary = Run_Jesher_Evaluation();
+
+disp(summary);
+Evaluated 3/72 cases. Output: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\results\matlab_run_20261030_170138_859
+Speaker checks, listening, review and final sign-off remain pending.
+             createdAtDubai: '30-Oct-2026 17:02:11'
+              matlabVersion: '26.2.0.3433840 (R2026b) Update 1'
+                  toolboxes: [1×5 struct]
+                 sourceFile: 'C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Audios\SpeechMusic.wav'
+          sourceSampleCount: 882005
+               sourceRateHz: 44100
+             availableCases: 3
+              expectedCases: 72
+             matrixComplete: 0
+               handoffFiles: {0×1 cell}
+               outputFolder: 'C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\results\matlab_run_20261030_170138_859'
+            snapshotSources: {'C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Results\Abdulrahman\AA02\sampling_22050.mat'}
+              snapshotFiles: {'001_sampling_22050.mat'}
+    speakerPlaybackVerified: 0
+         listeningCollected: 0
+           reviewerAccepted: 0
+               finalSignOff: 0
+       archiveBytesVerified: 1
+                archiveFile: 'audio_partial_NOT_FINAL.zip'
+
+runFolder = summary.outputFolder;
+
+disp(runFolder);
+
+winopen(runFolder);
+C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\results\matlab_run_20261030_170138_859
+metrics = readtable( ...
+    fullfile(runFolder, 'metrics.csv'), ...
+    'TextType', 'string');
+
+disp(metrics(:, { ...
+    'caseId', 'Fs', 'effectiveBits', ...
+    'nmse', 'snrDb', 'wavContainerBits', 'wavFileBytes'}));
+                    <strong>caseId</strong>                      <strong>Fs</strong>      <strong>effectiveBits</strong>       <strong>nmse</strong>       <strong>snrDb</strong>     <strong>wavContainerBits</strong>    <strong>wavFileBytes</strong>
+    <strong>_______________________________________</strong>    <strong>_____</strong>    <strong>_____________</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>________________</strong>    <strong>____________</strong>
+
+    "speechmusic_fs44100_b16_native_matlab"    44100         16                   0       Inf           16            1.7641e+06 
+    "speechmusic_fs22050_b16_lpf_matlab"       22050         16          0.00080722     30.93           16            8.8205e+05 
+    "speechmusic_fs22050_b16_none_matlab"      22050         16           0.0012202    29.136           16            8.8205e+05 
+
+coverage = readtable( ...
+    fullfile(runFolder, 'case_coverage.csv'), ...
+    'TextType', 'string');
+
+disp(coverage);
+
+sum(coverage.status == "missing_handoff")
+                     <strong>caseId</strong>                       <strong>platform</strong>            <strong>sourceFile</strong>            <strong>Fs</strong>      <strong>effectiveBits</strong>    <strong>filterMode</strong>         <strong>status</strong>      
+    <strong>_________________________________________</strong>    <strong>__________</strong>    <strong>________________________</strong>    <strong>_____</strong>    <strong>_____________</strong>    <strong>__________</strong>    <strong>_________________</strong>
+
+    "speechmusic_fs44100_b16_native_matlab"      "matlab"      "Audios/SpeechMusic.wav"    44100         16           "native"     "available"      
+    "speechmusic_fs44100_b08_native_matlab"      "matlab"      "Audios/SpeechMusic.wav"    44100          8           "native"     "missing_handoff"
+    "speechmusic_fs44100_b04_native_matlab"      "matlab"      "Audios/SpeechMusic.wav"    44100          4           "native"     "missing_handoff"
+    "speechmusic_fs44100_b02_native_matlab"      "matlab"      "Audios/SpeechMusic.wav"    44100          2           "native"     "missing_handoff"
+    "speechmusic_fs22050_b16_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    22050         16           "lpf"        "available"      
+    "speechmusic_fs22050_b08_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    22050          8           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b04_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    22050          4           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b02_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    22050          2           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b16_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    22050         16           "none"       "available"      
+    "speechmusic_fs22050_b08_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    22050          8           "none"       "missing_handoff"
+    "speechmusic_fs22050_b04_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    22050          4           "none"       "missing_handoff"
+    "speechmusic_fs22050_b02_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    22050          2           "none"       "missing_handoff"
+    "speechmusic_fs11025_b16_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    11025         16           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b08_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    11025          8           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b04_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    11025          4           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b02_lpf_matlab"         "matlab"      "Audios/SpeechMusic.wav"    11025          2           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b16_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    11025         16           "none"       "missing_handoff"
+    "speechmusic_fs11025_b08_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    11025          8           "none"       "missing_handoff"
+    "speechmusic_fs11025_b04_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    11025          4           "none"       "missing_handoff"
+    "speechmusic_fs11025_b02_none_matlab"        "matlab"      "Audios/SpeechMusic.wav"    11025          2           "none"       "missing_handoff"
+    "speechmusic_fs8000_b16_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     8000         16           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b08_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     8000          8           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b04_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     8000          4           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b02_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     8000          2           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b16_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     8000         16           "none"       "missing_handoff"
+    "speechmusic_fs8000_b08_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     8000          8           "none"       "missing_handoff"
+    "speechmusic_fs8000_b04_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     8000          4           "none"       "missing_handoff"
+    "speechmusic_fs8000_b02_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     8000          2           "none"       "missing_handoff"
+    "speechmusic_fs4000_b16_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     4000         16           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b08_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     4000          8           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b04_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     4000          4           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b02_lpf_matlab"          "matlab"      "Audios/SpeechMusic.wav"     4000          2           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b16_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     4000         16           "none"       "missing_handoff"
+    "speechmusic_fs4000_b08_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     4000          8           "none"       "missing_handoff"
+    "speechmusic_fs4000_b04_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     4000          4           "none"       "missing_handoff"
+    "speechmusic_fs4000_b02_none_matlab"         "matlab"      "Audios/SpeechMusic.wav"     4000          2           "none"       "missing_handoff"
+    "speechmusic_fs44100_b16_native_simulink"    "simulink"    "Audios/SpeechMusic.wav"    44100         16           "native"     "missing_handoff"
+    "speechmusic_fs44100_b08_native_simulink"    "simulink"    "Audios/SpeechMusic.wav"    44100          8           "native"     "missing_handoff"
+    "speechmusic_fs44100_b04_native_simulink"    "simulink"    "Audios/SpeechMusic.wav"    44100          4           "native"     "missing_handoff"
+    "speechmusic_fs44100_b02_native_simulink"    "simulink"    "Audios/SpeechMusic.wav"    44100          2           "native"     "missing_handoff"
+    "speechmusic_fs22050_b16_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    22050         16           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b08_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    22050          8           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b04_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    22050          4           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b02_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    22050          2           "lpf"        "missing_handoff"
+    "speechmusic_fs22050_b16_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    22050         16           "none"       "missing_handoff"
+    "speechmusic_fs22050_b08_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    22050          8           "none"       "missing_handoff"
+    "speechmusic_fs22050_b04_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    22050          4           "none"       "missing_handoff"
+    "speechmusic_fs22050_b02_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    22050          2           "none"       "missing_handoff"
+    "speechmusic_fs11025_b16_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    11025         16           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b08_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    11025          8           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b04_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    11025          4           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b02_lpf_simulink"       "simulink"    "Audios/SpeechMusic.wav"    11025          2           "lpf"        "missing_handoff"
+    "speechmusic_fs11025_b16_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    11025         16           "none"       "missing_handoff"
+    "speechmusic_fs11025_b08_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    11025          8           "none"       "missing_handoff"
+    "speechmusic_fs11025_b04_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    11025          4           "none"       "missing_handoff"
+    "speechmusic_fs11025_b02_none_simulink"      "simulink"    "Audios/SpeechMusic.wav"    11025          2           "none"       "missing_handoff"
+    "speechmusic_fs8000_b16_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     8000         16           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b08_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     8000          8           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b04_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     8000          4           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b02_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     8000          2           "lpf"        "missing_handoff"
+    "speechmusic_fs8000_b16_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     8000         16           "none"       "missing_handoff"
+    "speechmusic_fs8000_b08_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     8000          8           "none"       "missing_handoff"
+    "speechmusic_fs8000_b04_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     8000          4           "none"       "missing_handoff"
+    "speechmusic_fs8000_b02_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     8000          2           "none"       "missing_handoff"
+    "speechmusic_fs4000_b16_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     4000         16           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b08_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     4000          8           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b04_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     4000          4           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b02_lpf_simulink"        "simulink"    "Audios/SpeechMusic.wav"     4000          2           "lpf"        "missing_handoff"
+    "speechmusic_fs4000_b16_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     4000         16           "none"       "missing_handoff"
+    "speechmusic_fs4000_b08_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     4000          8           "none"       "missing_handoff"
+    "speechmusic_fs4000_b04_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     4000          4           "none"       "missing_handoff"
+    "speechmusic_fs4000_b02_none_simulink"       "simulink"    "Audios/SpeechMusic.wav"     4000          2           "none"       "missing_handoff"
+
+
+ans =
+
+    69
+
+winopen(fullfile(runFolder, 'figures'));
+Play_Jesher_Case( ...
+    fullfile(projectRoot, 'Audios', 'SpeechMusic.wav'), ...
+    0.5, 0, 20);
+Playing C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Audios\SpeechMusic.wav
+44100 Hz; 882005 source samples; 20.000113379 s; fixed gain 0.500
+Excerpt 0.000000000 to 20.000000000 s (end exclusive).
+Play_Jesher_Case( ...
+    fullfile(runFolder, 'audio_package', 'processed', ...
+    'speechmusic_fs22050_b16_none_matlab.wav'), ...
+    0.5, 0, 20);
+Playing C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\results\matlab_run_20261030_170138_859\audio_package\processed\speechmusic_fs22050_b16_none_matlab.wav
+22050 Hz; 441003 source samples; 20.000136054 s; fixed gain 0.500
+Excerpt 0.000000000 to 20.000000000 s (end exclusive).
+Play_Jesher_Case( ...
+    fullfile(runFolder, 'audio_package', 'processed', ...
+    'speechmusic_fs22050_b16_lpf_matlab.wav'), ...
+    0.5, 0, 20);
+Playing C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\results\matlab_run_20261030_170138_859\audio_package\processed\speechmusic_fs22050_b16_lpf_matlab.wav
+22050 Hz; 441003 source samples; 20.000136054 s; fixed gain 0.500
+Excerpt 0.000000000 to 20.000000000 s (end exclusive).
+diary off

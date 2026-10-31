@@ -1,0 +1,49 @@
+{
+  "report_prepared_date": "2026-10-31",
+  "verified_at_utc": "2026-10-31T07:52:46.142085+00:00",
+  "matlab_run": "matlab_run_20261030_170138_859",
+  "checks": [
+    {
+      "case_id": "speechmusic_fs44100_b16_native_matlab",
+      "metrics_recomputed": true,
+      "export_metadata_and_error_verified": true,
+      "wav_sha256": "69922d4cc5ad952779e0108831893bd86ccac50bd86b66d45ee72894a46c9c34"
+    },
+    {
+      "case_id": "speechmusic_fs22050_b16_lpf_matlab",
+      "metrics_recomputed": true,
+      "export_metadata_and_error_verified": true,
+      "wav_sha256": "d91a354142161cd072f8f97aff394b688a0ef19ce6a138fdfaeb9f3c03e3ee8e"
+    },
+    {
+      "case_id": "speechmusic_fs22050_b16_none_matlab",
+      "metrics_recomputed": true,
+      "export_metadata_and_error_verified": true,
+      "wav_sha256": "6d6bae8e4988d71d91a77460f10bac8888b9391df8ff44c3e32e6cf11c5b7374"
+    }
+  ],
+  "matlab_tests_passed": 19,
+  "archive_exact_file_set_and_bytes_verified": true,
+  "input_sha256": {
+    "Jesher\\results\\matlab_run_20261030_170138_859\\metrics.csv": "bcbd1ece17914b15bc663553c9e0ef0fabeebb4c74f6af257509beba5f91f460",
+    "Jesher\\results\\matlab_run_20261030_170138_859\\audio_package\\manifest.csv": "e03802770e94d34f1c8375aa489ad483a2b285cc2687013979ebef47511942cc",
+    "Jesher\\results\\matlab_run_20261030_170138_859\\run_summary.json": "ae970e4fdb51ff2e897a2f46969c62e8317b1f0fac02850f488e080ffd1792ff",
+    "Jesher\\results\\matlab_run_20261030_170138_859\\evaluation.mat": "805cae19639f5c678c972f722375c1be6433daa1ec5902169de94fdf2fe82a27",
+    "Jesher\\results\\matlab_session_20261030_170012.txt": "c4e064df206df19b1bf297a5a6a0bda4fdfc5a8cdccea1a8c21a235bdf88bb97",
+    "Jesher\\listening\\initial_observation.md": "b309b13708b6893650bac164d576d11f276abb0dc8df02326beec816eb9e1f3e"
+  },
+  "output_sha256": {
+    "Jesher\\report\\output\\pdf\\Jesher_Current_MATLAB_Results.pdf": "58d87e646294d17e5861336e9fc4395876be79cfd4154c4d79012b7669b31447",
+    "Jesher\\report\\metrics_playback_draft.md": "146b1dfc81eec8a86a5f10fe9dec64ade638a42deee7d2c9c975122e8b928e19",
+    "Jesher\\report\\current_matlab_results.html": "3395ebffe5d47379b4a21bb5d8b88385e510ed993077d5bbe7f14787b459ce4b",
+    "Jesher\\report\\figures\\figure_01_native.png": "8877731ab0b0f026df2a7592b01944df3fb3706368906856bdc3b534f3ce2a36",
+    "Jesher\\report\\figures\\figure_02_filtered.png": "b4a8581747b318522c5ee763051ac5a9cf4ca9d8748a7545f11501861db6ac7d",
+    "Jesher\\report\\figures\\figure_03_unfiltered.png": "51098be5320d1bbd13a51dfed59d74a0decec3089711baf63b0e3a7dd61233fd"
+  },
+  "scope": "Three available MATLAB controls; not the full experiment",
+  "listening": "User reports audible and clear; setup and other listeners unconfirmed",
+  "publication_review_utc": "2026-10-31T07:57:25.599174+00:00",
+  "publication_redactions": [
+    "MATLAB license number removed from session diary; all 19 passing test rows and run results retained"
+  ]
+}

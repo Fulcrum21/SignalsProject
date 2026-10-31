@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "succeeded",
+  "csv_evidence_valid": true,
+  "generated_utc": "2026-10-30T10:46:03.992392+00:00",
+  "execution_evidence": "Python numerical cross-check; MATLAB/Simulink not executed",
+  "source_commit": "be17af9179ecc91a2e8c2a50f606d82070afe503",
+  "python": "3.13.14",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "input_files": {
+    "Audios/SpeechMusic.wav": "69922d4cc5ad952779e0108831893bd86ccac50bd86b66d45ee72894a46c9c34",
+    "Results/Abdulrahman/AA02/sampling_22050.mat": "832b956a5993e45a580fff2c30f9d80597eb7f0d23d24d97cc7fc6af31b81223"
+  },
+  "checks": [
+    {
+      "name": "source_header",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAT_reference_matches_original",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "source_identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_independent_normalization",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sampling_control_not_requantized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "filter_settings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "saved_FIR_replicates_MAT_sampling",
+      "passed": true,
+      "detail": "maximum absolute difference 4.4408920985006262e-16"
+    },
+    {
+      "name": "unfiltered_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unfiltered_exact_sample_selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unfiltered_reconstruction_length",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unfiltered_wav_rate_length_width",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unfiltered_wav_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unfiltered_wav_conversion_bound",
+      "passed": true,
+      "detail": "max error 0; bound 1/32768; no clipping expected"
+    },
+    {
+      "name": "filtered_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "filtered_reconstruction_length",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "filtered_wav_rate_length_width",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "filtered_wav_metadata",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "filtered_wav_conversion_bound",
+      "passed": true,
+      "detail": "max error 3.0517303992005917e-05; bound 1/32768; no clipping expected"
+    },
+    {
+      "name": "expected_case_matrix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metric_and_validation_tests",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "all_checks_passed": true,
+  "tests": {
+    "tests_run": 20,
+    "failures": 0,
+    "errors": 0,
+    "successful": true
+  },
+  "case_coverage": {
+    "expected": 72,
+    "available_controls": 3,
+    "missing": 69,
+    "final_verified_rows": 0
+  },
+  "alignment": {
+    "scope": "Only the documented 44100->22050 AA-03 route is evaluated",
+    "reconstruction": "resample_poly(y,2,1,window=saved_h,padtype='constant')",
+    "effective_interpolation_FIR": "2*saved_h; SciPy applies the up=2 scaling internally",
+    "independent_check": "upfirdn(2*saved_h,y,up=2), remove 20 original-rate samples",
+    "interval": "all original sample times; discard only one unmatched final reconstruction sample",
+    "extra_lag_search": false,
+    "edge_trimming": false,
+    "independent_signal_normalization": false,
+    "MATLAB_default_reconstruction_parity": "inferred from shared n=10,beta=5,FIR; awaiting MATLAB execution",
+    "sources": [
+      "https://www.mathworks.com/help/signal/ref/resample.html",
+      "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html"
+    ]
+  },
+  "limitations": [
+    "No MATLAB or Simulink execution in this local audit",
+    "No combined quantized outputs or persisted Simulink case arrays supplied",
+    "No listening observations or actual speaker playback performed",
+    "Recording microphone provenance still belongs to Yazan",
+    "Baseline has a MATLAB matrix control ID only for coverage; this is not evidence of MATLAB execution"
+  ]
+}

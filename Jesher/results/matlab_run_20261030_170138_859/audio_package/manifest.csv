@@ -1,0 +1,5 @@
+caseId,platform,wavFile,Fs,effectiveBits,containerBits,channels,sampleCount,durationSeconds,fileBytes,maxAbsRoundTripError,rmsRoundTripError,clippedSamples
+original_recording,source,original/SpeechMusic.wav,44100,16,16,1,882005,20.0001133786848,1764054,0,0,0
+speechmusic_fs44100_b16_native_matlab,matlab,processed/speechmusic_fs44100_b16_native_matlab.wav,44100,16,16,1,882005,20.0001133786848,1764054,0,0,0
+speechmusic_fs22050_b16_lpf_matlab,matlab,processed/speechmusic_fs22050_b16_lpf_matlab.wav,22050,16,16,1,441003,20.0001360544218,882050,3.05173039920059e-05,1.76138532607473e-05,0
+speechmusic_fs22050_b16_none_matlab,matlab,processed/speechmusic_fs22050_b16_none_matlab.wav,22050,16,16,1,441003,20.0001360544218,882050,0,0,0

@@ -1,0 +1,18 @@
+{
+  "matlabVersion": "26.2.0.3433840 (R2026b) Update 1",
+  "products": [
+    {
+      "Name": "MATLAB",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB Copilot",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    }
+  ],
+  "signalResampleAvailable": false
+}

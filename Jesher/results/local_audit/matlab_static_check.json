@@ -1,0 +1,23 @@
+{
+  "tool": "MISS_HIT 0.9.44",
+  "mode": "static parse/lint; no MATLAB execution",
+  "grammar": "MATLAB 2021a",
+  "command": "python -m miss_hit.mh_lint --ignore-config --input-encoding utf-8 --brief --single --matlab 2021a Jesher/matlab",
+  "exit_code": 0,
+  "summary": "12 file(s) analysed, everything seems fine",
+  "checked_at_utc": "2026-10-30T10:47:37.306873+00:00",
+  "source_sha256": {
+    "Jesher/matlab/+jesher/alignToReference.m": "ce7ffdb2b0a72561465ac3cb9759d219d877b5d3f44035c6566b275342c77a88",
+    "Jesher/matlab/+jesher/comparePlatforms.m": "39e341119d8d92962af19a7ee105718a47b41339b49f377bd8cab6a9b4ead3e4",
+    "Jesher/matlab/+jesher/computeMetrics.m": "216fa5daa67f318fe6d0a0b17507276e853916b6264cd8c0021cfc54bec3d673",
+    "Jesher/matlab/+jesher/expectedCases.m": "920b3a18d6997aee0b54f5075a5d0452c4ef5380972832ed8ff3b508cab0125e",
+    "Jesher/matlab/+jesher/exportVerifiedWav.m": "3e77f4d5b87ba655d74a5868abc12f903caa2021096c980252e830e451ec0d6b",
+    "Jesher/matlab/+jesher/loadAvailableCases.m": "5a78764e725b85449ba59429b0adef74cf0172d16f8f7f4b093b8e030b1704ea",
+    "Jesher/matlab/+jesher/plotCase.m": "1dde84c699c5db98b3e4144b335888ae5c02735e824b2b2ecaa614171e2e2cd3",
+    "Jesher/matlab/+jesher/validateCases.m": "d7168b130ca650aaff08ff1d26a88ec36b37cb164f1e1f80c449e66024256ec7",
+    "Jesher/matlab/Play_Jesher_Case.m": "7c21c2003c28c571cf1bda50717c4705d64695c6f36129437878e10a21b8d796",
+    "Jesher/matlab/Run_Jesher_Evaluation.m": "36f5bbdc2d1bf013159cf37241c81f9d6be100c3cf71cf5a8f29c2f6d0905abc",
+    "Jesher/matlab/tests/TestJesherCore.m": "91a549ee14d04ffec66ed519287326d62469471b16a4b13309a78e483256e05b",
+    "Jesher/matlab/tests/TestJesherPipeline.m": "86a2c23aacb1b10fb912bcc43860c83e8a23f045c45d8580fd350e1f62c5e68b"
+  }
+}

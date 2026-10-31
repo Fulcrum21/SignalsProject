@@ -1,0 +1,56 @@
+{
+  "createdAtDubai": "30-Oct-2026 17:02:11",
+  "matlabVersion": "26.2.0.3433840 (R2026b) Update 1",
+  "toolboxes": [
+    {
+      "Name": "DSP System Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB Copilot",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Signal Processing Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Simulink",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    }
+  ],
+  "sourceFile": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Audios\\SpeechMusic.wav",
+  "sourceSampleCount": 882005,
+  "sourceRateHz": 44100,
+  "availableCases": 3,
+  "expectedCases": 72,
+  "matrixComplete": false,
+  "handoffFiles": [],
+  "outputFolder": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Jesher\\results\\matlab_run_20261030_170138_859",
+  "snapshotSources": [
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Abdulrahman\\AA02\\sampling_22050.mat"
+  ],
+  "snapshotFiles": [
+    "001_sampling_22050.mat"
+  ],
+  "speakerPlaybackVerified": false,
+  "listeningCollected": false,
+  "reviewerAccepted": false,
+  "finalSignOff": false,
+  "archiveBytesVerified": true,
+  "archiveFile": "audio_partial_NOT_FINAL.zip"
+}

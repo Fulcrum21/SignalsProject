@@ -1,0 +1,74 @@
+26.2.0.3433840 (R2026b) Update 1
+  1×2 struct array with fields:
+
+    Name
+    Version
+    Release
+    Date
+
+Running TestJesherCore
+.....
+================================================================================
+TestJesherCore/oddLengthReconstruction was filtered.
+    Test Diagnostic: Signal Processing Toolbox required.
+================================================================================
+...
+================================================================================
+TestJesherCore/rationalGridEndpointRule was filtered.
+    Test Diagnostic: Signal Processing Toolbox required.
+================================================================================
+.. .
+Done TestJesherCore
+__________
+
+Running TestJesherPipeline
+.......
+================================================================================
+TestJesherPipeline/noPlotRunCreatesHonestPartialPackage was filtered.
+    Test Diagnostic: Signal Processing Toolbox required.
+================================================================================
+.
+Done TestJesherPipeline
+__________
+
+Failure Summary:
+
+     Name                                                     Failed  Incomplete  Reason(s)
+    ======================================================================================================
+     TestJesherCore/oddLengthReconstruction                               X       Filtered by assumption.
+    ------------------------------------------------------------------------------------------------------
+     TestJesherCore/rationalGridEndpointRule                              X       Filtered by assumption.
+    ------------------------------------------------------------------------------------------------------
+     TestJesherPipeline/noPlotRunCreatesHonestPartialPackage              X       Filtered by assumption.
+                                 Name                                 Passed    Failed    Incomplete    Duration      Details   
+    ______________________________________________________________    ______    ______    __________    ________    ____________
+
+    {'TestJesherCore/unchangedReference'                         }    true      false       false         1.6161    {1×1 struct}
+    {'TestJesherCore/predictableDegradation'                     }    true      false       false        0.36014    {1×1 struct}
+    {'TestJesherCore/zeroReferenceCases'                         }    true      false       false       0.050021    {1×1 struct}
+    {'TestJesherCore/invalidMetricInputs'                        }    true      false       false         0.8974    {1×1 struct}
+    {'TestJesherCore/nativeGridIsUnchanged'                      }    true      false       false        0.10078    {1×1 struct}
+    {'TestJesherCore/oddLengthReconstruction'                    }    false     false       true          3.5583    {1×1 struct}
+    {'TestJesherCore/mismatchedTimingAndLengthAreRejected'       }    true      false       false       0.091261    {1×1 struct}
+    {'TestJesherCore/rateAndPolicyAreExplicit'                   }    true      false       false       0.030366    {1×1 struct}
+    {'TestJesherCore/rationalGridEndpointRule'                   }    false     false       true         0.50595    {1×1 struct}
+    {'TestJesherCore/wavRateContainerAndRoundTrip'               }    true      false       false         1.3776    {1×1 struct}
+    {'TestJesherCore/wavClippingAndInvalidRatesAreRejected'      }    true      false       false       0.066819    {1×1 struct}
+    {'TestJesherPipeline/expectedMatrixHasTypedUniqueRows'       }    true      false       false        0.66704    {1×1 struct}
+    {'TestJesherPipeline/trackedHandoffHasThreeAvailableControls'}    true      false       false        0.69042    {1×1 struct}
+    {'TestJesherPipeline/baselineOnlyFixtureIsSupported'         }    true      false       false        0.43806    {1×1 struct}
+    {'TestJesherPipeline/duplicatesAndFalsePrecisionAreRejected' }    true      false       false        0.58185    {1×1 struct}
+    {'TestJesherPipeline/duplicateExternalHandoffsNeverOverwrite'}    true      false       false         1.4603    {1×1 struct}
+    {'TestJesherPipeline/crossPlatformPairsUseExtendedNumbers'   }    true      false       false        0.50172    {1×1 struct}
+    {'TestJesherPipeline/completeMatrixGateWritesNoOutput'       }    true      false       false         1.4796    {1×1 struct}
+    {'TestJesherPipeline/noPlotRunCreatesHonestPartialPackage'   }    false     false       true         0.51434    {1×1 struct}
+
+{Incorrect number or types of inputs or outputs for function resample.
+
+Error in jesher.alignToReference (line 85)
+    reconstructed = resample(c.samples, p, q, 10, 5);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in Run_Jesher_Evaluation (line 37)
+    jesher.alignToReference(reference,referenceFs,cases(j));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
