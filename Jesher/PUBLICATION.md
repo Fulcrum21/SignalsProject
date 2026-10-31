@@ -5,6 +5,12 @@ audio files, audio ZIPs and MAT sample arrays local on 31 October 2026.
 
 ## Included in this contribution
 
+The latest starting point is `Demo/`: simple MATLAB scripts and the saved
+`Audio_Demo.slx` design. It generates the entire 72-case matrix from the source
+WAV on both platforms. Its actual result CSVs, model screenshot, representative
+plots and complete objective-results report are included. The saved model
+contains no audio samples or embedded MAT payloads.
+
 - Jesher's MATLAB evaluation/alignment/export/playback/plotting implementation.
 - MATLAB tests and independent Python audit source/tests.
 - The current measured report in Markdown, HTML and PDF, with captioned figures.

@@ -1,0 +1,5 @@
+Results/
+*.log
+*.slxc
+slprj/
+*.asv

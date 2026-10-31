@@ -1,5 +1,10 @@
 # Current measured MATLAB report section
 
+**Latest report:** [complete MATLAB/Simulink results](../Demo/RESULTS.md) and
+[complete results PDF](output/pdf/Jesher_Complete_Demo_Results.pdf) cover the new
+72-case course demonstration. Start with `../Demo/README.md` for running it.
+The three-case materials described below are preserved as historical evidence.
+
 Prepared 31 October 2026 from the completed run
 `Jesher/results/matlab_run_20261030_170138_859`.
 

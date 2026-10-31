@@ -16,7 +16,7 @@
 - [ ] **JE-02 - Evaluate the first complete case. Due 27 October.** With Abdulrahman, approve the common time base, reconstruction, delay/edge policy, reference interval, and length handling. Evaluate a combined reduced-rate/reduced-bit case in both platforms; calculate NMSE/SNR, export at the actual rate, re-import to check it, and verify speaker playback. Give Yazan the complete-case evidence.
 - [x] **JE-03 - Check metric correctness before the full run. Due 29 October; execution evidence from 30 October, reviewed 31 October.** Include unchanged input (zero error), a deliberately degraded case with predictable behavior, zero-reference-energy handling, and mismatched-rate/length handling. Confirm NMSE and SNR are consistent for the same valid comparison; document the treatment of infinities/undefined values. Do not use independent per-case normalization or unequal time bases to improve scores.
   - Evidence: all 19 MATLAB tests passed with no failed/incomplete cases in [session diary](../Jesher/results/matlab_session_20261030_170012.txt). Special metric values and alignment rules are documented in [the implementation guide](../Jesher/README.md). Full-matrix evaluation and reviewer sign-off remain separate tasks.
-- [ ] **JE-04 - Complete the full metrics and platform comparison table. Due 31 October, noon Dubai time.** Receive all 36 cases per platform from Khaled by 30 October. Check for missing/duplicate IDs and evaluate all 72 result rows using the same alignment policy. Record rate, bits, filter mode, sample count/duration, valid interval, NMSE, SNR, and matching export metadata. Compare MATLAB and Simulink under equivalent conditions; record tolerances and explain discrepancies with the relevant owner.
+- [x] **JE-04 - Complete the full metrics and platform comparison table. Due 31 October, noon Dubai time; technical completion 31 October.** Under the user's revised instruction to finish a simple self-contained course demo, generated all 36 cases per platform directly from the source using [Demo/](../Jesher/Demo/README.md), rather than waiting for teammate arrays. All 72 real rows and 36 comparisons are complete, with actual rates, bits, timing, sample counts, NMSE/SNR and export metadata. Maximum processing difference was `7.7715611723761e-16`; exported-WAV scores agree for all pairs. This does not claim that another teammate produced or reviewed this implementation.
 - [ ] **JE-05 - Export, verify, and package the audio. Metadata/files due 31 October, noon Dubai time; final ZIP and playback checks due 8:00 PM.** Export each agreed case at its actual rate in a supported WAV container, record effective bits separately from actual container width, and inspect re-imported samples/rate/duration. Verify playback and provide a manifest plus ZIP containing the original and all primary processed outputs from both platforms. Supply filenames/bytes/container widths to Khaled for storage analysis; preserve platform IDs so outputs do not overwrite one another.
 - [ ] **JE-06 - Complete perception and combined-case analysis. Due 31 October.** Gather listening notes from all four teammates using the same playback setup/volume policy and representative native, filtered/unfiltered, reduced-bit, and combined cases. Document what was actually listened to. Link descriptions to case IDs and NMSE/SNR. With Khaled, ensure representative combined-case waveforms, FFTs, and spectrograms are included; Abdulrahman/Khaled supply their component comparisons.
 - [ ] **JE-07 - Write the metrics/playback report section. Due 1 November.** Explain metric definitions and alignment, full summary tables, MATLAB/Simulink differences, export/playback method, perceptual observations, and limitations. Give Yazan the figures/tables and final audio-manifest reference.
@@ -52,6 +52,26 @@ Keep all completed tasks with evidence. If processed inputs are delayed, continu
 | 30 October | Final local validation: 20 Python tests passed; MISS_HIT 0.9.44 parsed/linted all 12 MATLAB files successfully. [Static-check evidence](../Jesher/results/local_audit/matlab_static_check.json) records source hashes. Nineteen MATLAB test methods cover numerical and integration behavior. | Static checks do not execute MATLAB; retain the actual MATLAB test/run and human-check requirements. |
 
 ### Local implementation and outstanding evidence
+
+**Latest completion, 31 October - simple course demo:** [Demo/README.md](../Jesher/Demo/README.md)
+is now the starting point. The user requested plain MATLAB scripts and a saved
+Simulink design suitable for live execution. Both platforms generate all cases
+from the original file. All 72 cases ran, all 36 pairs passed, and all 73 WAVs
+(original plus outputs) and archive members were verified. The direct model Run
+button loads settings automatically, and both single-case scripts and changed
+settings were tested. The optional known-tone test measured the expected 2 kHz
+alias from a 10 kHz input at an 8 kHz output rate. The current complete objective
+report is [Demo/RESULTS.md](../Jesher/Demo/RESULTS.md) with a
+[PDF](../Jesher/report/output/pdf/Jesher_Complete_Demo_Results.pdf).
+
+This supersedes the older "69 missing cases" status for the new independent
+course demo. JE-01 settings/implementation and JE-02 combined-case numerical
+work are ready; external agreement and actual new speaker checks are not claimed.
+JE-05 exports/archive are complete technically, while all-file human playback
+checks remain open. JE-06 plots are complete; four-person listening remains open.
+JE-07's full objective report is ready for team integration; later listening notes
+can be added. JE-08 teammate review, JE-09 human rehearsal and JE-10 final sign-off
+still need the relevant people. Earlier progress paragraphs below are history.
 
 **Publication package, 31 October:** branch `codex/jesher-quality-evaluation`
 contains Jesher's implementation, three-case metric/manifest tables, actual test

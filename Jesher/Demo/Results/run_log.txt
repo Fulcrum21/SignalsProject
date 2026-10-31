@@ -1,0 +1,1115 @@
+Metric identity, predictable error, silence and quantizer boundaries passed.
+[Warning: Division by zero in 'Audio_Demo/Energy ratio'
+Suggested Actions:
+    •  - Suppress
+] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  1/36: 44100 Hz, 16 bits, native | MATLAB Inf dB | Simulink Inf dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  2/36: 44100 Hz,  8 bits, native | MATLAB 33.3635 dB | Simulink 33.3635 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  3/36: 44100 Hz,  4 bits, native | MATLAB 9.8649 dB | Simulink 9.8649 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  4/36: 44100 Hz,  2 bits, native | MATLAB 1.3266 dB | Simulink 1.3266 dB
+Condition  5/36: 22050 Hz, 16 bits, lpf    | MATLAB 30.9301 dB | Simulink 30.9301 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  6/36: 22050 Hz,  8 bits, lpf    | MATLAB 29.0216 dB | Simulink 29.0216 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  7/36: 22050 Hz,  4 bits, lpf    | MATLAB 9.9302 dB | Simulink 9.9302 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  8/36: 22050 Hz,  2 bits, lpf    | MATLAB 1.3495 dB | Simulink 1.3495 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition  9/36: 22050 Hz, 16 bits, none   | MATLAB 29.1357 dB | Simulink 29.1357 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 10/36: 22050 Hz,  8 bits, none   | MATLAB 27.7908 dB | Simulink 27.7908 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 11/36: 22050 Hz,  4 bits, none   | MATLAB 9.9147 dB | Simulink 9.9147 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 12/36: 22050 Hz,  2 bits, none   | MATLAB 1.3491 dB | Simulink 1.3491 dB
+Condition 13/36: 11025 Hz, 16 bits, lpf    | MATLAB 18.8539 dB | Simulink 18.8539 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 14/36: 11025 Hz,  8 bits, lpf    | MATLAB 18.7062 dB | Simulink 18.7062 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 15/36: 11025 Hz,  4 bits, lpf    | MATLAB 9.4800 dB | Simulink 9.4800 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 16/36: 11025 Hz,  2 bits, lpf    | MATLAB 1.3596 dB | Simulink 1.3596 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 17/36: 11025 Hz, 16 bits, none   | MATLAB 16.2102 dB | Simulink 16.2102 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 18/36: 11025 Hz,  8 bits, none   | MATLAB 16.1302 dB | Simulink 16.1302 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 19/36: 11025 Hz,  4 bits, none   | MATLAB 9.0882 dB | Simulink 9.0882 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 20/36: 11025 Hz,  2 bits, none   | MATLAB 1.3297 dB | Simulink 1.3297 dB
+Condition 21/36:  8000 Hz, 16 bits, lpf    | MATLAB 15.9995 dB | Simulink 15.9995 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 22/36:  8000 Hz,  8 bits, lpf    | MATLAB 15.9237 dB | Simulink 15.9237 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 23/36:  8000 Hz,  4 bits, lpf    | MATLAB 9.0591 dB | Simulink 9.0591 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 24/36:  8000 Hz,  2 bits, lpf    | MATLAB 1.3391 dB | Simulink 1.3391 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 25/36:  8000 Hz, 16 bits, none   | MATLAB 13.0489 dB | Simulink 13.0489 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 26/36:  8000 Hz,  8 bits, none   | MATLAB 13.0074 dB | Simulink 13.0074 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 27/36:  8000 Hz,  4 bits, none   | MATLAB 8.2716 dB | Simulink 8.2716 dB
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'directIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Select source times
+without filtering'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Select source times without filtering'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filterCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Anti alias FIR and
+rate change'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Anti alias FIR and rate change' because the model
+is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'filteredIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Sampling/Remove known FIR
+delay'. The new value will be ignored within the context of 'Audio_Demo/Sampling/Remove known FIR delay' because the model is compiled
+with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'reconstructionCoefficients' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Reconstruction FIR'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source rate/Reconstruction FIR'
+because the model is compiled with Fast Restart. Switch off Fast Restart if you would like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+[Warning: Variable 'referenceIndices' was changed but it is used in a nontunable parameter in 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval'. The new value will be ignored within the context of 'Audio_Demo/Reconstruct at source
+rate/Remove phase delay and keep source interval' because the model is compiled with Fast Restart. Switch off Fast Restart if you would
+like to use the new value.] 
+[> In run_case (line 34)
+In RUN_ALL (line 26)] 
+Condition 28/36:  8000 Hz,  2 bits, none   | MATLAB 1.2730 dB | Simulink 1.2730 dB
+Condition 29/36:  4000 Hz, 16 bits, lpf    | MATLAB 9.1154 dB | Simulink 9.1154 dB
+Condition 30/36:  4000 Hz,  8 bits, lpf    | MATLAB 9.0996 dB | Simulink 9.0996 dB
+Condition 31/36:  4000 Hz,  4 bits, lpf    | MATLAB 6.6079 dB | Simulink 6.6079 dB
+Condition 32/36:  4000 Hz,  2 bits, lpf    | MATLAB 1.0535 dB | Simulink 1.0535 dB
+Condition 33/36:  4000 Hz, 16 bits, none   | MATLAB 6.3673 dB | Simulink 6.3673 dB
+Condition 34/36:  4000 Hz,  8 bits, none   | MATLAB 6.3581 dB | Simulink 6.3581 dB
+Condition 35/36:  4000 Hz,  4 bits, none   | MATLAB 4.8760 dB | Simulink 4.8760 dB
+Condition 36/36:  4000 Hz,  2 bits, none   | MATLAB 0.7567 dB | Simulink 0.7567 dB
+
+DONE: 72 actual cases, 36 platform comparisons, WAVs, figures and audio ZIP.
+Results: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\Demo\Results
+     Platform     RateHz    Bits     Filter        NMSE        SNRdB 
+    __________    ______    ____    ________    __________    _______
+
+    "matlab"      44100      16     "native"             0        Inf
+    "simulink"    44100      16     "native"             0        Inf
+    "matlab"      44100       8     "native"    0.00046095     33.363
+    "simulink"    44100       8     "native"    0.00046095     33.363
+    "matlab"      44100       4     "native"       0.10316     9.8649
+    "simulink"    44100       4     "native"       0.10316     9.8649
+    "matlab"      44100       2     "native"       0.73679     1.3266
+    "simulink"    44100       2     "native"       0.73679     1.3266
+    "matlab"      22050      16     "lpf"       0.00080723      30.93
+    "simulink"    22050      16     "lpf"       0.00080723      30.93
+    "matlab"      22050       8     "lpf"        0.0012527     29.022
+    "simulink"    22050       8     "lpf"        0.0012527     29.022
+    "matlab"      22050       4     "lpf"          0.10162     9.9302
+    "simulink"    22050       4     "lpf"          0.10162     9.9302
+    "matlab"      22050       2     "lpf"          0.73291     1.3495
+    "simulink"    22050       2     "lpf"          0.73291     1.3495
+    "matlab"      22050      16     "none"       0.0012202     29.136
+    "simulink"    22050      16     "none"       0.0012202     29.136
+    "matlab"      22050       8     "none"       0.0016631     27.791
+    "simulink"    22050       8     "none"       0.0016631     27.791
+    "matlab"      22050       4     "none"         0.10198     9.9147
+    "simulink"    22050       4     "none"         0.10198     9.9147
+    "matlab"      22050       2     "none"         0.73297     1.3491
+    "simulink"    22050       2     "none"         0.73297     1.3491
+    "matlab"      11025      16     "lpf"          0.01302     18.854
+    "simulink"    11025      16     "lpf"          0.01302     18.854
+    "matlab"      11025       8     "lpf"          0.01347     18.706
+    "simulink"    11025       8     "lpf"          0.01347     18.706
+    "matlab"      11025       4     "lpf"          0.11272       9.48
+    "simulink"    11025       4     "lpf"          0.11272       9.48
+    "matlab"      11025       2     "lpf"          0.73121     1.3596
+    "simulink"    11025       2     "lpf"          0.73121     1.3596
+    "matlab"      11025      16     "none"        0.023932      16.21
+    "simulink"    11025      16     "none"        0.023932      16.21
+    "matlab"      11025       8     "none"        0.024377      16.13
+    "simulink"    11025       8     "none"        0.024377      16.13
+    "matlab"      11025       4     "none"         0.12336     9.0882
+    "simulink"    11025       4     "none"         0.12336     9.0882
+    "matlab"      11025       2     "none"         0.73625     1.3297
+    "simulink"    11025       2     "none"         0.73625     1.3297
+    "matlab"       8000      16     "lpf"         0.025122     15.999
+    "simulink"     8000      16     "lpf"         0.025122     15.999
+    "matlab"       8000       8     "lpf"         0.025564     15.924
+    "simulink"     8000       8     "lpf"         0.025564     15.924
+    "matlab"       8000       4     "lpf"          0.12419     9.0591
+    "simulink"     8000       4     "lpf"          0.12419     9.0591
+    "matlab"       8000       2     "lpf"          0.73467     1.3391
+    "simulink"     8000       2     "lpf"          0.73467     1.3391
+    "matlab"       8000      16     "none"        0.049557     13.049
+    "simulink"     8000      16     "none"        0.049557     13.049
+    "matlab"       8000       8     "none"        0.050033     13.007
+    "simulink"     8000       8     "none"        0.050033     13.007
+    "matlab"       8000       4     "none"         0.14888     8.2716
+    "simulink"     8000       4     "none"         0.14888     8.2716
+    "matlab"       8000       2     "none"         0.74593      1.273
+    "simulink"     8000       2     "none"         0.74593      1.273
+    "matlab"       4000      16     "lpf"          0.12259     9.1154
+    "simulink"     4000      16     "lpf"          0.12259     9.1154
+    "matlab"       4000       8     "lpf"          0.12304     9.0996
+    "simulink"     4000       8     "lpf"          0.12304     9.0996
+    "matlab"       4000       4     "lpf"          0.21838     6.6079
+    "simulink"     4000       4     "lpf"          0.21838     6.6079
+    "matlab"       4000       2     "lpf"          0.78461     1.0535
+    "simulink"     4000       2     "lpf"          0.78461     1.0535
+    "matlab"       4000      16     "none"         0.23082     6.3673
+    "simulink"     4000      16     "none"         0.23082     6.3673
+    "matlab"       4000       8     "none"         0.23131     6.3581
+    "simulink"     4000       8     "none"         0.23131     6.3581
+    "matlab"       4000       4     "none"         0.32538      4.876
+    "simulink"     4000       4     "none"         0.32538      4.876
+    "matlab"       4000       2     "none"         0.84009    0.75673
+    "simulink"     4000       2     "none"         0.84009    0.75673
+

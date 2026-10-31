@@ -1,0 +1,22 @@
+Metric identity, predictable error, silence and quantizer boundaries passed.
+                   CaseID                   Platform                                               Source                                               RateHz    Bits    Filter    Samples     DurationSeconds    ComparisonSamples    ComparisonStartSeconds    ComparisonEndSeconds      NMSE       SNRdB     ProcessingNMSE    ProcessingSNRdB    WavContainerBits     WavBytes     WavMaxSampleError    WavClippedSamples                                                                WavFile                                                             
+    ____________________________________    ________    ____________________________________________________________________________________________    ______    ____    ______    ________    _______________    _________________    ______________________    ____________________    _________    ______    ______________    _______________    ________________    __________    _________________    _________________    ________________________________________________________________________________________________________________________________
+
+    "speechmusic_fs22050_b08_lpf_matlab"    "matlab"    "C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Audios\SpeechMusic.wav"    22050      8      "lpf"     4.41e+05          20               8.82e+05                   0                        20             0.0012527    29.022      0.0012527           29.022                16           8.8205e+05            0                    0            "C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\Demo\Results\speechmusic_fs22050_b08_lpf_matlab.wav"
+
+
+WAV: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\Demo\Results\speechmusic_fs22050_b08_lpf_matlab.wav
+NMSE and SNR above describe the EXPORTED WAV compared at the original rate.
+                    CaseID                     Platform                                                Source                                               RateHz    Bits    Filter    Samples     DurationSeconds    ComparisonSamples    ComparisonStartSeconds    ComparisonEndSeconds      NMSE       SNRdB     ProcessingNMSE    ProcessingSNRdB    WavContainerBits     WavBytes     WavMaxSampleError    WavClippedSamples                                                                 WavFile                                                              
+    ______________________________________    __________    ____________________________________________________________________________________________    ______    ____    ______    ________    _______________    _________________    ______________________    ____________________    _________    ______    ______________    _______________    ________________    __________    _________________    _________________    __________________________________________________________________________________________________________________________________
+
+    "speechmusic_fs22050_b08_lpf_simulink"    "simulink"    "C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Audios\SpeechMusic.wav"    22050      8      "lpf"     4.41e+05          20               8.82e+05                   0                        20             0.0012527    29.022      0.0012527           29.022                16           8.8205e+05            0                    0            "C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\Demo\Results\speechmusic_fs22050_b08_lpf_simulink.wav"
+
+
+WAV: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Jesher\Demo\Results\speechmusic_fs22050_b08_lpf_simulink.wav
+Open the Sampling, Quantization and Reconstruction subsystems to explain them.
+Direct model Run reloads SETTINGS correctly.
+Fast Restart with updated settings passed.
+Theoretical alias: |10000 - 8000| = 2000 Hz.
+Measured dominant unfiltered output frequency: 2000.000 Hz.
+Filtered-output RMS reduction versus unfiltered: 74.465 dB.

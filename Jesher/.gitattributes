@@ -5,5 +5,7 @@
 *.wav binary
 *.mat binary
 *.zip binary
+*.slx binary
 # MATLAB's captured console tables contain intentional trailing spaces.
 results/** whitespace=cr-at-eol,-blank-at-eol
+Demo/Results/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
