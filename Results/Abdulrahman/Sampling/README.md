@@ -73,6 +73,18 @@ The reference is all 882,005 original samples at 44.1 kHz, t=0 through 20.000090
 
 Use the same representation for paired measurements. WAV round-trip error is export rounding, not the sampling-stage NMSE/SNR. Do not compare a double-valued MAT signal with a separately rounded WAV and silently attribute all differences to sampling.
 
+## Compatibility with Jesher's branch
+
+Checked on 2 November against `origin/codex/jesher-quality-evaluation` at `13fc434`. A virtual Git merge with this sampling checkpoint was clean. Jesher's branch adds its implementation under `Jesher/` and updates `team/Jesher.md`; it does not overwrite the new sampling scripts or results.
+
+The code interfaces still require integration:
+
+- `Jesher/matlab/+jesher/loadAvailableCases.m` automatically adapts the earlier AA-02 prototype. Explicit external inputs instead require a top-level `cases` struct vector with the fields in `Jesher/inputs/README.md`. This package exposes `samplingHandoff.cases`; it is not yet a drop-in external input to that loader. A packaging adapter must map metadata including platform, sampling-only control status, provenance and `alignmentPolicy='full_record_resample_v1'`, preserving the exact arrays. The current counts and full-record policy match that evaluator's lower-rate timing requirements for this source.
+- Jesher's separate `Jesher/Demo/prepare_audio.m` uses nearest-source-time selection for unfiltered 8/4 kHz conversion. This package uses linear interpolation. Those paths are different experiments despite similar case IDs. Preserve their provenance and agree on one shared method before presenting them as matching platform results or combining same-ID rows.
+- His demo report primarily scores exported/re-imported WAVs and also records processing-array scores. The MAT arrays here preserve the sampling-stage doubles; use the same representation and documented PCM conversion when comparing numeric quality results.
+
+Jesher's branch includes an independently generated full-case demo and result tables. That work has not been merged into this checkpoint or independently revalidated here. Its existence does not complete this package's outstanding new-rate Simulink comparison. No Jesher-owned files were changed by the compatibility check.
+
 ## What remains
 
 Finish the three new Simulink rates and their comparison evidence. Preserve equivalent conversion/interpolation methods and verify block timing/delay rather than reusing an assumed delay. Khaled and Jesher still own combined bit-depth generation, quality metrics and final audio/listening evidence. Yazan integrates the report. The earlier 22.05 kHz platform check is recorded under AA-03; it does not certify the new Simulink rates.
