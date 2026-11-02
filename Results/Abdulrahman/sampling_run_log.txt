@@ -1,0 +1,12 @@
+11025 Hz: 220502 samples per branch, duration 20.000181 s, ratio 1/4
+8000 Hz: 160001 samples per branch, duration 20.000125 s, ratio 80/441
+4000 Hz: 80001 samples per branch, duration 20.000250 s, ratio 40/441
+New Nyquist limit: 5512.5 Hz
+Expected alias of the 10 kHz tone: 1025.0 Hz
+Original 10 kHz Recording: largest peak at 10000.00 Hz, amplitude 0.124973
+Downsampled - Without Anti-Aliasing Filter: largest peak at 1025.00 Hz, amplitude 0.124973
+Downsampled - With Anti-Aliasing Filter: largest peak at 1025.00 Hz, amplitude 0.000046
+PASS: eight cases, source/rates/counts, processing methods, reconstruction coverage, WAV round trips, manifest and aliasing checks.
+MATLAB sampling handoff saved to: ../Results/Abdulrahman/Sampling
+1 November 2026: final eight-case checks including known-tone timing.
+PASS: eight cases, source/rates/counts, processing methods, reconstruction coverage, 300 Hz timing, WAV round trips, manifest and aliasing checks.

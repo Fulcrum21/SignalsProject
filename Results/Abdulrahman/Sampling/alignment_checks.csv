@@ -1,0 +1,9 @@
+CaseId,KnownToneDominantHz,ResidualLagSourceSamples
+speechmusic_fs22050_b16_none_matlab,300,0
+speechmusic_fs22050_b16_lpf_matlab,300,0
+speechmusic_fs11025_b16_none_matlab,300,0
+speechmusic_fs11025_b16_lpf_matlab,300,0
+speechmusic_fs8000_b16_none_matlab,300,0
+speechmusic_fs8000_b16_lpf_matlab,300,0
+speechmusic_fs4000_b16_none_matlab,300,0
+speechmusic_fs4000_b16_lpf_matlab,300,0
