@@ -1,0 +1,6 @@
+# Preserve document, model, audio and image bytes on every platform.
+*.pdf binary
+*.mat binary
+*.wav binary
+*.png binary
+*.slx binary

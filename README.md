@@ -130,6 +130,12 @@ For source changes, coordinate shared entry points and commit only files you own
 
 ## Current implementation and checks
 
+**Sampling update, 1 November:** Abdulrahman's [MATLAB handoff](Results/Abdulrahman/Sampling/README.md) now covers all four lower rates with both anti-aliasing choices, eight checked WAV copies and thirteen comparison figures. The [editable sampling report section](Reports/Abdulrahman_Sampling.md) and [PDF draft](output/pdf/Abdulrahman_Sampling_Report_Draft.pdf) explain the methods and measured aliasing result. New-rate Simulink work, combined quantization/metrics and final report integration remain open; see [his checklist](team/Abdulrahman.md). The baseline audit below is retained as a historical record.
+
+**Sampling checkpoint, 2 November:** the prepared results are available directly in the handoff folder; teammates do not need to regenerate them to use them. From the repository root, load `Results/Abdulrahman/Sampling/sampling_all_rates.mat`. To reproduce the package, set MATLAB's Current Folder to `Matlab` and run `Prepare_Sampling_Handoff`; run `Check_Sampling_Handoff` for verification without regenerating the audio or figures. The earlier [study guide](output/pdf/Signals_Project_Study_Guide_AA01-AA03.pdf) explains the baseline and first verified sampling case. Current report integration should use the newer sampling report linked above.
+
+**Jesher branch compatibility, 2 November:** a virtual merge with `codex/jesher-quality-evaluation` at `13fc434` was clean. His branch contains a separate full-case demo; its unfiltered 8/4 kHz method uses nearest-source-time selection, while this sampling package uses linear interpolation. Its external MAT loader also requires a metadata adapter for the new package. Read the [compatibility notes](Results/Abdulrahman/Sampling/README.md#compatibility-with-jeshers-branch) before combining the datasets. No Jesher-owned files were changed.
+
 Repository inspected at commit [ad8cc0d](https://github.com/Fulcrum21/SignalsProject/commit/ad8cc0d9711f4de8d5031e72e389eab35237e4e6) on 24 October 2026.
 
 | Existing artifact | What is established |

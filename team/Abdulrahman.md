@@ -4,7 +4,7 @@
 
 **Owner:** Abdulrahman | **Reviewer:** Yazan
 
-**Last updated:** 25 October 2026
+**Last updated:** 2 November 2026
 
 **Internal finish:** 4 November 2026, 8:00 PM Dubai time. All deadlines below are at 8:00 PM Dubai time.
 
@@ -19,14 +19,23 @@
 - [x] **AA-03 - Finalize alignment and join the first complete case. Due 27 October; completed 25 October.** Document reconstruction to the common time base, known delay compensation, valid comparison interval/edges, and unequal-length handling for Jesher. Test the policy with a known signal. Supply the first sampling case in MATLAB and Simulink for the full pipeline; preserve its actual rate for quantization and metrics.
   - Evidence: the saved 22.05 kHz [Simulink model](../Simulink/SamplingModel_Abdulrahman.slx), [comparison script](../Matlab/Compare_Sampling.m), alignment procedure below, and [300 Hz validation results](../Results/Abdulrahman/AA03/known_tone_validation.csv). Speech/music differences were `0` and `3.33066907388e-16`; known-tone differences were `0` and `6.93889390391e-17`, with zero residual reconstruction lag. This supplies the verified sampling case; Khaled's quantization and Jesher's metrics remain their tasks.
 - [ ] **AA-04 - Complete every sampling route in both platforms. Due 29 October.** Implement 22.05 kHz, 11.025 kHz, 8 kHz, and 4 kHz with and without anti-aliasing filtering. Handle non-integer conversions correctly; keep amplitudes consistent with the reference. Give Khaled the sampling outputs and metadata for all routes, and stay available for combination issues.
+  - [x] **MATLAB portion completed 1 November:** all eight rate/filter cases are implemented, packaged and checked in the [sampling handoff](../Results/Abdulrahman/Sampling/README.md). The 8/4 kHz unfiltered methods are explicitly identified as linear interpolation without an AA LPF.
+  - [ ] **Remaining:** new-rate Simulink implementations and equivalent-method comparisons. The earlier 22.05 kHz comparison remains complete.
 - [ ] **AA-05 - Produce sampling/aliasing evidence. Due 30 October.** For each lower rate at 16 effective bits, produce comparable original/filtered/unfiltered waveform, FFT, and spectrogram views. Demonstrate identifiable frequency folding with at least one existing known-frequency test signal and discuss what is observable in the real recording. Compare equivalent MATLAB/Simulink cases and document filter/method/axis differences.
+  - [x] **MATLAB portion completed 1 November:** twelve real-audio comparisons plus the known-tone figure are saved in [Sampling](../Results/Abdulrahman/Sampling/). The 10 kHz tone folds to 1,025 Hz at 11.025 kHz; filtering suppresses the largest residual by 68.74 dB. See [measured peaks](../Results/Abdulrahman/Sampling/aliasing_summary.csv).
+  - [ ] **Remaining:** corresponding new-rate Simulink evidence and discussion of equivalent analysis settings.
 - [ ] **AA-06 - Complete the combined-case handoff. Due 30 October.** Work with Khaled to cover every lower-rate/filter/bit-depth combination in both platforms, preserving IDs/timing metadata. Help Jesher resolve alignment or rate discrepancies. Document which cases and artifacts were accepted; do not call the whole matrix complete if any route is missing.
+  - **Ready for integration:** eight MATLAB sampling cases, exact double arrays, eight checked WAV copies and timing/filter metadata are prepared. Recipient acceptance, reduced-bit combinations and remaining Simulink cases are not claimed.
 - [ ] **AA-07 - Write the sampling/aliasing report section. Due 31 October.** Include methods, filter choices, non-integer conversion, plots with units, observed folding/overlap, Nyquist interpretation, limitations, and MATLAB/Simulink comparison. Explain the reconstruction/alignment policy so quality results are reproducible.
+  - [x] **MATLAB draft ready 1 November:** [editable report section](../Reports/Abdulrahman_Sampling.md) and [18-page PDF](../output/pdf/Abdulrahman_Sampling_Report_Draft.pdf), using the measured results and thirteen figures.
+  - [ ] **Remaining:** add the new-rate Simulink results and final review before signing off the whole report task.
 - [ ] **AA-08 - Review Yazan's baseline. Due 2 November.** Check recording metadata/provenance, portable model input, FFT parity/scaling, dB and spectrogram units, and the full-record versus frame-FFT comparison. Record findings and evidence here; Yazan updates his own checklist. Address Yazan's review of your sampling work.
 - [ ] **AA-09 - Close findings and rehearse. Due 3 November.** Resolve your review/integration findings and re-run affected cases. Rehearse aliasing/alignment explanations and demonstrate that you can explain another member's section.
 - [ ] **AA-10 - Sign off sampling in the final package. Due 4 November, 6:00 PM Dubai time.** Check the final source/models, sample-rate/filter metadata, report figures, matching platform results, and demonstration. Confirm no essential sampling/alignment issue remains open.
 
 ## Handoffs
+
+**Current MATLAB package:** [Results/Abdulrahman/Sampling/README.md](../Results/Abdulrahman/Sampling/README.md). Set Current Folder to `Matlab` and run `Prepare_Sampling_Handoff` to reproduce the package. The original AA-02 files and AA-03 verification below are retained unchanged.
 
 | When | Give / receive | Acceptance evidence |
 | --- | --- | --- |
@@ -55,7 +64,7 @@ On 24 October, the user directed that the following format be used for the next 
 | Current handoff | `Results/Abdulrahman/AA02/sampling_22050.mat`, containing the `prototype` structure described below, plus `summary.csv`, `comparison.png`, and filtered/unfiltered 16-bit PCM WAV copies. |
 | Case identifiers | `speechmusic_fs22050_b16_none_matlab` and `speechmusic_fs22050_b16_lpf_matlab`. At this sampling-only stage, `b16` identifies the source/control. MAT arrays retain their double samples with no explicit reduced-bit-depth quantization (`quantizationApplied=false`); separate WAV copies use a 16-bit PCM container and include its rounding error. Khaled owns subsequent quantization and final precision metadata. |
 | Khaled receives | Both processed arrays, their actual rates, case IDs, sample counts/durations, and filter/timing metadata. Preserve this metadata when applying quantization. |
-| Jesher receives | The original reference and both processed arrays, start/last sample times, actual rates, sample counts, and the filter-delay compensation flag. Common-grid reconstruction and the valid comparison-edge policy remain AA-03 decisions. |
+| Jesher receives | The original reference and processed arrays, start/last sample times, actual rates, sample counts, and filter-delay metadata. The AA-03 policy is documented below; the all-rate extension and inverse ratios are in the current sampling handoff. |
 | Simulink handoff | The 22.05 kHz model is saved in `Simulink/SamplingModel_Abdulrahman.slx`, with verification in `Matlab/Compare_Sampling.m`. Supply equivalent samples and the same metadata fields/units with a `simulink` case label. Other sampling rates remain under AA-04. |
 
 ## AA-02 reproducible handoff and verified results
@@ -129,7 +138,7 @@ signalFs = handoff.prototype.unfiltered.Fs;
 
 **Verification performed:** mono-column shape; output rates/counts and odd-length rounding; duration bounds; exact unfiltered indexing; equality of the explicit filtered call to `resample(x,1,2)`; saved MAT-file round trip; CSV counts/rates; and three generated figures. The saved comparison image was visually inspected before publication. The current simplified script uses the relative paths above and must run with `Matlab` as the Current Folder.
 
-**What this evidence establishes:** a reproducible 22.05 kHz MATLAB sampling prototype and a concrete handoff, plus the separately verified 22.05 kHz Simulink comparison described above. The closely overlapping linear spectra do not, by themselves, prove that aliasing is absent. Remaining pipeline handoffs, other sampling rates, original/processed waveform and spectrogram comparisons, and a clear known-tone aliasing demonstration remain in AA-03 through AA-05.
+**What this AA-02/AA-03 evidence establishes:** the reproducible 22.05 kHz prototype and its verified Simulink comparison. The closely overlapping linear spectra do not, by themselves, prove that aliasing is absent. The 1 November MATLAB extension, figures, aliasing demonstration and all-rate handoff are linked at the top of this document; the corresponding new-rate Simulink comparisons and combined quantization/metric integration remain open.
 
 ## Progress log
 
@@ -141,6 +150,10 @@ signalFs = handoff.prototype.unfiltered.Fs;
 | 24 October | Added team-requested filtered/unfiltered WAV copies alongside the MAT handoff. The script recreates both exports and records WAV width, file bytes, and round-trip error. | Teammates can play/import the WAVs or load the exact processing arrays from the MAT file. |
 | 25 October | Moved checks requiring `out` into `Compare_Sampling.m`. Verified a fresh MATLAB-only run without `out`, then the saved Simulink model and separate comparison: differences `0` and `3.33066907388e-16`. | Follow the three-step run order above. |
 | 25 October | Completed AA-03: documented the full-record metric alignment procedure and verified the known 300 Hz tone, including sample counts, zero residual lag, and matching MATLAB/Simulink outputs. | Next session: AA-04, extend sampling to 11.025 kHz, 8 kHz, and 4 kHz in both platforms. |
+| 1 November | Completed the remaining MATLAB rate conversions, known 10 kHz aliasing demonstration, eight-case MAT/WAV handoff, thirteen comparison figures and a report draft. All WAVs were read back; processing methods and reconstruction coverage checked. | Complete the three new Simulink rates and comparisons; integrate quantization/metrics with Khaled and Jesher. |
+| 1 November | The existing 300 Hz tone retained its dominant frequency and zero diagnostic residual lag in all eight reconstructed MATLAB cases; no lag correction was applied. See [alignment checks](../Results/Abdulrahman/Sampling/alignment_checks.csv). | Preserve the same time-grid policy in subsequent quality measurements. |
+| 2 November | Prepared the MATLAB checkpoint for publication: rechecked the case/WAV inventories, saved verification records, report links and artifact checksums. Text checksums now tolerate Git's Windows line-ending conversion. The 1 November measurements are retained. | Finish the remaining Simulink cases and comparisons; complete combined-case integration and final review. |
+| 2 November | Virtual merge with Jesher's branch at `13fc434` was clean. Documented the external MAT schema adapter requirement, nearest-selection versus linear-interpolation difference, and MAT/WAV measurement basis in the handoff README. | Reconcile interfaces/methods before treating the branches as one equivalent experiment. |
 
 **Technical review findings:** pending under AA-08; add task ID, finding, evidence, owner, and resolution date here.
 **Final sign-off:** pending; add date, source/result commit, reviewer, and any remaining limitations.
