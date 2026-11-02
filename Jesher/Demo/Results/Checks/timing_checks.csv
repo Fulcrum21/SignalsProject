@@ -1,0 +1,17 @@
+Platform,RateHz,Filter,DominantHz,ResidualLagSourceSamples,ComparisonSamples
+matlab,22050,none,300,0,882000
+simulink,22050,none,300,0,882000
+matlab,22050,lpf,300,0,882000
+simulink,22050,lpf,300,0,882000
+matlab,11025,none,300,0,882000
+simulink,11025,none,300,0,882000
+matlab,11025,lpf,300,0,882000
+simulink,11025,lpf,300,0,882000
+matlab,8000,none,300,0,882000
+simulink,8000,none,300,0,882000
+matlab,8000,lpf,300,0,882000
+simulink,8000,lpf,300,0,882000
+matlab,4000,none,300,0,882000
+simulink,4000,none,300,0,882000
+matlab,4000,lpf,300,0,882000
+simulink,4000,lpf,300,0,882000

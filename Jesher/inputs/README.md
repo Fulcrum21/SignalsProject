@@ -1,11 +1,14 @@
 # Processed-array handoff
 
-Place MAT files here containing a nonempty struct vector named `cases`.
+Accept either a nonempty top-level `cases` struct vector or Abdulrahman's
+`samplingHandoff.cases`. The current eight-case package is discovered automatically
+at `Results/Abdulrahman/Sampling/sampling_all_rates.mat`. You may also place MAT files here.
 Files are ignored by Git by default so unreviewed/large signal arrays are not
 published accidentally. Pass explicit paths using `HandoffFiles` if preferred.
 The evaluator reads them; it never runs the processing owner or fabricates cases.
 
-Every case needs the following fields. Unknown extra fields can stay in the
+Every case needs the following fields. Optional `method` and `samplingMetadata` preserve the new sampling method and
+full per-case producer metadata. Other unknown extra fields can stay in the
 producer's original MAT artifact; retain its filename in `provenance`.
 
 | Field | Required value or meaning |
@@ -18,7 +21,7 @@ producer's original MAT artifact; retain its filename in `provenance`.
 | `effectiveBits` | 16, 8, 4, or 2, independently of the WAV carrier |
 | `filterMode` | `native` at 44,100 Hz; `lpf` or `none` below it |
 | `firstSampleTimeSeconds` | 0 for the current full-record comparison |
-| `delayCompensated` | Scalar logical true only after actual documented compensation |
+| `delayCompensated` | True when no uncompensated delay remains: filtered arrays already compensated, or unfiltered route has no FIR delay |
 | `processingStage` | E.g. `combined_quantized`, `sampling_only_control`, `native_reference` |
 | `quantizationApplied` | Scalar logical; reduced-bit cases must be true |
 | `normalizationApplied` | Scalar logical false; preserve original amplitude |
@@ -87,3 +90,20 @@ their 22,050 Hz rate; reconstruction for metrics happens later. At b16 these are
 sampling controls, so set `processingStage='sampling_only_control'` and
 `quantizationApplied=false` with an explicit control description. Do not label
 MATLAB arrays as Simulink results or compensate the filtered delay twice.
+
+## Automatic adapter for the eight-rate/filter controls
+
+The adapter verifies `samplingHandoff.original` against the unchanged recording,
+then preserves each entry's samples, ID, Fs, first time and method. The evaluator
+maps platform=`matlab`, effectiveBits=16, stage=`sampling_only_control`,
+quantizationApplied=false, normalizationApplied=false, delayCompensated=true,
+alignmentPolicy=`full_record_resample_v1`. Provenance records the MAT path, entry
+index and producing MATLAB release. An unfiltered case's
+`delayCompensatedByResample=false` does not mean that an FIR shift is required:
+there is no FIR delay to correct. A filtered case must already be compensated.
+
+Explicit supplied IDs take precedence over these automatic controls and the
+older AA-02 fallback. Duplicates within/between explicit files are rejected.
+The adapter never regenerates supplied arrays. The evaluator's `nmse/snrDb`
+columns score the supplied doubles; `exportedNmse/exportedSnrDb` score its own
+WAV export/re-import. `wavPcmConversion` records that export policy.

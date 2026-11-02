@@ -1,8 +1,7 @@
 # Start here: simple course demonstration
 
-This folder is the complete working demonstration. The older `Jesher/matlab/`,
-`report/` and `results/` folders preserve the earlier three-case work; you do not
-need them to run this demo. Other teammates' files are unchanged.
+This folder is the complete working demonstration. The separate `Jesher/matlab/` evaluator accepts team handoffs; it is optional
+for this self-contained demo. Historical results are clearly separated below. Other teammates' files are unchanged.
 
 ## Run it
 
@@ -42,6 +41,7 @@ from the script location; no username or absolute audio path is hard-coded.
 | `quality_metrics.m` | The NMSE and SNR formulas, including silence/zero-error cases |
 | `make_plots.m` | Waveform, FFT, spectrogram, quantization error and histogram |
 | `build_model.m` | Recreate the saved diagram if needed; not a normal demo step |
+| `CHECK_COMPATIBILITY.m` | Verify exact handoff import, regenerated methods and tone timing/aliasing on both platforms |
 | `CHECK_DEMO.m` | A few short metric/quantizer sanity checks without a test framework |
 | `DEMONSTRATE_ALIASING.m` | Optional 10 kHz tone example at 8 kHz; shows the measured alias peak |
 
@@ -59,8 +59,10 @@ The full current results are written up in [RESULTS.md](RESULTS.md), with a
    is explicitly averaged to mono; the project source is already mono.
 2. **Choose the output sampling rate.** The filtered path uses a Kaiser-window
    FIR with `resample(...,p,q,10,5)`. The unfiltered path selects the original
-   sample nearest each output time, without prefiltering. At 22,050/11,025 Hz
-   this is ordinary sample selection; 8,000/4,000 Hz use rational time indices.
+   samples directly at 22,050/11,025 Hz (every second/fourth sample). At
+   8,000/4,000 Hz it uses linear interpolation at uniform output times, without
+   a dedicated anti-aliasing LPF. This matches Abdulrahman's sampling handoff.
+   Linear interpolation itself affects the amplitude response.
 3. **Quantize.** At B=8,4,2, step size is `2/2^B`. Round to a signed integer
    level, limit it to `[-2^(B-1), 2^(B-1)-1]`, and multiply by the step.
    The 16-bit control bypasses extra quantization. The same convention is used
@@ -70,7 +72,9 @@ The full current results are written up in [RESULTS.md](RESULTS.md), with a
    uses explicit nearest-integer rounding, and any clipping is counted.
 5. **Read the WAV back.** Check its real rate, length and container width.
 6. **Align.** Reconstruct the exported samples onto the original sample grid.
-   Compensate known FIR/phase delay; retain the full original interval and its
+   FIR rate-conversion blocks compensate only their own known delay; MATLAB
+   `resample` and imported arrays are already compensated and receive no extra shift.
+   Retain the full original interval and its
    edge effects. Reconstruction does not recover lost frequencies.
 7. **Measure.** `NMSE=sum((x-y).^2)/sum(x.^2)` and
    `SNR=10*log10(sum(x.^2)/sum((x-y).^2))`. The main result columns score the
@@ -121,3 +125,61 @@ independently implemented or accepted these conventions.
   approximate rule relies on an ideal quantization-noise model and suitable
   signal amplitude/statistics; low-bit clipping and quiet content violate those
   assumptions.
+
+## Team handoff evaluation (separate from generation)
+
+From the repository root:
+
+```matlab
+addpath(fullfile(pwd,'Jesher','matlab'))
+summary = Run_Jesher_Evaluation();
+```
+
+This automatically reads the current eight sampling controls plus the unchanged
+native reference: **9 actual MATLAB cases, 63 missing handoffs**. It does not
+invent reduced-bit or Simulink handoffs. Explicit input paths also work:
+
+```matlab
+summary = Run_Jesher_Evaluation('HandoffFiles', ...
+    {'Results/Abdulrahman/Sampling/sampling_all_rates.mat'});
+```
+
+Both top-level `cases` and `samplingHandoff.cases` are accepted. Explicit cases
+win over fallback IDs; duplicate IDs among explicit inputs are errors. MAT
+samples are used unchanged. `method` and `samplingMetadata` retain the producer's
+method, ratios, filters and timing. `b16` means sampling-only source/control
+precision, not an additional 16-bit quantization of double arrays.
+
+Both evaluators now use explicit nearest-integer PCM16 conversion,
+`int16(round(samples*32768))`, with half ties away from zero and an export-error
+bound of half a PCM step when no clipping occurs. This replaces the legacy
+exporter's implicit double-input `audiowrite` conversion; historical WAV metrics
+retain that older behavior. The effective 8/4/2-bit quantizer is unchanged.
+Compare processing arrays with processing arrays and re-imported WAVs with WAVs.
+
+## Verification and history
+
+After changing code, run `CHECK_DEMO`, `RUN_ALL`, then `CHECK_COMPATIBILITY` from
+this folder. The latter writes eight handoff checks, sixteen 300 Hz timing checks
+and four 10 kHz alias checks to `Results/Checks/`. A residual-lag search is only
+a diagnostic; it never shifts arrays or changes the full-record quality scores.
+
+From the repository root, the existing public-interface regression tests run as:
+
+```matlab
+addpath(fullfile(pwd,'Jesher','matlab'))
+results = runtests(fullfile('Jesher','matlab','tests'));
+assertSuccess(results)
+```
+
+The previous verified nearest-source-time results are retained in
+[history/13fc434/](history/13fc434/README.md). Current generated rows carry
+`ExperimentVersion=linear_interp_v2`; historical same-ID rows are a different
+experiment and must not be combined with current rows. Teammates' scripts,
+results and task completion statuses are not changed by these checks.
+
+The integration was checked against upstream `9b6ae88` on 2 November 2026.
+`Results/matrix_run_log.txt` retains the completed matrix transcript; the corrected
+follow-up checker, tone tests, live entry points and handoff package are recorded
+in `Results/compatibility_run_log.txt`. The report builder checks the successful
+completion marker before publishing a current result summary.

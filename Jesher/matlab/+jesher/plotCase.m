@@ -1,7 +1,7 @@
 function plotCase(reference,referenceFs,c,outputFolder)
 %PLOTCASE Same common grid and axes for waveform, FFT and spectrogram views.
 aligned = jesher.alignToReference(reference,referenceFs,c);
-f = figure('Visible','off','Color','white','Position',[50 50 1200 1000]);
+f = figure('Visible','off','Theme','light','Color','white','Position',[50 50 1200 1000]);
 closer = onCleanup(@()close(f)); %#ok<NASGU>
 tiledlayout(3,2,'TileSpacing','compact');
 t = (0:numel(reference)-1)'/referenceFs;

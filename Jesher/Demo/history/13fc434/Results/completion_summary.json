@@ -1,0 +1,12 @@
+{
+  "completed_cases": 72,
+  "platform_pairs": 36,
+  "manifest_audio_rows": 73,
+  "all_wav_headers_and_bytes_checked": true,
+  "all_archive_members_byte_verified": true,
+  "maximum_platform_sample_difference": 7.7715611723761e-16,
+  "wav_scores_equal_for_all_pairs": true,
+  "export_clipped_samples": 0,
+  "source_sha256": "69922d4cc5ad952779e0108831893bd86ccac50bd86b66d45ee72894a46c9c34",
+  "listening": "New outputs await actual human listening; previous three-case observation retained separately."
+}

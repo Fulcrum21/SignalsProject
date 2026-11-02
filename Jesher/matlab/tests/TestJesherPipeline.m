@@ -16,13 +16,13 @@ classdef TestJesherPipeline < matlab.unittest.TestCase
             testCase.verifyTrue(all(expected.filterMode(expected.Fs == 44100) == "native"));
         end
 
-        function trackedHandoffHasThreeAvailableControls(testCase)
+        function trackedHandoffHasNineAvailableControls(testCase)
             [cases, reference, Fs] = jesher.loadAvailableCases(testCase.repoRoot(), {});
             coverage = jesher.validateCases(cases, reference);
             testCase.verifyEqual(Fs, 44100);
-            testCase.verifyEqual(numel(cases), 3);
-            testCase.verifyEqual(sum(coverage.status == "available"), 3);
-            testCase.verifyEqual(sum(coverage.status == "missing_handoff"), 69);
+            testCase.verifyEqual(numel(cases), 9);
+            testCase.verifyEqual(sum(coverage.status == "available"), 9);
+            testCase.verifyEqual(sum(coverage.status == "missing_handoff"), 63);
             testCase.verifyEqual(sum(string({cases.platform}) == "simulink"), 0);
             testCase.verifyFalse(any([cases.quantizationApplied]));
         end
@@ -39,6 +39,67 @@ classdef TestJesherPipeline < matlab.unittest.TestCase
             testCase.verifyEqual(Fs, 44100);
             coverage = jesher.validateCases(cases, reference);
             testCase.verifyEqual(sum(coverage.status == "available"), 1);
+        end
+
+        function nestedHandoffPreservesArraysAndMetadata(testCase)
+            root = testCase.repoRoot();
+            path = fullfile(root,'Results','Abdulrahman','Sampling','sampling_all_rates.mat');
+            saved = load(path);
+            [cases,reference] = jesher.loadAvailableCases(root,{path});
+            testCase.verifyEqual(numel(cases),9);
+            for j = 1:8
+                entry = saved.samplingHandoff.cases(j);
+                c = cases(strcmp({cases.caseId},entry.caseId));
+                testCase.verifyEqual(c.samples,entry.samples);
+                testCase.verifyEqual(c.Fs,entry.Fs);
+                testCase.verifyEqual(c.firstSampleTimeSeconds,entry.firstSampleTimeSeconds);
+                testCase.verifyEqual(c.method,entry.method);
+                testCase.verifyEqual(c.samplingMetadata,rmfield(entry,'samples'));
+                testCase.verifyEqual(c.platform,'matlab');
+                testCase.verifyEqual(c.effectiveBits,16);
+                testCase.verifyEqual(c.processingStage,'sampling_only_control');
+                testCase.verifyFalse(c.quantizationApplied || c.normalizationApplied);
+                testCase.verifyTrue(c.delayCompensated);
+                testCase.verifyEqual(c.alignmentPolicy,'full_record_resample_v1');
+                testCase.verifyTrue(contains(c.provenance,path));
+                aligned = jesher.alignToReference(reference,44100,c);
+                expected = resample(entry.samples,entry.q,entry.p);
+                testCase.verifyEqual(aligned,expected(1:numel(reference)));
+            end
+        end
+
+        function explicitCasesOverrideFallbackWithoutRegeneration(testCase)
+            fixture = testCase.applyFixture(matlab.unittest.fixtures.TemporaryFolderFixture);
+            root = testCase.repoRoot();
+            available = jesher.loadAvailableCases(root,{});
+            cases = available(strcmp({available.caseId},'speechmusic_fs8000_b16_none_matlab'));
+            cases.samples(10) = cases.samples(10)+1e-6;
+            cases.provenance = 'Explicit producer array; intentional sentinel for precedence test.';
+            cases = rmfield(cases,{'method','samplingMetadata'}); % Older public contract still works.
+            path = fullfile(fixture.Folder,'explicit.mat');
+            save(path,'cases');
+            loaded = jesher.loadAvailableCases(root,{path});
+            testCase.verifyEqual(numel(loaded),9);
+            testCase.verifyEqual(numel(unique(string({loaded.caseId}))),9);
+            actual = loaded(strcmp({loaded.caseId},cases.caseId));
+            testCase.verifyEqual(actual.samples,cases.samples);
+            testCase.verifyEqual(actual.provenance,cases.provenance);
+        end
+
+        function nestedWrongSourceAndDuplicateIdsAreRejected(testCase)
+            fixture = testCase.applyFixture(matlab.unittest.fixtures.TemporaryFolderFixture);
+            root = testCase.repoRoot();
+            path = fullfile(root,'Results','Abdulrahman','Sampling','sampling_all_rates.mat');
+            saved = load(path);
+            samplingHandoff = saved.samplingHandoff;
+            samplingHandoff.original.samples(1) = samplingHandoff.original.samples(1)+1e-6;
+            badPath = fullfile(fixture.Folder,'bad.mat');
+            save(badPath,'samplingHandoff');
+            testCase.verifyError(@()jesher.loadAvailableCases(root,{badPath}),'jesher:SourceMismatch');
+            samplingHandoff = saved.samplingHandoff;
+            samplingHandoff.cases(2) = samplingHandoff.cases(1);
+            save(badPath,'samplingHandoff');
+            testCase.verifyError(@()jesher.loadAvailableCases(root,{badPath}),'jesher:DuplicateCase');
         end
 
         function duplicatesAndFalsePrecisionAreRejected(testCase)
@@ -110,14 +171,14 @@ classdef TestJesherPipeline < matlab.unittest.TestCase
             output = fullfile(fixture.Folder, 'evaluation');
             summary = Run_Jesher_Evaluation('HandoffFiles', {path}, ...
                 'OutputFolder', output, 'MakePlots', false);
-            testCase.verifyEqual(summary.availableCases, 3);
+            testCase.verifyEqual(summary.availableCases, 9);
             testCase.verifyFalse(summary.matrixComplete);
             testCase.verifyFalse(summary.speakerPlaybackVerified);
             testCase.verifyFalse(summary.listeningCollected);
             testCase.verifyTrue(summary.archiveBytesVerified);
             testCase.verifyEqual(summary.archiveFile, 'audio_partial_NOT_FINAL.zip');
             metrics = readtable(fullfile(output, 'metrics.csv'), 'TextType', 'string');
-            testCase.verifyEqual(height(metrics), 3);
+            testCase.verifyEqual(height(metrics), 9);
             testCase.verifyTrue(isnumeric(metrics.Fs));
             testCase.verifyTrue(isnumeric(metrics.nmse));
             native = metrics(metrics.caseId == "speechmusic_fs44100_b16_native_matlab", :);

@@ -1,0 +1,121 @@
+{
+  "source_commit": "13fc4347fd105d45d34bb8d135863a2a01d77dda",
+  "method": "nearest-source-time at noninteger unfiltered rates",
+  "artifacts": [
+    {
+      "original_path": "Jesher/Demo/Results/Aliasing/tone_check.csv",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/Aliasing/tone_check.csv",
+      "sha256": "73e29d6615a918bcdecbb650884089a474ecb41e8c6de88872e12d46da4a033c"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/audio_manifest.csv",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/audio_manifest.csv",
+      "sha256": "ec3e72a9ed3beccc332b0ce4e6131cd3e8a06ae7df391b76eab2b734af9389f3"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/completion_summary.json",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/completion_summary.json",
+      "sha256": "0a20ccf860d8d45ad3e5c473f060b859c339e6876ee2d357a0c90952200bb2a6"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/last_case.csv",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/last_case.csv",
+      "sha256": "036997d6e8c864d0d585ba6be744d9be150ce370602a965a7e8dec4485aac223"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/live_demo_log.txt",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/live_demo_log.txt",
+      "sha256": "2b9b840024435569612e9eca8116791b3d1e04c93c15c09d44fb64abc4b407f6"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/metrics.csv",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/metrics.csv",
+      "sha256": "765d641baccf1cc696c40fc9e65d8c8538838021622e83a42aef36f73c1f9a6f"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/model_overview.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/model_overview.png",
+      "sha256": "431b84a00f61c8062b0fa68549bd59f0a6f51a8b9c757725e2d95949a652e4df"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/platform_comparison.csv",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/platform_comparison.csv",
+      "sha256": "f36d62b0324c97ae505224d88742e051e90ae100192c12bf0b658cc00121815e"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/run_log.txt",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/run_log.txt",
+      "sha256": "07e55289f1f5b9a4afd5c89c64dbd0dde055c5ee152e44659d3126226a23c151"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_lpf_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_lpf_matlab_comparison.png",
+      "sha256": "f611fc81e48138978e739db9f35169d664c9ce8cb0ccffbf6e110127415fd50b"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_lpf_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_lpf_matlab_quantization.png",
+      "sha256": "fc7cb5eb805bd4402e8045f1ca08b000bc615749c245b7a7056efed8dc85eafe"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_lpf_simulink_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_lpf_simulink_comparison.png",
+      "sha256": "86168de580c1c2d7830add56fc7197d9a9a8d97ba9e10c0cb3ba9a7c5cd20f24"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_lpf_simulink_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_lpf_simulink_quantization.png",
+      "sha256": "99d41703693bee5dd464e9985974e24761292aab3c2691a93a44de0293106ed7"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_none_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_none_matlab_comparison.png",
+      "sha256": "817281235bbbc968d2e96c82944a2c6123f9055c8ed4650e678ef11dad3780c0"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs22050_b08_none_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs22050_b08_none_matlab_quantization.png",
+      "sha256": "b3ae24b07ef104cf37f331233e496003a20d0e453a964937ea30a1fe09943cf4"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs4000_b02_lpf_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs4000_b02_lpf_matlab_comparison.png",
+      "sha256": "3adafd893943856e18d1c156bfe1b78043fca8d9009beee5d90d0447dd10e898"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs4000_b02_lpf_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs4000_b02_lpf_matlab_quantization.png",
+      "sha256": "6c2e2c1ba43280f2a7d67ac74f79e8edd9fb87fdf40ee45189b3c4008c6a14bf"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs4000_b02_none_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs4000_b02_none_matlab_comparison.png",
+      "sha256": "48182c6f42e844f850aac4b81d1cefa15bf5f3430d3405baf9d5b4eb6f96253f"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs4000_b02_none_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs4000_b02_none_matlab_quantization.png",
+      "sha256": "4c77d24459676c0e6f3bf5de6b0d44a4a6d231e2a088bf393fed56125e6ed30f"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs44100_b02_native_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs44100_b02_native_matlab_comparison.png",
+      "sha256": "354bd8433f8c25ab1cb79be706db5795477437ae3297c6978d0726c9c10914e1"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs44100_b02_native_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs44100_b02_native_matlab_quantization.png",
+      "sha256": "7bed4948bf11a422a8bd8d8c40e4c1fbc0c1882e838558013b1c9971a6b0b841"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs44100_b16_native_matlab_comparison.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs44100_b16_native_matlab_comparison.png",
+      "sha256": "fa024dcc614c2a8cbfac27e2a975feeba214b624cb5d92b072413484a85253ca"
+    },
+    {
+      "original_path": "Jesher/Demo/Results/speechmusic_fs44100_b16_native_matlab_quantization.png",
+      "retained_path": "Jesher/Demo/history/13fc434/Results/speechmusic_fs44100_b16_native_matlab_quantization.png",
+      "sha256": "402e2bb2474650b280c467cca75aef59b4bdbe00ef8709d27d8c53b3888213ac"
+    }
+  ]
+}

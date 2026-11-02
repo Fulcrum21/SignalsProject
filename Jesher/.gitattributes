@@ -9,3 +9,4 @@
 # MATLAB's captured console tables contain intentional trailing spaces.
 results/** whitespace=cr-at-eol,-blank-at-eol
 Demo/Results/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+Demo/history/**/Results/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

@@ -15,25 +15,42 @@ set_param(model,'SolverType','Fixed-step','Solver','FixedStepDiscrete', ...
 set_param(model,'InitFcn', ...
     'addpath(fileparts(get_param(''Audio_Demo'',''FileName''))); setup_model(''Audio_Demo'');');
 
+%% Sampling: FIR conversion or direct selection / linear interpolation.
 constant([model '/Audio frame'],'inputFrame',[30 105 120 145]);
 sub = [model '/Sampling'];
 add_block('built-in/Subsystem',sub,'Position',[180 85 350 165]);
 inport(sub,'In',1,[20 90 50 110]);
 rateBlock(sub,'Anti alias FIR and rate change','p','q','filterCoefficients',[100 30 250 85]);
 selector(sub,'Remove known FIR delay','filteredIndices',[300 30 440 85]);
-selector(sub,'Select source times without filtering','directIndices',[100 150 300 200]);
-constant([sub '/Filter choice'],'useFilter',[340 115 390 145]);
+selector(sub,'Lower source sample','lowerIndices',[90 145 220 185]);
+selector(sub,'Upper source sample','upperIndices',[90 215 220 255]);
+add_block('simulink/Math Operations/Sum',[sub '/Upper minus lower'], ...
+    'Inputs','+-','Position',[250 210 280 250]);
+constant([sub '/Fraction of source interval'],'interpolationWeight',[230 295 360 335]);
+add_block('simulink/Math Operations/Product',[sub '/Weighted difference'], ...
+    'Position',[340 210 375 250]);
+add_block('simulink/Math Operations/Sum',[sub '/Linear interpolation'], ...
+    'Inputs','++','Position',[410 145 440 185]);
+constant([sub '/Filter choice'],'useFilter',[340 100 390 130]);
 add_block('simulink/Signal Routing/Switch',[sub '/Choose filtered or direct'], ...
     'Criteria','u2 ~= 0','Position',[490 60 530 160]);
 outport(sub,'Out',1,[590 95 620 115]);
 wire(sub,'In/1','Anti alias FIR and rate change/1');
 wire(sub,'Anti alias FIR and rate change/1','Remove known FIR delay/1');
-wire(sub,'In/1','Select source times without filtering/1');
+wire(sub,'In/1','Lower source sample/1');
+wire(sub,'In/1','Upper source sample/1');
+wire(sub,'Upper source sample/1','Upper minus lower/1');
+wire(sub,'Lower source sample/1','Upper minus lower/2');
+wire(sub,'Upper minus lower/1','Weighted difference/1');
+wire(sub,'Fraction of source interval/1','Weighted difference/2');
+wire(sub,'Lower source sample/1','Linear interpolation/1');
+wire(sub,'Weighted difference/1','Linear interpolation/2');
 wire(sub,'Remove known FIR delay/1','Choose filtered or direct/1');
 wire(sub,'Filter choice/1','Choose filtered or direct/2');
-wire(sub,'Select source times without filtering/1','Choose filtered or direct/3');
+wire(sub,'Linear interpolation/1','Choose filtered or direct/3');
 wire(sub,'Choose filtered or direct/1','Out/1');
 
+%% Uniform signed quantization with a 16-bit control bypass.
 sub = [model '/Uniform Quantization'];
 add_block('built-in/Subsystem',sub,'Position',[420 85 590 165]);
 inport(sub,'In',1,[20 90 50 110]);
@@ -56,6 +73,7 @@ wire(sub,'16 bit control bypass/1','Keep control or quantize/2');
 wire(sub,'Multiply by step/1','Keep control or quantize/3');
 wire(sub,'Keep control or quantize/1','Out/1');
 
+%% Inverse conversion onto the complete original sample interval.
 sub = [model '/Reconstruct at source rate'];
 add_block('built-in/Subsystem',sub,'Position',[660 85 850 165]);
 inport(sub,'In',1,[20 90 50 110]);
@@ -70,7 +88,7 @@ wire(sub,'Pad frame/1','Reconstruction FIR/1');
 wire(sub,'Reconstruction FIR/1','Remove phase delay and keep source interval/1');
 wire(sub,'Remove phase delay and keep source interval/1','Out/1');
 
-% Metrics are calculated with Simulink arithmetic on aligned source-grid arrays.
+%% Calculate processing-array NMSE/SNR with Simulink arithmetic.
 constant([model '/Original reference'],'referenceAudio',[660 270 785 310]);
 add_block('simulink/Math Operations/Sum',[model '/Error'],'Inputs','+-','Position',[920 200 950 245]);
 add_block('simulink/Math Operations/Dot Product',[model '/Reference energy'],'Position',[840 350 925 390]);

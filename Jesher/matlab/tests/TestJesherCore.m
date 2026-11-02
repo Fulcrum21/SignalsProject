@@ -110,7 +110,9 @@ classdef TestJesherCore < matlab.unittest.TestCase
             testCase.verifyEqual(w.sampleCount, 5);
             testCase.verifyEqual(w.durationSeconds, 5 / 8000);
             testCase.verifyGreaterThan(w.fileBytes, 2 * numel(samples));
-            testCase.verifyLessThanOrEqual(w.maxAbsRoundTripError, 1 / 32768 + 8 * eps(1));
+            testCase.verifyLessThanOrEqual(w.maxAbsRoundTripError, 0.5 / 32768 + 8 * eps(1));
+            testCase.verifyEqual(audioread(path),double(int16(round(samples*32768)))/32768);
+            testCase.verifyTrue(contains(w.pcmConversion,'round(samples*32768)'));
             info = audioinfo(path);
             testCase.verifyEqual(info.SampleRate, 8000);
         end

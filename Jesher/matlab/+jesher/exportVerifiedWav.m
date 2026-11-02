@@ -30,7 +30,9 @@ end
 if ~isempty(folder) && ~isfolder(folder)
     mkdir(folder);
 end
-audiowrite(path, samples, Fs, 'BitsPerSample', 16);
+% Match the demo's explicit PCM conversion; do not rely on runtime rounding.
+pcm = int16(round(samples*32768));
+audiowrite(path, pcm, Fs, 'BitsPerSample', 16);
 info = audioinfo(path);
 [reimported, reimportedFs] = audioread(path);
 if reimportedFs ~= Fs || info.SampleRate ~= Fs || ...
@@ -41,11 +43,10 @@ if reimportedFs ~= Fs || info.SampleRate ~= Fs || ...
 end
 roundTripError = reimported - samples;
 maxError = max(abs(roundTripError));
-% MATLAB PCM conversion can differ by almost one LSB; do not assume a
-% half-LSB rounding convention. Reject any larger unexplained alteration.
-if maxError > pcmStep + 8 * eps(1)
+pcmConversion = 'round(samples*32768), signed PCM16; half ties away from zero';
+if ~isequal(reimported,double(pcm)/32768) || maxError > pcmStep/2 + 8 * eps(1)
     error('jesher:WavRoundTripMismatch', ...
-        'WAV round-trip error exceeds one 16-bit PCM step.');
+        'WAV round-trip does not match explicit nearest-integer PCM16 conversion.');
 end
 file = dir(path);
 wav = struct('filename', [name extension], 'containerBits', info.BitsPerSample, ...
@@ -53,5 +54,6 @@ wav = struct('filename', [name extension], 'containerBits', info.BitsPerSample, 
     'durationSeconds', info.TotalSamples / info.SampleRate, ...
     'maxAbsRoundTripError', maxError, ...
     'rmsRoundTripError', sqrt(mean(roundTripError .^ 2)), ...
-    'clippedSamples', 0);
+    'clippedSamples', 0, ...
+    'pcmConversion', pcmConversion);
 end

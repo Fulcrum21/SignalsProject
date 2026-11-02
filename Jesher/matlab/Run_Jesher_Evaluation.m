@@ -3,8 +3,9 @@ function summary = Run_Jesher_Evaluation(varargin)
 % From the repository root:
 %   addpath(fullfile(pwd,'Jesher','matlab'));
 %   summary = Run_Jesher_Evaluation();
-% Future handoffs: save a cases struct vector using inputs/README.md.
+% Handoffs: top-level cases or Abdulrahman's samplingHandoff.cases; see inputs/README.md.
 % This function does not run teammates' scripts, simulate, or play audio.
+%% Settings and input loading (public name/value options are preserved).
 p = inputParser;
 addParameter(p,'OutputFolder','',@(x)ischar(x) || isstring(x));
 addParameter(p,'HandoffFiles',{},@(x)iscell(x) || isstring(x));
@@ -37,12 +38,13 @@ if any([cases.Fs] ~= referenceFs) && exist('resample','file') ~= 2
         ['Signal Processing Toolbox is required for sample-grid reconstruction. ' ...
         'Install the MathWorks toolbox, restart MATLAB, and rerun the tests.']);
 end
-% Validate time bases and carrier range before writing a result folder.
+%% Check time bases and export range before creating output files.
 for j = 1:numel(cases)
     jesher.alignToReference(reference,referenceFs,cases(j));
     assert(all(cases(j).samples >= -1 & cases(j).samples <= 1-2^-15), ...
         'jesher:ExportRange','Case %s exceeds the PCM16 range; resolve with its owner.',cases(j).caseId);
 end
+%% Create a fresh output folder and preserve the exact input artifacts.
 if strlength(string(options.OutputFolder)) == 0
     stamp = char(datetime('now','TimeZone','Asia/Dubai','Format','yyyyMMdd_HHmmss_SSS'));
     outputFolder = fullfile(ownerRoot,'results',['matlab_run_' stamp]);
@@ -59,6 +61,9 @@ prototypePath = fullfile(repoRoot,'Results','Abdulrahman','AA02','sampling_22050
 if isfile(prototypePath)
     snapshotSources{end+1,1} = prototypePath;
 end
+samplingPath = fullfile(repoRoot,'Results','Abdulrahman','Sampling','sampling_all_rates.mat');
+if isfile(samplingPath), snapshotSources{end+1,1} = samplingPath; end
+snapshotSources = unique(snapshotSources,'stable');
 snapshotFiles = cell(numel(snapshotSources),1);
 for j = 1:numel(snapshotSources)
     [~,name,extension] = fileparts(snapshotSources{j});
@@ -79,6 +84,7 @@ manifest(1) = struct('caseId',"original_recording",'platform',"source", ...
     'sampleCount',numel(reference),'durationSeconds',numel(reference)/referenceFs, ...
     'fileBytes',sourceFile.bytes,'maxAbsRoundTripError',0,'rmsRoundTripError',0, ...
     'clippedSamples',0);
+%% Measure original processing arrays, then export/re-import and measure again.
 for j = 1:numel(cases)
     c = cases(j);
     [aligned,a] = jesher.alignToReference(reference,referenceFs,c);
@@ -117,6 +123,7 @@ for j = 1:numel(cases)
     r.wavFileBytes = w.fileBytes;
     r.wavMaxAbsRoundTripError = w.maxAbsRoundTripError;
     r.wavRmsRoundTripError = w.rmsRoundTripError;
+    r.wavPcmConversion = string(w.pcmConversion);
     r.processingStage = string(c.processingStage);
     r.quantizationApplied = c.quantizationApplied;
     r.quantizerDescription = string(c.quantizerDescription);
@@ -130,6 +137,7 @@ for j = 1:numel(cases)
         'maxAbsRoundTripError',w.maxAbsRoundTripError, ...
         'rmsRoundTripError',w.rmsRoundTripError,'clippedSamples',w.clippedSamples);
 end
+%% Save tables and optional comparison figures.
 resultTable = struct2table(results);
 manifestTable = struct2table(manifest);
 platformTable = jesher.comparePlatforms(cases,resultTable);
@@ -154,6 +162,7 @@ summary = struct('createdAtDubai',char(datetime('now','TimeZone','Asia/Dubai')),
     'snapshotSources',{snapshotSources},'snapshotFiles',{snapshotFiles}, ...
     'speakerPlaybackVerified',false,'listeningCollected',false, ...
     'reviewerAccepted',false,'finalSignOff',false);
+%% Package audio and verify the ZIP contents byte for byte.
 % A complete matrix still needs actual listening, review, and final sign-off.
 if isComplete
     archiveName = 'audio_all_cases_UNREVIEWED.zip';
@@ -218,7 +227,7 @@ r = struct('caseId',"",'platform',"",'sourceFile',"",'Fs',0,'effectiveBits',0, .
     'comparisonLastTimeSeconds',0,'comparisonSampleCount',0,'alignmentPolicy',"", ...
     'nmse',NaN,'snrDb',NaN,'metricStatus',"",'referenceEnergy',NaN,'errorEnergy',NaN, ...
     'exportedNmse',NaN,'exportedSnrDb',NaN,'wavFile',"",'wavContainerBits',0, ...
-    'wavFileBytes',0,'wavMaxAbsRoundTripError',NaN,'wavRmsRoundTripError',NaN, ...
+    'wavFileBytes',0,'wavMaxAbsRoundTripError',NaN,'wavRmsRoundTripError',NaN,'wavPcmConversion',"", ...
     'processingStage',"",'quantizationApplied',false,'quantizerDescription',"", ...
     'samplingDescription',"",'provenance',"");
 end

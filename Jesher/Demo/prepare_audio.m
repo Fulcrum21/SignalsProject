@@ -1,5 +1,5 @@
 function data = prepare_audio(settings)
-% Load source and prepare timing/filter parameters, not processed audio.
+%% Read the source and check the experiment settings.
 [x,Fs] = audioread(settings.audioFile);
 if size(x,2)>1, x = mean(x,2); end  % Explicit stereo-to-mono policy.
 assert(~isempty(x) && all(isfinite(x)),'Source must contain finite audio samples.');
@@ -16,9 +16,30 @@ else
 end
 g = gcd(Fs,settings.targetFs);
 data.p = settings.targetFs/g; data.q = Fs/g;
-data.outputCount = ceil(data.N*data.p/data.q);
-% Nearest-source-time selection, with NO prefilter, for arbitrary rate ratios.
-data.directIndices = min(data.N,1+round((0:data.outputCount-1)'*data.q/data.p));
+%% Use Abdulrahman's source-covered output times and unfiltered method.
+data.originalTime = (0:data.N-1)'/Fs;
+data.outputCount = floor((data.N-1)*settings.targetFs/Fs)+1;
+data.outputTime = (0:data.outputCount-1)'/settings.targetFs;
+if data.p==1
+    data.lowerIndices = (1:data.q:data.N)';
+    data.upperIndices = data.lowerIndices;
+    data.interpolationWeight = zeros(data.outputCount,1);
+    data.samplingMethod = sprintf('Direct sample selection x(1:%d:end); no anti-aliasing LPF.',data.q);
+else
+    % Simulink calculates low + weight*(high-low) from the source itself.
+    data.lowerIndices = min(data.N-1,1+floor(data.outputTime*Fs));
+    data.upperIndices = data.lowerIndices+1;
+    lowerTime = data.originalTime(data.lowerIndices);
+    upperTime = data.originalTime(data.upperIndices);
+    data.interpolationWeight = (data.outputTime-lowerTime)./(upperTime-lowerTime);
+    data.samplingMethod = 'Linear interpolation at uniform output times; no anti-aliasing LPF.';
+end
+if strcmp(data.mode,'lpf')
+    data.samplingMethod = 'resample(x,p,q,10,5); retain source-covered output times; FIR delay already compensated.';
+elseif strcmp(data.mode,'native')
+    data.samplingMethod = 'Native original sample grid, unchanged.';
+end
+%% Prepare FIR parameters for actual Simulink rate-conversion blocks.
 if data.p == data.q
     % Identity-delay filters keep the diagram valid; the native path bypasses them.
     h = [0 1 0]; reconstruction = [0 1 0];

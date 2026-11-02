@@ -16,7 +16,7 @@ contains no audio samples or embedded MAT payloads.
 - The current measured report in Markdown, HTML and PDF, with captioned figures.
 - Plain result tables, case coverage, audio manifests, run metadata and test logs.
 - Listening protocol/forms and the user's actual initial observation.
-- Jesher's own task document; only JE-03 is marked complete.
+- Jesher's own task document; numerical completion is separate from human review/listening.
 
 ## Kept local
 
@@ -38,3 +38,11 @@ to produce their own fresh local result folder from the existing upstream inputs
 The MATLAB session diary's license number is redacted. Its 19 passing test rows
 and run output are preserved. Shared `main` is not modified by publishing this
 separate contribution branch.
+
+## Local compatibility update, 2 November 2026
+
+Latest origin/main was merged without editing teammates' implementations. The
+updated adapter and linear-interpolation demo, current results and clearly
+identified historical evidence are prepared locally for review. This update
+must not be pushed until the user explicitly requests it. Upstream sampling
+WAV/MAT files remain as imported; no new Jesher audio/MAT/ZIP payload is added.

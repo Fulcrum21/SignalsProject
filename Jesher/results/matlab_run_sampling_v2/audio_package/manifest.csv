@@ -1,0 +1,11 @@
+caseId,platform,wavFile,Fs,effectiveBits,containerBits,channels,sampleCount,durationSeconds,fileBytes,maxAbsRoundTripError,rmsRoundTripError,clippedSamples
+original_recording,source,original/SpeechMusic.wav,44100,16,16,1,882005,20.0001133786848,1764054,0,0,0
+speechmusic_fs44100_b16_native_matlab,matlab,processed/speechmusic_fs44100_b16_native_matlab.wav,44100,16,16,1,882005,20.0001133786848,1764054,0,0,0
+speechmusic_fs22050_b16_none_matlab,matlab,processed/speechmusic_fs22050_b16_none_matlab.wav,22050,16,16,1,441003,20.0001360544218,882050,0,0,0
+speechmusic_fs22050_b16_lpf_matlab,matlab,processed/speechmusic_fs22050_b16_lpf_matlab.wav,22050,16,16,1,441003,20.0001360544218,882050,1.52587590521325e-05,8.81299119276479e-06,0
+speechmusic_fs11025_b16_none_matlab,matlab,processed/speechmusic_fs11025_b16_none_matlab.wav,11025,16,16,1,220502,20.0001814058957,441048,0,0,0
+speechmusic_fs11025_b16_lpf_matlab,matlab,processed/speechmusic_fs11025_b16_lpf_matlab.wav,11025,16,16,1,220502,20.0001814058957,441048,1.52586655250975e-05,8.81384451902418e-06,0
+speechmusic_fs8000_b16_none_matlab,matlab,processed/speechmusic_fs8000_b16_none_matlab.wav,8000,16,16,1,160001,20.000125,320046,1.52587890625e-05,8.79678720831709e-06,0
+speechmusic_fs8000_b16_lpf_matlab,matlab,processed/speechmusic_fs8000_b16_lpf_matlab.wav,8000,16,16,1,160001,20.000125,320046,1.52587031164789e-05,8.80175458132281e-06,0
+speechmusic_fs4000_b16_none_matlab,matlab,processed/speechmusic_fs4000_b16_none_matlab.wav,4000,16,16,1,80001,20.00025,160046,1.52587890625e-05,8.7683581274774e-06,0
+speechmusic_fs4000_b16_lpf_matlab,matlab,processed/speechmusic_fs4000_b16_lpf_matlab.wav,4000,16,16,1,80001,20.00025,160046,1.52583764905789e-05,8.79588579533879e-06,0

@@ -3,6 +3,9 @@
 **Latest report:** [complete MATLAB/Simulink results](../Demo/RESULTS.md) and
 [complete results PDF](output/pdf/Jesher_Complete_Demo_Results.pdf) cover the new
 72-case course demonstration. Start with `../Demo/README.md` for running it.
+Current results use `linear_interp_v2` (2 November 2026), with the exact eight-case
+sampling adapter and separate processing/WAV measurements. The 31 October
+nearest-source-time report is preserved in `../Demo/history/13fc434/`.
 The three-case materials described below are preserved as historical evidence.
 
 Prepared 31 October 2026 from the completed run

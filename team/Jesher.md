@@ -53,6 +53,24 @@ Keep all completed tasks with evidence. If processed inputs are delayed, continu
 
 ### Local implementation and outstanding evidence
 
+**Compatibility revision, 2 November 2026:** merged upstream `9b6ae88` locally
+without changing teammates' implementations. The public evaluator now accepts
+`samplingHandoff.cases`, preserves all eight supplied arrays exactly and gives
+explicit cases priority over fallback controls. It evaluates nine MATLAB
+controls (native plus eight sampling cases); 63 producer handoffs remain missing.
+The independent demo now matches Abdulrahman's integer selection and noninteger
+linear interpolation in both MATLAB and actual Simulink blocks. All 72 cases
+and 36 platform pairs were rerun: maximum processing difference `7.7715611723761e-16`;
+two b16 WAV pairs differ by at most one PCM16 step after explicit rounding.
+All 22 MATLAB and 20 Python regression tests passed, along with eight exact
+handoff checks, sixteen tone timing checks and four alias checks. Both single-case
+scripts and the model's direct Run were tested. Current figures, CSVs, manifests
+and the report are regenerated; previous nearest-source-time artifacts are
+retained under `Demo/history/13fc434`. No teammate task completion is claimed.
+Human listening, peer review and final sign-off remain pending. This revision
+is committed locally for review and is not pushed under the current request.
+
+
 **Latest completion, 31 October - simple course demo:** [Demo/README.md](../Jesher/Demo/README.md)
 is now the starting point. The user requested plain MATLAB scripts and a saved
 Simulink design suitable for live execution. Both platforms generate all cases

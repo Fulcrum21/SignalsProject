@@ -26,8 +26,10 @@ Edit only the clearly commented settings in `SETTINGS.m`. The default is 22,050 
 
 ## Completed with the available resources
 
-- All **36 MATLAB and 36 Simulink cases** actually ran in MATLAB R2026b.
-- All 36 platform comparisons passed. Maximum processing difference: approximately `7.77e-16`; exported-WAV scores match for every tested pair.
+- The **36 MATLAB and 36 Simulink cases** are regenerated for the current
+  `linear_interp_v2` method; see the actual run evidence in the results section.
+- All 36 platform comparisons passed. Processing-array and exported-WAV agreement are recorded separately in the
+  current comparison CSV; see the results section for measured differences.
 - All 72 exports were re-imported and their headers/counts/sizes checked.
 - A local archive contains the unchanged original, 72 outputs and their manifest.
 - Waveform, FFT, spectrogram, quantization-error and histogram figures are generated.
@@ -42,4 +44,11 @@ Human listening to the new outputs, four-person notes, live rehearsal and peer r
 
 ## Older work
 
-The older `matlab/`, `results/`, `validation/` and earlier report files are kept as history and evidence. They are not extra steps for the live demo. The earlier three-case report is superseded for current objective coverage by `Demo/RESULTS.md`. Other teammates' scripts and models are unchanged.
+The `matlab/` public evaluator now accepts the new eight-case sampling handoff
+(`samplingHandoff.cases`) as well as the existing top-level `cases` contract.
+It evaluates 9 MATLAB controls and honestly reports 63 missing handoff cases.
+This is separate from the independently generated 72-case demo.
+
+Older `results/`, `validation/` and earlier report files are kept as history and evidence. They are not extra steps for the live demo. The earlier three-case report is superseded for current objective coverage by `Demo/RESULTS.md`. Other teammates' scripts and models are unchanged.
+
+The previous nearest-source-time experiment is preserved at [Demo/history/13fc434/](Demo/history/13fc434/README.md). Current 8/4 kHz unfiltered routes use linear interpolation in both MATLAB and actual Simulink blocks, matching Abdulrahman's handoff. Both evaluators use documented, explicit nearest-integer PCM16 export.
