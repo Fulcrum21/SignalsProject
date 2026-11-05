@@ -6,12 +6,16 @@
   "simulinkCaseCount": 8,
   "wavCount": 8,
   "comparisonFigures": 13,
-  "pdfPages": 19,
+  "pdfPages": 10,
   "aliasOriginalHz": 10000.0,
   "aliasUnfilteredHz": 1025.0,
   "aliasSuppressionDb": 68.74118523959622,
   "maxWavRoundTripError": 3.05173039920059e-05,
   "remainingSimulink": "Sampling comparisons complete; combined-case integration and final review pending",
   "listeningPerformed": false,
-  "fullCombinedMatrixComplete": false
+  "fullCombinedMatrixComplete": false,
+  "reportRevisionDate": "2026-11-05",
+  "reportMainPages": 7,
+  "reportAppendixPages": 3,
+  "listeningReportedByOwner": true
 }
