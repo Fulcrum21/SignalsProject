@@ -162,7 +162,7 @@ signalFs = handoff.prototype.unfiltered.Fs;
 
 **Listening checks (5 November):** Abdulrahman reports completion. Case-specific subjective observations and playback conditions have not been recorded here; no additional listening claims are inferred.
 
-**Shared Word report (5 November):** sampling section and supporting appendix inserted into [The report.docx](../The%20report.docx), with thirteen embedded figures and three editable tables. Existing report body content was preserved exactly. The combined document was exported using Word and visually reviewed; it contains twenty pages at this checkpoint. This publishes the sampling section, not the still-pending whole-team submission sign-off.
+**Shared Word report (5 November):** sampling section and supporting appendix inserted into [The report.docx](../The%20report.docx), with thirteen embedded figures and three editable tables. Existing report body content was preserved exactly. The combined document was exported using Word and visually reviewed; it contains nineteen pages at this checkpoint. This publishes the sampling section, not the still-pending whole-team submission sign-off.
 
 **Publication checkpoint (5 November):** all four sampling Simulink models are complete and numerically verified. The comparison script, aligned Simulink MAT handoff, results table, report updates and this progress file are included in the publication checkpoint. AA-06 and final report/package sign-off remain open; no sampling model needs to be redone for those tasks.
 
