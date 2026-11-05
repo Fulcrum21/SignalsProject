@@ -2,7 +2,7 @@
 
 ## Sampling and aliasing
 
-**Abdulrahman | MATLAB report section draft | 1 November 2026**
+**Abdulrahman | Sampling report section draft | Updated 3 November 2026**
 
 The same mono speech/music recording was converted from 44.1 kHz to four lower rates, with and without anti-aliasing low-pass filtering. Eight MATLAB sampling cases are supplied. A known 10 kHz tone folds to 1,025 Hz after unfiltered conversion to 11.025 kHz, matching the sampling-theory prediction. Filtering reduces the measured largest residual by 68.74 dB relative to the unfiltered alias.
 
@@ -21,7 +21,7 @@ The source WAV contains 882,005 mono samples at 44,100 Hz, stored as 16-bit PCM.
 
 These are sampling-only results. The MAT arrays retain double-valued samples without reduced-bit quantization or independent normalization. The b16 label identifies the source/control; WAV playback copies use a 16-bit PCM carrier. Quantization, complete NMSE/SNR tables and listening results belong to the integrated team evaluation.
 
-New-rate Simulink implementation and comparison remain pending. The previously verified 22.05 kHz platform comparison is retained [7]. This is a draft section for the team report, not a completed submission report.
+All four saved sampling models have now been run and compared against the exact MATLAB arrays. Eight aligned Simulink sampling controls are supplied separately, with no further quantization. The platform comparison table documents tolerances and measured differences. This remains a draft section for the integrated team report, not a completed submission report.
 
 ## Sampling methods
 
@@ -264,6 +264,36 @@ MATLAB verified the reference, case inventory, actual rates, expected counts, fi
 
 No independent amplitude normalization or clipping was applied. WAV conversion error measures export rounding, not total downsampling degradation. Speaker playback and listening impressions require the team's actual listening session.
 
+## Simulink verification
+
+The four saved sampling models were run in MATLAB/Simulink R2026a for the full 20-second simulation interval. Logged frames were joined into columns, the known FIR delay was removed from filtered outputs, and only surplus final-frame coverage was discarded. Each case retains its exact MATLAB reference sample count.
+
+| Rate Hz | Filter | Samples | Delay removed | Max difference |
+| --- | --- | --- | --- | --- |
+| 22050 | none | 441003 | 0 | 0 |
+| 22050 | lpf | 441003 | 10 | 3.33067e-16 |
+| 11025 | none | 220502 | 0 | 0 |
+| 11025 | lpf | 220502 | 10 | 5.55112e-16 |
+| 8000 | none | 160001 | 0 | 1.67937e-11 |
+| 8000 | lpf | 160001 | 10 | 7.77156e-16 |
+| 4000 | none | 80001 | 0 | 1.31945e-11 |
+| 4000 | lpf | 80001 | 10 | 6.66134e-16 |
+
+Unfiltered outputs use a maximum-absolute-difference tolerance of 1e-10; filtered outputs use 1e-12. These are numerical agreement bounds, far below one PCM16 sample step. The 8/4 kHz unfiltered models interpolate within each 4,410-sample frame; the MATLAB reference interpolates using full-record times. Their slightly different floating-point calculations explain small nonzero discrepancies. The filtered differences are at floating-point rounding scale.
+
+### Reproduce the comparison
+
+From the repository root:
+
+```matlab
+addpath("Matlab")
+Compare_All_Sampling
+```
+
+The script prepares the four coefficient variables, loads the saved models and explicitly simulates to 20 s. It saves simulink_comparison.csv and simulink_cases.mat. The latter contains eight top-level cases structures with actual aligned Simulink samples, platform IDs, processing-stage and alignment metadata compatible with Jesher's external handoff contract. No MATLAB answer is relabeled as a Simulink result.
+
+The FFT and spectrogram branches attached to the source still display the original recording. With 4,410-sample frames the final frame contains only five original samples, then padding; its broad, tiny FFT is not the whole-record spectrum. The sample-array comparison above is independent of that display artifact.
+
 ## Conclusion and remaining integration
 
 All four lower rates are implemented in MATLAB with explicit filtered and unfiltered methods. The known 10 kHz recording folds to 1,025 Hz at 11.025 kHz sampling. Filtering reduces its measured largest residual by 68.74 dB. Comparable real-recording waveforms, FFTs and spectrograms show retained bandwidth and processing differences.
@@ -272,7 +302,7 @@ The 8 and 4 kHz unfiltered paths use linear interpolation, with a frequency-resp
 
 ### Remaining integration
 
-Abdulrahman will complete the remaining Simulink cases and comparisons. Khaled will apply reduced bit depths. Jesher will complete the NMSE/SNR tables, final audio package and listening evaluation. Yazan will merge the report sections and acquisition evidence. Eight MATLAB sampling cases do not establish that the full combined case matrix is complete.
+The sampling-only MATLAB/Simulink comparisons now pass at all four lower rates. The new Simulink handoff still needs receiver acceptance and integration with the agreed reduced-bit cases. The team must reconcile final metrics, audio/listening evidence and report sections, including Jesher's separately developed demo. Sampling agreement does not by itself establish that the full combined case matrix, review and submission are complete.
 
 ### Sources and references
 

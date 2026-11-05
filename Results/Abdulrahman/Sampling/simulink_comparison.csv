@@ -1,0 +1,9 @@
+FsHz,FilterMode,SampleCount,RemovedDelayOutputSamples,MaxAbsDifference,Tolerance,ModelName
+22050,none,441003,0,0,1e-10,SamplingModel_Abdulrahman
+22050,lpf,441003,10,3.33066907387547e-16,1e-12,SamplingModel_Abdulrahman
+11025,none,220502,0,0,1e-10,SamplingModel_11025_Abdulrahman
+11025,lpf,220502,10,5.55111512312578e-16,1e-12,SamplingModel_11025_Abdulrahman
+8000,none,160001,0,1.6793746948629e-11,1e-10,SamplingModel_8000_Abdulrahman
+8000,lpf,160001,10,7.7715611723761e-16,1e-12,SamplingModel_8000_Abdulrahman
+4000,none,80001,0,1.31944594139455e-11,1e-10,SamplingModel_4000_Abdulrahman
+4000,lpf,80001,10,6.66133814775094e-16,1e-12,SamplingModel_4000_Abdulrahman

@@ -1,0 +1,74 @@
+{Dot indexing is not supported for variables of type cell.
+
+Error in Simulink.scopes.SpectrumAnalyzer.fevalHandler
+
+Error in Compare_All_Sampling (line 19)
+    out = sim(models(rateIndex), 'StopTime', '20');
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+}
+{Dot indexing is not supported for variables of type cell.
+
+Error in Simulink.scopes.SpectrumAnalyzer.fevalHandler
+
+Error in Compare_All_Sampling (line 19)
+    out = sim(models(rateIndex), 'StopTime', '20');
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+}
+{Dot indexing is not supported for variables of type cell.
+
+Error in Simulink.scopes.SpectrumAnalyzer.fevalHandler
+
+Error in matlabshared.scopes.container.Application/updateDynamicTabs
+
+Error in matlabshared.application.DynamicTabs/set.DynamicTabController (line 36)
+            updateDynamicTabs(this);
+            ^^^^^^^^^^^^^^^^^^^^^^^
+Error in matlabshared.scopes.container.Application/set.ActiveScope
+
+Error in matlabshared.scopes.container.Application/addScope
+
+Error in Simulink.scopes.WebScope/openSLVisual
+
+Error in Compare_All_Sampling (line 19)
+    out = sim(models(rateIndex), 'StopTime', '20');
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+}
+    FsHz     FilterMode    SampleCount    RemovedDelayOutputSamples    MaxAbsDifference    Tolerance                ModelName
+    _____    __________    ___________    _________________________    ________________    _________    _________________________________
+
+    22050      "none"        4.41e+05                 0                            0         1e-10      "SamplingModel_Abdulrahman"
+    22050      "lpf"         4.41e+05                10                   3.3307e-16         1e-12      "SamplingModel_Abdulrahman"
+    11025      "none"       2.205e+05                 0                            0         1e-10      "SamplingModel_11025_Abdulrahman"
+    11025      "lpf"        2.205e+05                10                   5.5511e-16         1e-12      "SamplingModel_11025_Abdulrahman"
+     8000      "none"         1.6e+05                 0                   1.6794e-11         1e-10      "SamplingModel_8000_Abdulrahman"
+     8000      "lpf"          1.6e+05                10                   7.7716e-16         1e-12      "SamplingModel_8000_Abdulrahman"
+     4000      "none"           80001                 0                   1.3194e-11         1e-10      "SamplingModel_4000_Abdulrahman"
+     4000      "lpf"            80001                10                   6.6613e-16         1e-12      "SamplingModel_4000_Abdulrahman"
+
+PASS: eight actual Simulink outputs match their MATLAB references.
+    FsHz     FilterMode    SampleCount    RemovedDelayOutputSamples    MaxAbsDifference    Tolerance                ModelName
+    _____    __________    ___________    _________________________    ________________    _________    _________________________________
+
+    22050      "none"        4.41e+05                 0                            0         1e-10      "SamplingModel_Abdulrahman"
+    22050      "lpf"         4.41e+05                10                   3.3307e-16         1e-12      "SamplingModel_Abdulrahman"
+    11025      "none"       2.205e+05                 0                            0         1e-10      "SamplingModel_11025_Abdulrahman"
+    11025      "lpf"        2.205e+05                10                   5.5511e-16         1e-12      "SamplingModel_11025_Abdulrahman"
+     8000      "none"         1.6e+05                 0                   1.6794e-11         1e-10      "SamplingModel_8000_Abdulrahman"
+     8000      "lpf"          1.6e+05                10                   7.7716e-16         1e-12      "SamplingModel_8000_Abdulrahman"
+     4000      "none"           80001                 0                   1.3194e-11         1e-10      "SamplingModel_4000_Abdulrahman"
+     4000      "lpf"            80001                10                   6.6613e-16         1e-12      "SamplingModel_4000_Abdulrahman"
+
+PASS: eight actual Simulink outputs match their MATLAB references.
+    FsHz     FilterMode    SampleCount    RemovedDelayOutputSamples    MaxAbsDifference    Tolerance                ModelName
+    _____    __________    ___________    _________________________    ________________    _________    _________________________________
+
+    22050      "none"        4.41e+05                 0                            0         1e-10      "SamplingModel_Abdulrahman"
+    22050      "lpf"         4.41e+05                10                   3.3307e-16         1e-12      "SamplingModel_Abdulrahman"
+    11025      "none"       2.205e+05                 0                            0         1e-10      "SamplingModel_11025_Abdulrahman"
+    11025      "lpf"        2.205e+05                10                   5.5511e-16         1e-12      "SamplingModel_11025_Abdulrahman"
+     8000      "none"         1.6e+05                 0                   1.6794e-11         1e-10      "SamplingModel_8000_Abdulrahman"
+     8000      "lpf"          1.6e+05                10                   7.7716e-16         1e-12      "SamplingModel_8000_Abdulrahman"
+     4000      "none"           80001                 0                   1.3194e-11         1e-10      "SamplingModel_4000_Abdulrahman"
+     4000      "lpf"            80001                10                   6.6613e-16         1e-12      "SamplingModel_4000_Abdulrahman"
+
+PASS: eight actual Simulink outputs match their MATLAB references.

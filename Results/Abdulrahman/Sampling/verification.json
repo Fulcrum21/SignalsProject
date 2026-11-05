@@ -1,15 +1,17 @@
 {
-  "date": "2026-11-01",
-  "platform": "MATLAB R2026a",
+  "date": "2026-11-03",
+  "matlabResultsDate": "2026-11-01",
+  "platform": "MATLAB and Simulink R2026a",
   "caseCount": 8,
+  "simulinkCaseCount": 8,
   "wavCount": 8,
   "comparisonFigures": 13,
-  "pdfPages": 18,
+  "pdfPages": 19,
   "aliasOriginalHz": 10000.0,
   "aliasUnfilteredHz": 1025.0,
   "aliasSuppressionDb": 68.74118523959622,
   "maxWavRoundTripError": 3.05173039920059e-05,
-  "remainingSimulink": "11.025 kHz, 8 kHz, 4 kHz and corresponding platform comparisons",
+  "remainingSimulink": "Sampling comparisons complete; combined-case integration and final review pending",
   "listeningPerformed": false,
   "fullCombinedMatrixComplete": false
 }

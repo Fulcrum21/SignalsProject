@@ -32,6 +32,9 @@ for r in cases:
         assert (w.getnchannels(),w.getsampwidth(),w.getframerate(),w.getnframes()) == (1,2,int(r['Fs']),int(r['sampleCount']))
 suppression = 20*math.log10(float(alias[1]['PeakAmplitude'])/float(alias[2]['PeakAmplitude']))
 max_error = max(float(r['wavMaxAbsRoundTripError']) for r in cases)
+with (RESULTS/'simulink_comparison.csv').open(newline='',encoding='utf-8-sig') as f:
+    simulink_rows=list(csv.DictReader(f))
+assert len(simulink_rows)==8 and all(float(r['MaxAbsDifference'])<=float(r['Tolerance']) for r in simulink_rows)
 pages = []
 def add(title,body): pages.append((title,body.strip()))
 def tab(headers,rows):
@@ -39,7 +42,7 @@ def tab(headers,rows):
 def image(name): return f'![{name}](../Results/Abdulrahman/Sampling/{name})'
 
 add('Sampling and aliasing',f'''
-**Abdulrahman | MATLAB report section draft | 1 November 2026**
+**Abdulrahman | Sampling report section draft | Updated 3 November 2026**
 
 The same mono speech/music recording was converted from 44.1 kHz to four lower rates, with and without anti-aliasing low-pass filtering. Eight MATLAB sampling cases are supplied. A known 10 kHz tone folds to 1,025 Hz after unfiltered conversion to 11.025 kHz, matching the sampling-theory prediction. Filtering reduces the measured largest residual by {suppression:.2f} dB relative to the unfiltered alias.
 
@@ -53,7 +56,7 @@ The source WAV contains 882,005 mono samples at 44,100 Hz, stored as 16-bit PCM.
 
 These are sampling-only results. The MAT arrays retain double-valued samples without reduced-bit quantization or independent normalization. The b16 label identifies the source/control; WAV playback copies use a 16-bit PCM carrier. Quantization, complete NMSE/SNR tables and listening results belong to the integrated team evaluation.
 
-New-rate Simulink implementation and comparison remain pending. The previously verified 22.05 kHz platform comparison is retained [7]. This is a draft section for the team report, not a completed submission report.
+All four saved sampling models have now been run and compared against the exact MATLAB arrays. Eight aligned Simulink sampling controls are supplied separately, with no further quantization. The platform comparison table documents tolerances and measured differences. This remains a draft section for the integrated team report, not a completed submission report.
 ''')
 
 add('Sampling methods','''
@@ -197,6 +200,27 @@ MATLAB verified the reference, case inventory, actual rates, expected counts, fi
 No independent amplitude normalization or clipping was applied. WAV conversion error measures export rounding, not total downsampling degradation. Speaker playback and listening impressions require the team's actual listening session.
 ''')
 
+add('Simulink verification',f'''
+The four saved sampling models were run in MATLAB/Simulink R2026a for the full 20-second simulation interval. Logged frames were joined into columns, the known FIR delay was removed from filtered outputs, and only surplus final-frame coverage was discarded. Each case retains its exact MATLAB reference sample count.
+
+{tab(['Rate Hz','Filter','Samples','Delay removed','Max difference'], [[r['FsHz'],r['FilterMode'],r['SampleCount'],r['RemovedDelayOutputSamples'],f"{float(r['MaxAbsDifference']):.6g}"] for r in simulink_rows])}
+
+Unfiltered outputs use a maximum-absolute-difference tolerance of 1e-10; filtered outputs use 1e-12. These are numerical agreement bounds, far below one PCM16 sample step. The 8/4 kHz unfiltered models interpolate within each 4,410-sample frame; the MATLAB reference interpolates using full-record times. Their slightly different floating-point calculations explain small nonzero discrepancies. The filtered differences are at floating-point rounding scale.
+
+### Reproduce the comparison
+
+From the repository root:
+
+```matlab
+addpath("Matlab")
+Compare_All_Sampling
+```
+
+The script prepares the four coefficient variables, loads the saved models and explicitly simulates to 20 s. It saves simulink_comparison.csv and simulink_cases.mat. The latter contains eight top-level cases structures with actual aligned Simulink samples, platform IDs, processing-stage and alignment metadata compatible with Jesher's external handoff contract. No MATLAB answer is relabeled as a Simulink result.
+
+The FFT and spectrogram branches attached to the source still display the original recording. With 4,410-sample frames the final frame contains only five original samples, then padding; its broad, tiny FFT is not the whole-record spectrum. The sample-array comparison above is independent of that display artifact.
+''')
+
 add('Conclusion and remaining integration',f'''
 All four lower rates are implemented in MATLAB with explicit filtered and unfiltered methods. The known 10 kHz recording folds to 1,025 Hz at 11.025 kHz sampling. Filtering reduces its measured largest residual by {suppression:.2f} dB. Comparable real-recording waveforms, FFTs and spectrograms show retained bandwidth and processing differences.
 
@@ -204,7 +228,7 @@ The 8 and 4 kHz unfiltered paths use linear interpolation, with a frequency-resp
 
 ### Remaining integration
 
-Abdulrahman will complete the remaining Simulink cases and comparisons. Khaled will apply reduced bit depths. Jesher will complete the NMSE/SNR tables, final audio package and listening evaluation. Yazan will merge the report sections and acquisition evidence. Eight MATLAB sampling cases do not establish that the full combined case matrix is complete.
+The sampling-only MATLAB/Simulink comparisons now pass at all four lower rates. The new Simulink handoff still needs receiver acceptance and integration with the agreed reduced-bit cases. The team must reconcile final metrics, audio/listening evidence and report sections, including Jesher's separately developed demo. Sampling agreement does not by itself establish that the full combined case matrix, review and submission are complete.
 
 ### Sources and references
 
@@ -279,13 +303,13 @@ def render(body):
     return story
 
 pdf=canvas.Canvas(str(PDF),pagesize=A4)
-pdf.setTitle('Sampling and aliasing - Abdulrahman - MATLAB report draft')
+pdf.setTitle('Sampling and aliasing - Abdulrahman - verified platform comparisons')
 pdf.setAuthor('Signals Project team - Abdulrahman sampling section')
 for n,(title,body) in enumerate(pages,1):
     pdf.setFillColor(TEAL); pdf.rect(0,H-9,W,9,fill=1,stroke=0)
     pdf.setFillColor(GRAY); pdf.setFont('Bold',8)
     pdf.drawString(44,H-33,'CCEN 302 / SAMPLING AND ALIASING')
-    pdf.drawRightString(W-44,H-33,'MATLAB DRAFT / 1 NOV 2026')
+    pdf.drawRightString(W-44,H-33,'SAMPLING DRAFT / 3 NOV 2026')
     pdf.bookmarkPage(str(n)); pdf.addOutlineEntry(title,str(n),0)
     story=[P(title,'title')]+render(body)
     frame=Frame(44,52,CW,H-102,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)
@@ -293,15 +317,16 @@ for n,(title,body) in enumerate(pages,1):
     assert not story, f'Page {n} overflows: {title}'
     pdf.setStrokeColor(colors.HexColor('#D4DFE7')); pdf.line(44,38,W-44,38)
     pdf.setFillColor(GRAY); pdf.setFont('Body',8)
-    pdf.drawString(44,24,'MATLAB sampling complete / new-rate Simulink comparison pending')
+    pdf.drawString(44,24,'Eight sampling comparisons verified / final team integration pending')
     pdf.drawRightString(W-44,24,f'{n:02} / {len(pages):02}'); pdf.showPage()
 pdf.save()
 MD.write_text('# Sampling and aliasing report draft\n\n'+'\n\n'.join('## '+title+'\n\n'+body for title,body in pages)+'\n',encoding='utf-8')
 reader=PdfReader(str(PDF))
-assert len(reader.pages)==len(pages)==18
+assert len(reader.pages)==len(pages)==19
 for i,p in enumerate(reader.pages): assert len(p.extract_text())>500,(i+1,'Sparse page')
 inputs=[ROOT/'Audios/SpeechMusic.wav',ROOT/'Audios/10kHz_Sine.wav']
 inputs += [ROOT/'Matlab'/name for name in ['Sampling_Abdulrahman.m','Sampling_OtherRates.m','Aliasing_Demo.m','Prepare_Sampling_Handoff.m','Plot_Sampling_Comparisons.m','Check_Sampling_Handoff.m']]
+inputs += [ROOT/'Matlab/Compare_All_Sampling.m'] + list((ROOT/'Simulink').glob('SamplingModel*.slx'))
 inputs += [p for p in RESULTS.iterdir() if p.suffix in ('.mat','.csv','.wav','.png') and p.name!='sha256_manifest.csv']
 with (RESULTS/'sha256_manifest.csv').open('w',newline='',encoding='utf-8') as f:
     writer=csv.writer(f); writer.writerow(['RelativePath','HashedBytes','HashMode','SHA256'])
@@ -311,6 +336,6 @@ with (RESULTS/'sha256_manifest.csv').open('w',newline='',encoding='utf-8') as f:
         mode='text-lf' if p.suffix in ('.m','.csv','.py','.json','.md','.txt') else 'raw'
         if mode=='text-lf': content=content.replace(b'\r\n',b'\n')
         writer.writerow([p.relative_to(ROOT).as_posix(),len(content),mode,hashlib.sha256(content).hexdigest()])
-verification=dict(date='2026-11-01',platform='MATLAB R2026a',caseCount=8,wavCount=8,comparisonFigures=13,pdfPages=18,aliasOriginalHz=float(alias[0]['PeakHz']),aliasUnfilteredHz=float(alias[1]['PeakHz']),aliasSuppressionDb=suppression,maxWavRoundTripError=max_error,remainingSimulink='11.025 kHz, 8 kHz, 4 kHz and corresponding platform comparisons',listeningPerformed=False,fullCombinedMatrixComplete=False)
+verification=dict(date='2026-11-03',matlabResultsDate='2026-11-01',platform='MATLAB and Simulink R2026a',caseCount=8,simulinkCaseCount=8,wavCount=8,comparisonFigures=13,pdfPages=19,aliasOriginalHz=float(alias[0]['PeakHz']),aliasUnfilteredHz=float(alias[1]['PeakHz']),aliasSuppressionDb=suppression,maxWavRoundTripError=max_error,remainingSimulink='Sampling comparisons complete; combined-case integration and final review pending',listeningPerformed=False,fullCombinedMatrixComplete=False)
 (RESULTS/'verification.json').write_text(json.dumps(verification,indent=2)+'\n',encoding='utf-8')
 print(f'CREATED {PDF} ({len(pages)} pages)'); print(f'CREATED {MD}'); print(json.dumps(verification,indent=2))

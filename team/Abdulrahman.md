@@ -4,7 +4,7 @@
 
 **Owner:** Abdulrahman | **Reviewer:** Yazan
 
-**Last updated:** 2 November 2026
+**Last updated:** 5 November 2026
 
 **Internal finish:** 4 November 2026, 8:00 PM Dubai time. All deadlines below are at 8:00 PM Dubai time.
 
@@ -18,17 +18,17 @@
   - Evidence: [verified MATLAB source](../Matlab/Sampling_Abdulrahman.m), [sample arrays and settings](../Results/Abdulrahman/AA02/sampling_22050.mat), [summary table](../Results/Abdulrahman/AA02/summary.csv), [comparison spectrum](../Results/Abdulrahman/AA02/comparison.png), and the WAV copies linked below. This completes the MATLAB prototype, not Simulink or the full alignment/aliasing experiments.
 - [x] **AA-03 - Finalize alignment and join the first complete case. Due 27 October; completed 25 October.** Document reconstruction to the common time base, known delay compensation, valid comparison interval/edges, and unequal-length handling for Jesher. Test the policy with a known signal. Supply the first sampling case in MATLAB and Simulink for the full pipeline; preserve its actual rate for quantization and metrics.
   - Evidence: the saved 22.05 kHz [Simulink model](../Simulink/SamplingModel_Abdulrahman.slx), [comparison script](../Matlab/Compare_Sampling.m), alignment procedure below, and [300 Hz validation results](../Results/Abdulrahman/AA03/known_tone_validation.csv). Speech/music differences were `0` and `3.33066907388e-16`; known-tone differences were `0` and `6.93889390391e-17`, with zero residual reconstruction lag. This supplies the verified sampling case; Khaled's quantization and Jesher's metrics remain their tasks.
-- [ ] **AA-04 - Complete every sampling route in both platforms. Due 29 October.** Implement 22.05 kHz, 11.025 kHz, 8 kHz, and 4 kHz with and without anti-aliasing filtering. Handle non-integer conversions correctly; keep amplitudes consistent with the reference. Give Khaled the sampling outputs and metadata for all routes, and stay available for combination issues.
+- [x] **AA-04 - Complete every sampling route in both platforms. Due 29 October; implementation verified 3 November.** Implement 22.05 kHz, 11.025 kHz, 8 kHz, and 4 kHz with and without anti-aliasing filtering. Handle non-integer conversions correctly; keep amplitudes consistent with the reference. Sampling outputs and metadata are packaged for Khaled; recipient acceptance and combined-case integration remain under AA-06.
   - [x] **MATLAB portion completed 1 November:** all eight rate/filter cases are implemented, packaged and checked in the [sampling handoff](../Results/Abdulrahman/Sampling/README.md). The 8/4 kHz unfiltered methods are explicitly identified as linear interpolation without an AA LPF.
-  - [ ] **Remaining:** new-rate Simulink implementations and equivalent-method comparisons. The earlier 22.05 kHz comparison remains complete.
+  - [x] **Simulink portion completed 3 November:** all four saved models were rerun using [Compare_All_Sampling.m](../Matlab/Compare_All_Sampling.m). All eight comparisons passed; [measured table](../Results/Abdulrahman/Sampling/simulink_comparison.csv) and [actual aligned Simulink arrays](../Results/Abdulrahman/Sampling/simulink_cases.mat) are saved. Both-platform sampling is ready for handoff; recipient acceptance and combined cases remain under AA-06.
 - [ ] **AA-05 - Produce sampling/aliasing evidence. Due 30 October.** For each lower rate at 16 effective bits, produce comparable original/filtered/unfiltered waveform, FFT, and spectrogram views. Demonstrate identifiable frequency folding with at least one existing known-frequency test signal and discuss what is observable in the real recording. Compare equivalent MATLAB/Simulink cases and document filter/method/axis differences.
   - [x] **MATLAB portion completed 1 November:** twelve real-audio comparisons plus the known-tone figure are saved in [Sampling](../Results/Abdulrahman/Sampling/). The 10 kHz tone folds to 1,025 Hz at 11.025 kHz; filtering suppresses the largest residual by 68.74 dB. See [measured peaks](../Results/Abdulrahman/Sampling/aliasing_summary.csv).
-  - [ ] **Remaining:** corresponding new-rate Simulink evidence and discussion of equivalent analysis settings.
+  - [x] **Numerical platform evidence completed 3 November:** all eight maximum differences and delay corrections are recorded in the comparison CSV and report. The report explains frame FFTs versus full-record plots and the final padded frame. Final figure review remains part of sign-off.
 - [ ] **AA-06 - Complete the combined-case handoff. Due 30 October.** Work with Khaled to cover every lower-rate/filter/bit-depth combination in both platforms, preserving IDs/timing metadata. Help Jesher resolve alignment or rate discrepancies. Document which cases and artifacts were accepted; do not call the whole matrix complete if any route is missing.
-  - **Ready for integration:** eight MATLAB sampling cases, exact double arrays, eight checked WAV copies and timing/filter metadata are prepared. Recipient acceptance, reduced-bit combinations and remaining Simulink cases are not claimed.
+  - **Ready for integration:** eight MATLAB sampling cases, eight actual aligned Simulink controls, eight MATLAB WAV copies and timing/filter metadata are prepared. Recipient acceptance, reduced-bit combinations and final integration are not claimed.
 - [ ] **AA-07 - Write the sampling/aliasing report section. Due 31 October.** Include methods, filter choices, non-integer conversion, plots with units, observed folding/overlap, Nyquist interpretation, limitations, and MATLAB/Simulink comparison. Explain the reconstruction/alignment policy so quality results are reproducible.
   - [x] **MATLAB draft ready 1 November:** [editable report section](../Reports/Abdulrahman_Sampling.md) and [18-page PDF](../output/pdf/Abdulrahman_Sampling_Report_Draft.pdf), using the measured results and thirteen figures.
-  - [ ] **Remaining:** add the new-rate Simulink results and final review before signing off the whole report task.
+  - [x] **Simulink results added 3 November:** the updated 19-page sampling draft includes all rates, numerical tolerances, known-delay handling and reproducible commands. Final team integration/review remains open.
 - [ ] **AA-08 - Review Yazan's baseline. Due 2 November.** Check recording metadata/provenance, portable model input, FFT parity/scaling, dB and spectrogram units, and the full-record versus frame-FFT comparison. Record findings and evidence here; Yazan updates his own checklist. Address Yazan's review of your sampling work.
 - [ ] **AA-09 - Close findings and rehearse. Due 3 November.** Resolve your review/integration findings and re-run affected cases. Rehearse aliasing/alignment explanations and demonstrate that you can explain another member's section.
 - [ ] **AA-10 - Sign off sampling in the final package. Due 4 November, 6:00 PM Dubai time.** Check the final source/models, sample-rate/filter metadata, report figures, matching platform results, and demonstration. Confirm no essential sampling/alignment issue remains open.
@@ -36,6 +36,8 @@
 ## Handoffs
 
 **Current MATLAB package:** [Results/Abdulrahman/Sampling/README.md](../Results/Abdulrahman/Sampling/README.md). Set Current Folder to `Matlab` and run `Prepare_Sampling_Handoff` to reproduce the package. The original AA-02 files and AA-03 verification below are retained unchanged.
+
+**Current Simulink package, 3 November:** from the repository root, run `addpath("Matlab"); Compare_All_Sampling`. This initializes the required coefficient variables, runs all four saved models to 20 s and writes `simulink_comparison.csv` plus eight top-level `cases` in `simulink_cases.mat`. The visual spectrogram is temporarily bypassed during the automated check to avoid a scope UI callback error; models are not saved by this script. The data paths and logging remain active. Your shared Word report is not edited by this workflow.
 
 | When | Give / receive | Acceptance evidence |
 | --- | --- | --- |
@@ -155,5 +157,13 @@ signalFs = handoff.prototype.unfiltered.Fs;
 | 2 November | Prepared the MATLAB checkpoint for publication: rechecked the case/WAV inventories, saved verification records, report links and artifact checksums. Text checksums now tolerate Git's Windows line-ending conversion. The 1 November measurements are retained. | Finish the remaining Simulink cases and comparisons; complete combined-case integration and final review. |
 | 2 November | Virtual merge with Jesher's branch at `13fc434` was clean. Documented the external MAT schema adapter requirement, nearest-selection versus linear-interpolation difference, and MAT/WAV measurement basis in the handoff README. | Reconcile interfaces/methods before treating the branches as one equivalent experiment. |
 
-**Technical review findings:** pending under AA-08; add task ID, finding, evidence, owner, and resolution date here.
+**Technical review findings (5 November):** [Review record](../Reports/Package_Review_2026-11-05.md). All 40 sampling manifest entries and eight WAV headers pass; all eight saved platform comparisons satisfy tolerance. Yazan's FFT parity/scaling and relative model input were inspected. Baseline spectrogram units need checking; zero FFT magnitudes produce negative infinity in the dB display. Integrated quantization/metrics, final package execution, and reciprocal teammate acceptance remain open. No new simulations were run during this audit.
+
+**Listening checks (5 November):** Abdulrahman reports completion. Case-specific subjective observations and playback conditions have not been recorded here; no additional listening claims are inferred.
+
+**Publication checkpoint (5 November):** all four sampling Simulink models are complete and numerically verified. The comparison script, aligned Simulink MAT handoff, results table, report updates and this progress file are included in the publication checkpoint. AA-06 and final report/package sign-off remain open; no sampling model needs to be redone for those tasks.
+
+**Repository synchronization (5 November):** origin/main already includes Jesher's work at `e8c404f`; this sampling checkpoint was rebased onto it without conflicts. His work is now available locally. Final integrated execution and the R2026b/R2026a model compatibility issue remain separate from the completed sampling simulations.
+
+**3 November verification:** unfiltered differences at 22.05/11.025/8/4 kHz were `0`, `0`, `1.6794e-11`, `1.3194e-11`; filtered differences were `3.3307e-16`, `5.5511e-16`, `7.7716e-16`, `6.6613e-16`. These compare actual saved-model outputs with exact MATLAB controls, not quality degradation against the original.
 **Final sign-off:** pending; add date, source/result commit, reviewer, and any remaining limitations.

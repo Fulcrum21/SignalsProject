@@ -2,7 +2,7 @@
 
 **Owner:** Abdulrahman. **Prepared:** 1 November 2026. **Receivers:** Khaled (quantization), Jesher (metrics), Yazan (report integration).
 
-This folder supplies eight sampling-only MATLAB cases from the unchanged `Audios/SpeechMusic.wav`: 22,050, 11,025, 8,000 and 4,000 Hz, each with `none` and `lpf` anti-aliasing choices. The new-rate Simulink cases and comparisons remain Abdulrahman's work. Receiver acceptance and the combined quantization matrix are not claimed.
+This folder supplies eight sampling-only MATLAB cases and eight verified Simulink controls from the unchanged `Audios/SpeechMusic.wav`: 22,050, 11,025, 8,000 and 4,000 Hz, each with `none` and `lpf` anti-aliasing choices. All sampling comparisons passed on 3 November. Receiver acceptance and the combined quantization matrix are not claimed.
 
 ## Files
 
@@ -87,4 +87,19 @@ Jesher's branch includes an independently generated full-case demo and result ta
 
 ## What remains
 
-Finish the three new Simulink rates and their comparison evidence. Preserve equivalent conversion/interpolation methods and verify block timing/delay rather than reusing an assumed delay. Khaled and Jesher still own combined bit-depth generation, quality metrics and final audio/listening evidence. Yazan integrates the report. The earlier 22.05 kHz platform check is recorded under AA-03; it does not certify the new Simulink rates.
+All four sampling models now pass their MATLAB comparisons. Combined bit-depth generation, integrated quality metrics, final audio/listening evidence, reviews and report integration remain team work. The earlier branch compatibility notes describe the 2 November audit; Jesher's subsequently reviewed branch added the adapter and matching interpolation method.
+
+## Simulink verification on 3 November
+
+The four saved models are in `Simulink/`. From the repository root:
+
+```matlab
+addpath("Matlab")
+Compare_All_Sampling
+```
+
+The script initializes all four coefficient variables and runs every model to 20 s. It temporarily bypasses the visual spectrogram to avoid a scope UI callback error, restoring its state afterward without saving the models. All sampling paths and output logging remain active.
+
+`simulink_comparison.csv` records eight measured differences, tolerances, sample counts and removed FIR delays. `simulink_cases.mat` contains eight top-level `cases` with actual aligned Simulink outputs and Jesher-compatible metadata. Pass this MAT file to Jesher's evaluator as an explicit handoff. These are sampling-only b16 controls, not reduced-bit combined cases. MATLAB reference arrays and existing WAV copies remain unchanged.
+
+Unfiltered comparisons use tolerance 1e-10, accommodating tiny differences between frame-relative and whole-record interpolation calculations. Filtered comparisons use 1e-12. All pass. Known filter delays are removed once; excess final frames are discarded only after retaining the declared recording coverage. The report contains the complete measured table.
