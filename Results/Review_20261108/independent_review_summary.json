@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-08",
+  "reviewedCommit": "0d0dd4b",
+  "matlabRelease": "R2026a",
+  "freshSamplingChecks": 8,
+  "freshSamplingPlatformComparisons": 8,
+  "matlabRegressionTests": 22,
+  "baselineExecutionPassed": true,
+  "jesherRebuiltModelOnlyInAuditCopy": true,
+  "exactHandoffImports": 8,
+  "regeneratedControls": 8,
+  "timingChecks": 16,
+  "aliasChecks": 4,
+  "combinedCases": 72,
+  "platformPairs": 36,
+  "wavHeadersChecked": 73,
+  "zipMembersByteChecked": 74,
+  "maxPlatformSampleDifference": 7.7715611723761e-16,
+  "sourceHash": "69922d4cc5ad952779e0108831893bd86ccac50bd86b66d45ee72894a46c9c34",
+  "wholeTeamSubmissionApproved": false
+}

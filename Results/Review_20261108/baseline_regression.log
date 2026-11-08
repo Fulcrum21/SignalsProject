@@ -1,0 +1,14 @@
+BASELINE_PASS
+Running TestJesherCore
+.......... .
+Done TestJesherCore
+__________
+
+Running TestJesherPipeline
+.......... Evaluated 9/72 cases. Output: C:\Users\pc\AppData\Local\Temp\tp8dfb1b8e_ebe6_4127_a407_51c43b97fe3b\evaluation
+Speaker checks, listening, review and final sign-off remain pending.
+.
+Done TestJesherPipeline
+__________
+
+REGRESSION_PASS
