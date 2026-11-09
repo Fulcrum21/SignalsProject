@@ -1,5 +1,7 @@
 # Start here: simple course demonstration
 
+**Historical standalone demo.** For the current team pipeline using Khaled's published quantizer and model, start with root `RUN_JESHER` and [QUICK_START](../../QUICK_START.md). This folder remains a separate independent experiment.
+
 This folder is the complete working demonstration. The separate `Jesher/matlab/` evaluator accepts team handoffs; it is optional
 for this self-contained demo. Historical results are clearly separated below. Other teammates' files are unchanged.
 

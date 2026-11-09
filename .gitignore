@@ -23,6 +23,9 @@ Thumbs.db
 
 # Generated recording samples stay local; publish source, figures and tables.
 Results/Khaled/*.mat
+Results/Khaled/**/*.mat
+Results/Khaled/**/*.wav
+Results/Khaled/**/*.zip
 Results/Integrated/**/*.mat
 Results/Integrated/**/*.wav
 Results/Integrated/**/*.zip

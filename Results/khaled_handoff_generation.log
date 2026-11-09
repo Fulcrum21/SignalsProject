@@ -1,0 +1,63 @@
+Original: 882005 samples at 44100 Hz (20.000113 s)
+
+Path:  44100 Hz, native, N=882005, sampling max diff=0
+  16 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:  22050 Hz, none  , N=441003, sampling max diff=0
+  16 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:  22050 Hz, lpf   , N=441003, sampling max diff=3.331e-16
+  16 bits: quantizer PASS; output max diff = 3.331e-16; differing samples = 294073
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:  11025 Hz, none  , N=220502, sampling max diff=0
+  16 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:  11025 Hz, lpf   , N=220502, sampling max diff=5.551e-16
+  16 bits: quantizer PASS; output max diff = 5.551e-16; differing samples = 171670
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:   8000 Hz, none  , N=160001, sampling max diff=1.679e-11
+  16 bits: quantizer PASS; output max diff = 1.679e-11; differing samples = 155860
+   8 bits: quantizer PASS; output max diff = 0.007812; differing samples = 14
+   4 bits: quantizer PASS; output max diff = 0.125; differing samples = 1
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:   8000 Hz, lpf   , N=160001, sampling max diff=7.772e-16
+  16 bits: quantizer PASS; output max diff = 7.772e-16; differing samples = 135602
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:   4000 Hz, none  , N=80001, sampling max diff=1.319e-11
+  16 bits: quantizer PASS; output max diff = 1.319e-11; differing samples = 76069
+   8 bits: quantizer PASS; output max diff = 0.007812; differing samples = 10
+   4 bits: quantizer PASS; output max diff = 0.125; differing samples = 1
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+Path:   4000 Hz, lpf   , N=80001, sampling max diff=6.661e-16
+  16 bits: quantizer PASS; output max diff = 6.661e-16; differing samples = 70820
+   8 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   4 bits: quantizer PASS; output max diff = 0; differing samples = 0
+   2 bits: quantizer PASS; output max diff = 0; differing samples = 0
+
+==========================================
+KH-04 GENERATED: 36 MATLAB, 36 Simulink, 72 total cases.
+Maximum cross-platform output difference: 0.125
+Maximum cross-platform sample discrepancy count: 294073
+Saved in: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Results\Khaled\Combined
+Handoff still requires Jesher acceptance and export checks.
+NOTE: Differences between platforms may reflect differences in upstream sampling arrays. Inspect KH04_Comparison_Manifest.csv.

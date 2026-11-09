@@ -1,4 +1,12 @@
-# Jesher's course project: start in Demo
+# Jesher's current evaluation: use Khaled's published work
+
+From the repository root, run **`RUN_JESHER`**. It reads Khaled's actual `KH04_MATLAB_Cases.mat` and `KH04_Simulink_Cases.mat`, generating them with his script/model if absent. It preserves the producer arrays, computes aligned NMSE/SNR, exports and verifies WAVs, and writes report figures and tables. **`RUN_PROJECT`** also regenerates Abdulrahman's sampling first.
+
+For the live demonstration, edit root `PROJECT_SETTINGS.m`, run `RUN_DEMO`, then `PLAY_PROJECT_AUDIO`. See [QUICK_START](../QUICK_START.md) and [the current report](../Reports/Jesher_Khaled_Handoff_Results.md). Khaled's nine supplied observations are attributed separately from new Jesher speaker checks.
+
+## Earlier independent demo and historical status
+
+The material below describes the earlier standalone experiment. Its old coverage/status statements do not describe the current complete KH04 handoff evaluation.
 
 The complete live demonstration is in **[Demo/](Demo/README.md)**. It reads the original audio directly, processes it in MATLAB or Simulink, exports a WAV, reads it back and calculates aligned NMSE/SNR. No handoff MAT files or Python environment are needed to run it.
 

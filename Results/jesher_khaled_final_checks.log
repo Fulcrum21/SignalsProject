@@ -1,0 +1,4 @@
+PASS: quantizer boundary, half-tie, saturation, level-count, bypass and metric checks.
+PASS: all 72 files, metadata, errors, metrics and 36 actual platform pairs.
+Listening and team sign-off must be performed by the students.
+PASS: exact 72-case handoff/metadata/export checks and all current entry scripts/helpers pass Code Analyzer.

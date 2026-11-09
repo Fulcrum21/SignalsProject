@@ -14,7 +14,7 @@ native.platform = 'simulink';
 native.caseId = 'speechmusic_fs44100_b16_native_simulink';
 native.samples = reference;
 native.Fs = Fs;
-native.provenance = 'Original recording; native input to Quantization_Khaled bypass.';
+native.provenance = 'Original recording; unchanged native reference input.';
 native.alignmentPolicy = 'full_record_resample_v1';
 inputs(end+1,1) = native;
 % Normalize description conventions only. No sample or timing changes here.

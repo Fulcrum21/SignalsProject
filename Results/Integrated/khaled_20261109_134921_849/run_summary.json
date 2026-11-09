@@ -1,0 +1,65 @@
+{
+  "createdAtDubai": "09-Nov-2026 13:49:36",
+  "matlabVersion": "26.2.0.3433840 (R2026b) Update 1",
+  "toolboxes": [
+    {
+      "Name": "DSP System Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB Copilot",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Signal Processing Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Simulink",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    }
+  ],
+  "sourceFile": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Audios\\SpeechMusic.wav",
+  "sourceSampleCount": 882005,
+  "sourceRateHz": 44100,
+  "availableCases": 72,
+  "expectedCases": 72,
+  "matrixComplete": true,
+  "handoffFiles": [
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\Combined\\KH04_MATLAB_Cases.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\Combined\\KH04_Simulink_Cases.mat"
+  ],
+  "outputFolder": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Integrated\\khaled_20261109_134921_849",
+  "snapshotSources": [
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\Combined\\KH04_MATLAB_Cases.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\Combined\\KH04_Simulink_Cases.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Abdulrahman\\AA02\\sampling_22050.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Abdulrahman\\Sampling\\sampling_all_rates.mat"
+  ],
+  "snapshotFiles": [
+    "001_KH04_MATLAB_Cases.mat",
+    "002_KH04_Simulink_Cases.mat",
+    "003_sampling_22050.mat",
+    "004_sampling_all_rates.mat"
+  ],
+  "speakerPlaybackVerified": false,
+  "listeningCollected": false,
+  "reviewerAccepted": false,
+  "finalSignOff": false,
+  "archiveBytesVerified": true,
+  "archiveFile": "audio_all_cases_UNREVIEWED.zip"
+}

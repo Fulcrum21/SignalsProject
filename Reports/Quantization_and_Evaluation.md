@@ -1,5 +1,7 @@
 # Tasks 3 and 4: Quantization, storage and quality evaluation
 
+**Archived assistant-quantizer experiment.** The current workflow evaluates Khaled's published KH04 handoffs. Use [Jesher's current results](Jesher_Khaled_Handoff_Results.md). The replacement quantizer/model described in this older report have been retired from the live pipeline; the report is retained as historical evidence.
+
 Measured run: `run_20261109_125250_117`. MATLAB 2026b. Insert Task 3 after the existing sampling section, then Task 4. The full table can be placed in a results appendix.
 
 This implementation completes the quantization stage at Jesher's request and connects it to Abdulrahman's actual MATLAB and Simulink sampling outputs. Jesher's evaluator measures those combined outputs. The earlier independent demo remains a separate experiment. The task labels identify team responsibilities; they do not claim independent authorship or approval by another student.

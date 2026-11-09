@@ -1,0 +1,73 @@
+CaseID,PlaybackStatus,Listener,PlaybackDevice,ListeningNotes,JesherExportedNMSE,JesherExportedSNRdB,NotesSource,JesherPlaybackVerified
+speechmusic_fs44100_b16_native_matlab,tested,self,laptop speakers,"Speech is clear and easy to understand.",0,Inf,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b08_native_matlab,tested,self,laptop speakers,"Speech is clear and easy to understand.",0.000460949930685724,33.3634624599396,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b04_native_matlab,tested,self,laptop speakers,"Speech is audible, but less easy to understand than before.",0.103159711676512,9.86489880352197,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b02_native_matlab,tested,self,laptop speakers,"Speech is not audible, and cannot be understood.",0.736785262285885,1.32659069798083,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b16_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0012201979411864,29.135697121187,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b08_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0016630982906517,27.7908208281523,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b04_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.101982789728061,9.9147311212799,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b02_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.732972964353786,1.34912043978932,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b16_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.000807225381232419,30.9300519122619,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b08_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.00125267620061646,29.0216117358579,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b04_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.10162094448202,9.9301677300156,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b02_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.732911573456366,1.34948420279133,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b16_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0239320782862286,16.2101958517056,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b08_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0243770637122807,16.1301860759181,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b04_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.123362453207,9.08817002752347,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b02_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.736253558820635,1.32972592955364,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b16_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.013020024710586,18.8538819152351,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b08_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0134702822998467,18.7062330257093,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b04_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.112718963951976,9.4800301166598,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b02_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.7312119810588,1.35956701211458,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b16_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.043977836232231,13.567661423131,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b08_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0444515595616772,13.5211299741258,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b04_none_matlab,tested,self,laptop speakers,"Speech is audible, but less easy to understand than before.",0.143047542835518,8.44519597782808,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b02_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.74301424207978,1.29002861613073,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b16_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0251219358613544,15.9994689751803,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b08_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.0255640518067648,15.923703110042,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b04_lpf_matlab,tested,self,laptop speakers,"Speech is audible, but less easy to understand than before.",0.124190851430722,9.05910395459711,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b02_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.734668126593384,1.33908801512482,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b16_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.224497901165795,6.48787714867225,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b08_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.225002119373107,6.47813391098814,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b04_none_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.318430165813074,4.96985797009746,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b02_none_matlab,tested,self,laptop speakers,"Speech is not audible, and cannot be understood.",0.834593657705914,0.785249199283955,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b16_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.122592579123752,9.11535818097761,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b08_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.123037734326627,9.09961674767152,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b04_lpf_matlab,not_tested,not_recorded,not_recorded,"not_recorded",0.21837744302398,6.60792223458817,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b02_lpf_matlab,tested,self,laptop speakers,"Speech is not audible, and cannot be understood.",0.784611228478932,1.05345481024802,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b16_native_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0,Inf,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b08_native_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.000460949930685724,33.3634624599396,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b04_native_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.103159711676512,9.86489880352197,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs44100_b02_native_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.736785262285885,1.32659069798083,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b16_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0012201979411864,29.135697121187,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b08_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0016630982906517,27.7908208281523,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b04_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.101982789728061,9.9147311212799,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b02_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.732972964353786,1.34912043978932,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b16_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.000807225381232419,30.9300519122619,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b08_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.00125267620061646,29.0216117358579,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b04_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.10162094448202,9.9301677300156,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs22050_b02_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.732911573456366,1.34948420279133,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b16_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0239320782862286,16.2101958517056,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b08_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0243770637122807,16.1301860759181,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b04_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.123362453207,9.08817002752347,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b02_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.736253558820635,1.32972592955364,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b16_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.013020024710586,18.8538819152351,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b08_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0134702822998467,18.7062330257093,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b04_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.112718963951976,9.4800301166598,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs11025_b02_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.7312119810588,1.35956701211458,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b16_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0439779144716837,13.5676536967544,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b08_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0444514011530016,13.5211454507788,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b04_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.143046980951843,8.44521303673408,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b02_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.74301424207978,1.29002861613073,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b16_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0251219358613544,15.9994689751803,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b08_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.0255640518067648,15.923703110042,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b04_lpf_simulink,tested,self,laptop speakers,"Speech is audible, but less easy to understand than before.",0.124190851430722,9.05910395459711,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs8000_b02_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.734668126593384,1.33908801512482,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b16_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.224498559232957,6.48786441828518,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b08_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.225004395311011,6.47808998152309,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b04_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.318428525790442,4.96988033778401,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b02_none_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.834593657705914,0.785249199283955,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b16_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.122592579123752,9.11535818097761,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b08_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.123037734326627,9.09961674767152,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b04_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.21837744302398,6.60792223458817,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0
+speechmusic_fs4000_b02_lpf_simulink,not_tested,not_recorded,not_recorded,"not_recorded",0.784611228478932,1.05345481024802,Khaled branch fa2fc06: KH06_Listening_Notes.csv,0

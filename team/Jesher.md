@@ -10,7 +10,15 @@
 
 **Role:** make the quality comparison valid, ensure outputs can be heard correctly, and connect objective results to perception.
 
-## Current integrated pipeline, 9 November
+## Current evaluation of Khaled's published work, 9 November
+
+Following the user's correction, use Khaled's own branch `khaled-quantization-storage` at `fa2fc06`. His source/model are merged unchanged. `RUN_JESHER` evaluates the exact two KH04 handoff files produced by `Khaled_KH04_All_Cases`; `RUN_PROJECT` regenerates sampling first and calls his producer. The previous assistant replacement quantizer/model are retired from the live workflow. Khaled's checklist is restored to the version on his branch so that personal approvals are not inferred.
+
+The numerical work covers all 72 cases, verified WAV exports/archive, exact producer acceptance and documented platform differences. Current report: [Jesher_Khaled_Handoff_Results.md](../Reports/Jesher_Khaled_Handoff_Results.md). Results are identified by [latest_run.txt](../Results/Integrated/latest_run.txt). Preserve provenance when comparing with earlier independent runs.
+
+His worksheet supplies nine listening observations; the other 63 cases remain untested there. These are attributed reports, not new Jesher speaker checks. His published KH06 quality table uses linear interpolation with endpoint holding; Jesher retains the agreed resample-based reconstruction and records a method comparison. Report assembly, further actual listening, peer review and rehearsal remain student actions.
+
+## Earlier assistant integration on 9 November, superseded
 
 The user requested completion of Khaled's implementation and integration with Abdulrahman's actual work. The new root [RUN_PROJECT](../RUN_PROJECT.m) runs Abdulrahman's sampling scripts and four real sampling models, applies the new quantizer in each platform, and supplies all 72 cases to the existing Jesher evaluator. It passed full timing, metadata, quantizer, WAV representation and ZIP checks. All 22 existing MATLAB regression tests also passed. [QUICK_START](../QUICK_START.md) explains the simple run order and files.
 

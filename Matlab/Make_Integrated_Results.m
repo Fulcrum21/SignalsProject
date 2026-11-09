@@ -1,4 +1,4 @@
-function Make_Integrated_Results(folder,handoffFile)
+function Make_Integrated_Results(folder,handoffFiles)
 % Tables and figures from this run only. Never insert old demo metrics here.
 root=fileparts(fileparts(mfilename('fullpath')));
 metrics=readtable(fullfile(folder,'metrics.csv'),'TextType','string');
@@ -20,7 +20,55 @@ listening.heard=false(height(metrics),1);
 writetable(listening,fullfile(folder,'listening_template.csv'));
 
 %% Baseline and selected processed signals, with identical plot conventions.
-data=load(handoffFile,'cases'); cases=data.cases;
+cases=Load_Khaled_Cases(handoffFiles);
+inputs=Load_Sampling_Inputs();
+quantizationRows=struct([]);
+for k=1:numel(cases)
+    c=cases(k);
+    input=inputs([inputs.Fs]==c.Fs & strcmp({inputs.filterMode},c.filterMode) & ...
+        strcmp({inputs.platform},c.platform));
+    assert(isscalar(input));
+    errorSignal=c.quantizationError; d=c.quantizationStep;
+    m=jesher.computeMetrics(input.samples,c.samples);
+    saturated=0;
+    if c.effectiveBits<16
+        index=round(input.samples/d);
+        saturated=nnz(index < -2^(c.effectiveBits-1) | index > 2^(c.effectiveBits-1)-1);
+    end
+    row=struct('caseId',string(c.caseId),'platform',string(c.platform), ...
+        'Fs',c.Fs,'effectiveBits',c.effectiveBits,'filterMode',string(c.filterMode), ...
+        'distinctOutputLevels',numel(unique(c.samples)),'saturatedSamples',saturated, ...
+        'errorMSE',mean(errorSignal.^2),'errorMean',mean(errorSignal), ...
+        'maxAbsError',max(abs(errorSignal)),'quantizationOnlyNMSE',m.nmse, ...
+        'quantizationOnlySNRdB',m.snrDb);
+    if k==1, quantizationRows=row; else, quantizationRows(k)=row; end
+end
+writetable(struct2table(quantizationRows),fullfile(folder,'quantization_summary.csv'));
+
+%% Preserve the nine listening observations supplied on Khaled's branch.
+% They concern his listening session/exports, not a new Jesher speaker check.
+notes=readtable(fullfile(root,'Results','Khaled','Storage','KH06_Listening_Notes.csv'), ...
+    'TextType','string');
+[found,order]=ismember(metrics.caseId,notes.CaseID);
+assert(all(found) && height(notes)==72 && numel(unique(notes.CaseID))==72);
+notes=notes(order,:);
+notes.JesherExportedNMSE=metrics.exportedNmse;
+notes.JesherExportedSNRdB=metrics.exportedSnrDb;
+notes.NotesSource=repmat("Khaled branch fa2fc06: KH06_Listening_Notes.csv",height(notes),1);
+notes.JesherPlaybackVerified=false(height(notes),1);
+writetable(notes,fullfile(folder,'listening_results.csv'));
+
+%% Khaled's published quality table used a different reconstruction method.
+% Compare processing-array metrics only, so WAV conversion is not mixed in.
+prior=readtable(fullfile(root,'Results','Khaled','Storage', ...
+    'KH06_Storage_Quality_Shareable_72.csv'),'TextType','string');
+[found,order]=ismember(metrics.caseId,prior.CaseID); assert(all(found));
+comparison=metrics(:,{'caseId','nmse','snrDb'});
+comparison.JesherReconstruction=repmat("resample_10_5_full_record",height(metrics),1);
+comparison.KhaledReconstruction=prior.ReconstructionMethod(order);
+comparison.KhaledProcessingNMSE=prior.ProcessingNMSE(order);
+comparison.KhaledProcessingSNRdB=prior.ProcessingSNRdB(order);
+writetable(comparison,fullfile(folder,'reconstruction_comparison.csv'));
 reference=audioread(fullfile(root,'Audios','SpeechMusic.wav'));
 figureFolder=fullfile(folder,'figures'); if ~isfolder(figureFolder), mkdir(figureFolder); end
 addpath(fullfile(root,'Jesher','Demo'));
@@ -54,7 +102,7 @@ exportgraphics(f,fullfile(figureFolder,'native_quality_storage.png'),'Resolution
 t=(0:88199)'/44100; tone=0.5*sin(2*pi*997*t); theory=struct([]);
 for k=1:3
     bits=[8 4 2]; B=bits(k);
-    y=Uniform_Quantize(tone,B); m=jesher.computeMetrics(tone,y);
+    y=Khaled_Quantizer(tone,B); m=jesher.computeMetrics(tone,y);
     row=struct('bits',B,'sinePeak',0.5,'frequencyHz',997, ...
         'measuredSNRdB',m.snrDb,'highResolutionPrediction',6.0206*B+1.7609+20*log10(0.5));
     if k==1, theory=row; else, theory(k)=row; end
@@ -62,7 +110,7 @@ end
 writetable(struct2table(theory),fullfile(folder,'sine_quantization_check.csv'));
 
 %% Actual saved quantization model, for report/code documentation.
-load_system(fullfile(root,'Simulink','Quantization_Khaled.slx'));
-print('-sQuantization_Khaled','-dpng','-r180',fullfile(figureFolder,'quantization_model.png'));
-close_system('Quantization_Khaled',0);
+load_system(fullfile(root,'Simulink','Khaled_Quantizer_Model.slx'));
+print('-sKhaled_Quantizer_Model','-dpng','-r180',fullfile(figureFolder,'quantization_model.png'));
+close_system('Khaled_Quantizer_Model',0);
 end
