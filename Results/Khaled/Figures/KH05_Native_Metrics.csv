@@ -1,0 +1,5 @@
+CaseID,Bits,MSE,SNR_dB,UsedLevels,MaxPlatformDifference
+speechmusic_fs44100_b16_native_matlab,16,0,Inf,28685,0
+speechmusic_fs44100_b08_native_matlab,8,5.08574288364377e-06,33.3634624599396,233,0
+speechmusic_fs44100_b04_native_matlab,4,0.00113817951714861,9.86489880352196,15,0
+speechmusic_fs44100_b02_native_matlab,2,0.00812908334506037,1.32659069798082,4,0

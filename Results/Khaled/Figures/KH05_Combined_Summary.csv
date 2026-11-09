@@ -1,0 +1,2 @@
+CaseID,Fs,Bits,FilterMode,SampleCount,DurationSeconds,QuantizationMSE,QuantizationSNR_dB,InputMaxDiff,OutputMaxDiff,DifferingOutputSamples
+speechmusic_fs8000_b04_lpf_matlab,8000,4,lpf,160001,20.000125,0.00112587023671394,9.79967220449784,7.7715611723761e-16,0,0
