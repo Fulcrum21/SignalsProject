@@ -1,0 +1,31 @@
+Report section written: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Reports\Quantization_and_Evaluation.md
+Running TestJesherCore
+.......... .
+Done TestJesherCore
+__________
+
+Running TestJesherPipeline
+.......... Evaluated 9/72 cases. Output: C:\Users\jeshe\AppData\Local\Temp\tp716f59ba_a588_4224_b2e2_2b2dbe384ad0\evaluation
+Speaker checks, listening, review and final sign-off remain pending.
+.
+Done TestJesherPipeline
+__________
+
+              caseId: 'speechmusic_fs22050_b08_lpf_simulink'
+             wavFile: 'C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Results\Integrated\demo\speechmusic_fs22050_b08_lpf_simulink.wav'
+                  Fs: 22050
+       effectiveBits: 8
+      processingNMSE: 0.0013
+     processingSNRdB: 29.0216
+        exportedNMSE: 0.0013
+       exportedSNRdB: 29.0216
+    wavContainerBits: 16
+            wavBytes: 882050
+
+Quantize_All_Cases.m:32 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+Quantize_All_Cases.m:43 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+CHECK_INTEGRATION.m:67 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+Make_Integrated_Results.m:60 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+Write_Integrated_Report.m:13 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+CHECK_INTEGRATION.m:67 A Code Analyzer message was once suppressed here, but the message is no longer generated.
+PASS: regression tests, both single-case platforms and direct saved-model Run.

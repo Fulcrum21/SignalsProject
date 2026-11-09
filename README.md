@@ -4,6 +4,12 @@
 
 Course: Signals and Communications Systems (CCEN 302). This project studies sampling, aliasing, quantization, audio quality, and storage using MATLAB and Simulink.
 
+## Combined sampling, quantization and evaluation
+
+From MATLAB's Current Folder at the repository root, run **`RUN_PROJECT`** for the whole experiment. It runs Abdulrahman's actual sampling scripts/models, the completed quantization stage and Jesher's evaluator. For one live case, edit `PROJECT_SETTINGS.m`, run **`RUN_DEMO`**, then **`PLAY_PROJECT_AUDIO`**. See [the simple run guide](QUICK_START.md) for file responsibilities, output locations and toolbox requirements. The integrated implementation is separate from the earlier independent `Jesher/Demo` experiment. Generated WAV/MAT/ZIP recordings stay local; source, figures and result tables can be published.
+
+The [new quantization/evaluation report section](Reports/Quantization_and_Evaluation.md) includes measured tables, captions and report placement. The successful 9 November run covers 72 cases and 36 platform pairs; quantizer boundary checks and all 22 existing MATLAB regression tests passed. Actual speaker listening, team review and final report assembly remain separate student actions.
+
 [Project brief](CCEN%20302%20Project-3.pdf) | [Team progress](#team-progress) | [Schedule](#schedule) | [Shared experiment contract](#shared-experiment-contract) | [Requirement coverage](#requirement-coverage) | [Update instructions](#how-to-update-your-progress)
 
 ## Team progress

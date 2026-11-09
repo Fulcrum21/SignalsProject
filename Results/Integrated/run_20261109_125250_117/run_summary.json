@@ -1,0 +1,62 @@
+{
+  "createdAtDubai": "09-Nov-2026 12:53:08",
+  "matlabVersion": "26.2.0.3433840 (R2026b) Update 1",
+  "toolboxes": [
+    {
+      "Name": "DSP System Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "MATLAB Copilot",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Signal Processing Toolbox",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    },
+    {
+      "Name": "Simulink",
+      "Version": "26.2",
+      "Release": "(R2026b)",
+      "Date": "22-May-2026"
+    }
+  ],
+  "sourceFile": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Audios\\SpeechMusic.wav",
+  "sourceSampleCount": 882005,
+  "sourceRateHz": 44100,
+  "availableCases": 72,
+  "expectedCases": 72,
+  "matrixComplete": true,
+  "handoffFiles": [
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\quantized_cases.mat"
+  ],
+  "outputFolder": "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Integrated\\run_20261109_125250_117",
+  "snapshotSources": [
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Khaled\\quantized_cases.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Abdulrahman\\AA02\\sampling_22050.mat",
+    "C:\\Users\\jeshe\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\SignalsProject\\Results\\Abdulrahman\\Sampling\\sampling_all_rates.mat"
+  ],
+  "snapshotFiles": [
+    "001_quantized_cases.mat",
+    "002_sampling_22050.mat",
+    "003_sampling_all_rates.mat"
+  ],
+  "speakerPlaybackVerified": false,
+  "listeningCollected": false,
+  "reviewerAccepted": false,
+  "finalSignOff": false,
+  "archiveBytesVerified": true,
+  "archiveFile": "audio_all_cases_UNREVIEWED.zip"
+}

@@ -1,0 +1,6 @@
+Export successful: '<a href="matlab:uiopen('C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Simulink\Quantization_Khaled.slx', true)">C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Simulink\Quantization_Khaled.slx</a>' created for use in Simulink R2026a.
+Model 'Quantization_Khaled' was exported from R2026b to R2026a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('Quantization_Khaled')">click here</a>. Save the model to remove this notification.
+PASS: quantizer boundary, half-tie, saturation, level-count, bypass and metric checks.
+Model 'Quantization_Khaled' was exported from R2026b to R2026a. To find blocks that were removed during the export operation, <a href="matlab:slexportprevious.utils.displayReplacedBlocks('Quantization_Khaled')">click here</a>. Save the model to remove this notification.
+Report section written: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Reports\Quantization_and_Evaluation.md
+PASS: final R2026a-format model reproduces all 36 saved Simulink outputs in R2026b, boundary checks and direct Run.

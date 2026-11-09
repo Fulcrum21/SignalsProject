@@ -4,11 +4,19 @@
 
 **Owner:** Jesher | **Reviewer:** Khaled
 
-**Last updated:** 31 October 2026
+**Last updated:** 9 November 2026
 
 **Internal finish:** 4 November 2026, 8:00 PM Dubai time. All deadlines below are at 8:00 PM Dubai time.
 
 **Role:** make the quality comparison valid, ensure outputs can be heard correctly, and connect objective results to perception.
+
+## Current integrated pipeline, 9 November
+
+The user requested completion of Khaled's implementation and integration with Abdulrahman's actual work. The new root [RUN_PROJECT](../RUN_PROJECT.m) runs Abdulrahman's sampling scripts and four real sampling models, applies the new quantizer in each platform, and supplies all 72 cases to the existing Jesher evaluator. It passed full timing, metadata, quantizer, WAV representation and ZIP checks. All 22 existing MATLAB regression tests also passed. [QUICK_START](../QUICK_START.md) explains the simple run order and files.
+
+Use [the new report section](../Reports/Quantization_and_Evaluation.md) and the latest folder recorded in [latest_run.txt](../Results/Integrated/latest_run.txt) for this combined experiment. The earlier `Jesher/Demo` results remain their own independently generated experiment. The new integrated platform checks explain 26 one-step quantizer differences across four unfiltered 8/4 kHz pairs; identical-input quantizers agree exactly. Do not substitute the older demo's near-zero maximum difference for this combined dataset.
+
+The objective implementation and report material are ready. JE-05 still needs actual speaker checks, JE-06 needs case-linked human listening, and rehearsal/independent peer review/final report sign-off remain open. The new listening CSV is a blank template, not completed evidence. New WAV/MAT/ZIP payloads remain local as instructed.
 
 ## Tasks
 

@@ -20,3 +20,14 @@ sccprj/
 .DS_Store
 Thumbs.db
 [Dd]esktop.ini
+
+# Generated recording samples stay local; publish source, figures and tables.
+Results/Khaled/*.mat
+Results/Integrated/**/*.mat
+Results/Integrated/**/*.wav
+Results/Integrated/**/*.zip
+Results/Integrated/**/input_snapshot/
+Results/Integrated/**/archive_verification/
+Results/Integrated/**/audio_package/
+Results/Integrated/demo/
+tmp_matlab_products.log

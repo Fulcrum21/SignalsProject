@@ -1,0 +1,110 @@
+
+ans =
+
+      882005      441003      882006
+
+AA-02 outputs saved to: ../Results/Abdulrahman/AA02
+11025 Hz: 220502 samples per branch, duration 20.000181 s, ratio 1/4
+8000 Hz: 160001 samples per branch, duration 20.000125 s, ratio 80/441
+4000 Hz: 80001 samples per branch, duration 20.000250 s, ratio 40/441
+New Nyquist limit: 5512.5 Hz
+Expected alias of the 10 kHz tone: 1025.0 Hz
+Original 10 kHz Recording: largest peak at 10000.00 Hz, amplitude 0.124973
+Downsampled - Without Anti-Aliasing Filter: largest peak at 1025.00 Hz, amplitude 0.124973
+Downsampled - With Anti-Aliasing Filter: largest peak at 1025.00 Hz, amplitude 0.000046
+PASS: eight cases, source/rates/counts, processing methods, reconstruction coverage, 300 Hz timing, WAV round trips, manifest and aliasing checks.
+MATLAB sampling handoff saved to: ../Results/Abdulrahman/Sampling
+    FsHz     FilterMode    SampleCount    RemovedDelayOutputSamples    MaxAbsDifference    Tolerance                ModelName
+    _____    __________    ___________    _________________________    ________________    _________    _________________________________
+
+    22050      "none"        4.41e+05                 0                            0         1e-10      "SamplingModel_Abdulrahman"
+    22050      "lpf"         4.41e+05                10                   3.3307e-16         1e-12      "SamplingModel_Abdulrahman"
+    11025      "none"       2.205e+05                 0                            0         1e-10      "SamplingModel_11025_Abdulrahman"
+    11025      "lpf"        2.205e+05                10                   5.5511e-16         1e-12      "SamplingModel_11025_Abdulrahman"
+     8000      "none"         1.6e+05                 0                   1.6794e-11         1e-10      "SamplingModel_8000_Abdulrahman"
+     8000      "lpf"          1.6e+05                10                   7.7716e-16         1e-12      "SamplingModel_8000_Abdulrahman"
+     4000      "none"           80001                 0                   1.3194e-11         1e-10      "SamplingModel_4000_Abdulrahman"
+     4000      "lpf"            80001                10                   6.6613e-16         1e-12      "SamplingModel_4000_Abdulrahman"
+
+PASS: eight actual Simulink outputs match their MATLAB references.
+Quantized  1/72: speechmusic_fs22050_b16_none_matlab
+Quantized  2/72: speechmusic_fs22050_b08_none_matlab
+Quantized  3/72: speechmusic_fs22050_b04_none_matlab
+Quantized  4/72: speechmusic_fs22050_b02_none_matlab
+Quantized  5/72: speechmusic_fs22050_b16_lpf_matlab
+Quantized  6/72: speechmusic_fs22050_b08_lpf_matlab
+Quantized  7/72: speechmusic_fs22050_b04_lpf_matlab
+Quantized  8/72: speechmusic_fs22050_b02_lpf_matlab
+Quantized  9/72: speechmusic_fs11025_b16_none_matlab
+Quantized 10/72: speechmusic_fs11025_b08_none_matlab
+Quantized 11/72: speechmusic_fs11025_b04_none_matlab
+Quantized 12/72: speechmusic_fs11025_b02_none_matlab
+Quantized 13/72: speechmusic_fs11025_b16_lpf_matlab
+Quantized 14/72: speechmusic_fs11025_b08_lpf_matlab
+Quantized 15/72: speechmusic_fs11025_b04_lpf_matlab
+Quantized 16/72: speechmusic_fs11025_b02_lpf_matlab
+Quantized 17/72: speechmusic_fs8000_b16_none_matlab
+Quantized 18/72: speechmusic_fs8000_b08_none_matlab
+Quantized 19/72: speechmusic_fs8000_b04_none_matlab
+Quantized 20/72: speechmusic_fs8000_b02_none_matlab
+Quantized 21/72: speechmusic_fs8000_b16_lpf_matlab
+Quantized 22/72: speechmusic_fs8000_b08_lpf_matlab
+Quantized 23/72: speechmusic_fs8000_b04_lpf_matlab
+Quantized 24/72: speechmusic_fs8000_b02_lpf_matlab
+Quantized 25/72: speechmusic_fs4000_b16_none_matlab
+Quantized 26/72: speechmusic_fs4000_b08_none_matlab
+Quantized 27/72: speechmusic_fs4000_b04_none_matlab
+Quantized 28/72: speechmusic_fs4000_b02_none_matlab
+Quantized 29/72: speechmusic_fs4000_b16_lpf_matlab
+Quantized 30/72: speechmusic_fs4000_b08_lpf_matlab
+Quantized 31/72: speechmusic_fs4000_b04_lpf_matlab
+Quantized 32/72: speechmusic_fs4000_b02_lpf_matlab
+Quantized 33/72: speechmusic_fs22050_b16_none_simulink
+Quantized 34/72: speechmusic_fs22050_b08_none_simulink
+Quantized 35/72: speechmusic_fs22050_b04_none_simulink
+Quantized 36/72: speechmusic_fs22050_b02_none_simulink
+Quantized 37/72: speechmusic_fs22050_b16_lpf_simulink
+Quantized 38/72: speechmusic_fs22050_b08_lpf_simulink
+Quantized 39/72: speechmusic_fs22050_b04_lpf_simulink
+Quantized 40/72: speechmusic_fs22050_b02_lpf_simulink
+Quantized 41/72: speechmusic_fs11025_b16_none_simulink
+Quantized 42/72: speechmusic_fs11025_b08_none_simulink
+Quantized 43/72: speechmusic_fs11025_b04_none_simulink
+Quantized 44/72: speechmusic_fs11025_b02_none_simulink
+Quantized 45/72: speechmusic_fs11025_b16_lpf_simulink
+Quantized 46/72: speechmusic_fs11025_b08_lpf_simulink
+Quantized 47/72: speechmusic_fs11025_b04_lpf_simulink
+Quantized 48/72: speechmusic_fs11025_b02_lpf_simulink
+Quantized 49/72: speechmusic_fs8000_b16_none_simulink
+Quantized 50/72: speechmusic_fs8000_b08_none_simulink
+Quantized 51/72: speechmusic_fs8000_b04_none_simulink
+Quantized 52/72: speechmusic_fs8000_b02_none_simulink
+Quantized 53/72: speechmusic_fs8000_b16_lpf_simulink
+Quantized 54/72: speechmusic_fs8000_b08_lpf_simulink
+Quantized 55/72: speechmusic_fs8000_b04_lpf_simulink
+Quantized 56/72: speechmusic_fs8000_b02_lpf_simulink
+Quantized 57/72: speechmusic_fs4000_b16_none_simulink
+Quantized 58/72: speechmusic_fs4000_b08_none_simulink
+Quantized 59/72: speechmusic_fs4000_b04_none_simulink
+Quantized 60/72: speechmusic_fs4000_b02_none_simulink
+Quantized 61/72: speechmusic_fs4000_b16_lpf_simulink
+Quantized 62/72: speechmusic_fs4000_b08_lpf_simulink
+Quantized 63/72: speechmusic_fs4000_b04_lpf_simulink
+Quantized 64/72: speechmusic_fs4000_b02_lpf_simulink
+Quantized 65/72: speechmusic_fs44100_b16_native_matlab
+Quantized 66/72: speechmusic_fs44100_b08_native_matlab
+Quantized 67/72: speechmusic_fs44100_b04_native_matlab
+Quantized 68/72: speechmusic_fs44100_b02_native_matlab
+Quantized 69/72: speechmusic_fs44100_b16_native_simulink
+Quantized 70/72: speechmusic_fs44100_b08_native_simulink
+Quantized 71/72: speechmusic_fs44100_b04_native_simulink
+Quantized 72/72: speechmusic_fs44100_b02_native_simulink
+Evaluated 72/72 cases. Output: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Results\Integrated\run_20261109_125250_117
+Speaker checks, listening, review and final sign-off remain pending.
+PASS: quantizer boundary, half-tie, saturation, level-count, bypass and metric checks.
+PASS: all 72 files, metadata, errors, metrics and 36 actual platform pairs.
+Listening and team sign-off must be performed by the students.
+
+COMPLETE: 72 cases, actual sampling models, quantization, metrics and WAVs.
+Results: C:\Users\jeshe\OneDrive - ku.ac.ae\Documents\ChatGPT\SignalsProject\Results\Integrated\run_20261109_125250_117
+Run RUN_DEMO for a single case; PLAY_PROJECT_AUDIO for listening.
